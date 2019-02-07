@@ -1,0 +1,15 @@
+include:
+  - names-markov
+
+Begin:
+  - |
+    {NamesMarkov['male'].one}
+    {NamesMarkov['male'].two}
+    {NamesMarkov['male'].three}
+    {NamesMarkov['male'].four}
+    {NamesMarkov['male'].five}
+    {NamesMarkov['male'].six}
+    {NamesMarkov['male'].seven}
+    {NamesMarkov['male'].eight}
+    {NamesMarkov['male'].nine}
+    {NamesMarkov['male'].ten}

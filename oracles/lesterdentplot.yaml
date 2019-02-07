@@ -1,0 +1,141 @@
+Begin:
+  - |
+    {LesterDentPlot}
+
+
+LesterDentPlot:
+  - |
+    ## First quarter
+
+    1. Introduce the characters! Use tags, traits, and characteristic moments.
+
+    2. Hook the reader. {Hook}
+
+    3. Menace the hero.
+
+    4. Hint at a mystery, menace, and problem to be solved.
+
+    5. The hero tries to fathom the mystery, defeat the menace, solve the problem.
+
+    6. In doing so, {he.Protag} puts {him.Protag}self in danger, and must choose {Crises.FirstQuarter}.
+
+    7. Twist!
+
+    Does it have SUSPENSE? Is there a MENACE to the hero? Does everything happen logically?
+
+    ## Second quarter
+
+    1. Shovel more grief onto the hero.
+
+    2. Hero, being heroic, struggles, and {his.Protag} struggles lead up to...
+
+    3. A choice of {Crises.SecondQuarter}, which leads to...
+
+    4. A physical conflict, and...
+
+    5. A twist!
+
+    Does it have SUSPENSE? Is there a MENACE to the hero? Does everything happen logically?
+
+    ## Third quarter
+
+    1. Shovel more grief onto the hero.
+
+    2. Hero makes some headway, ...
+
+    3. Faces a crisis: {Crises.ThirdQuarter}...
+
+    4. And corners the villain or somebody into...
+
+    5. A physical conflict, which leads to...
+
+    6. A surprising plot twist, in which the hero preferably gets it in the neck bad.
+
+    Does it have SUSPENSE? Is there a MENACE to the hero? Does everything happen logically?
+
+    ## Fourth quarter
+
+    1. Introduce a complication, which leads to...
+
+    2. A choice of {Crises.FourthQuarter}, which leads to the hero being controlled by the villain.
+
+    3. The hero, using {his.Protag} skill and intelligence, rescues {him.Protag}self.
+
+    4. The hero and villain face off in the climax, where things will be settled.
+
+    5. As part of the climax, we learn the solution to the main mystery: how the deed was done, who did it, and why.
+
+    6. The villain pulls something out of {his.Antag} hat, something that surprises the hero.
+
+    7. Final twist!
+
+    8. Wrap things up.
+
+    9. Close with a punch line. Have the hero say something snappy, or use an inside joke.
+
+
+LesterDentPlotNoVillain:
+  - |
+    ## First quarter
+
+    1. Introduce the characters! Use tags, traits, and characteristic moments.
+
+    2. Hook the reader. {Hook}
+
+    3. Menace the hero.
+
+    4. Hint at a mystery, menace, and problem to be solved.
+
+    5. The hero tries to fathom the mystery, defeat the menace, solve the problem.
+
+    6. In doing so, {he.Protag} puts {him.Protag}self in danger, and must choose {Crises.FirstQuarter}.
+
+    7. Twist!
+
+    Does it have SUSPENSE? Is there a MENACE to the hero? Does everything happen logically?
+
+    ## Second quarter
+
+    1. Shovel more grief onto the hero.
+
+    2. Hero, being heroic, struggles, and {his.Protag} struggles lead up to...
+
+    3. A choice of {Crises.SecondQuarter}, which leads to...
+
+    4. A physical conflict, and...
+
+    5. A twist!
+
+    Does it have SUSPENSE? Is there a MENACE to the hero? Does everything happen logically?
+
+    ## Third quarter
+
+    1. Shovel more grief onto the hero.
+
+    2. Hero makes some headway, ...
+
+    3. Faces a crisis: {Crises.ThirdQuarter}, which leads to...
+
+    4. A physical conflict, which leads to...
+
+    5. A surprising plot twist, in which the hero preferably gets it in the neck bad.
+
+    Does it have SUSPENSE? Is there a MENACE to the hero? Does everything happen logically?
+
+    ## Fourth quarter
+
+    1. Introduce a complication, which leads to...
+
+    2. A choice of {Crises.FourthQuarter}, which leads to the hero being trapped or endangered.
+
+    3. The hero, using {his.Protag} skill and intelligence, rescues {him.Protag}self.
+
+    4. The hero finally confronts the problem or menace directly. Things will be settled.
+
+    5. As part of the climax, we learn the solution to the main mystery.
+
+    6. Final twist!
+
+    7. Wrap things up.
+
+    8. Close with a punch line. Have the hero say something snappy, or use an inside joke.

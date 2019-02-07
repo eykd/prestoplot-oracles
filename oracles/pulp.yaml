@@ -1,0 +1,55 @@
+include:
+  - highadventure
+  - lovecraft
+  - mystery
+  - noir
+  - pirates
+  - spaceopera
+  - spies
+  - superhero
+  - swordplanet
+  - weirdscience
+  - western
+  - wuxia
+
+  - hooks
+  - locations
+  - characters
+  - inciting-incidents
+  - outcomes
+  - proverbs
+  - villains
+
+
+Begin:
+  - |
+    ## {Theme.Main.title}
+
+    {Theme.Main.pieces}
+
+
+Theme:
+  - title: High Adventure!
+    pieces: "{HighAdventureOracle}"
+  - title: Lovecraft!
+    pieces: "{LovecraftOracle}"
+  - title: Mystery!
+    pieces: "{MysteryOracle}"
+  - title: Noir!
+    pieces: "{NoirOracle}"
+  - title: Pirates!
+    pieces: "{PiratesOracle}"
+  - title: Space Opera!
+    pieces: "{SpaceOperaOracle}"
+  - title: Spies!
+    pieces: "{SpiesOracle}"
+  - title: Superheroes!
+    pieces: "{SuperHeroOracle}"
+  - title: Sword & Planet!
+    pieces: "{SwordPlanetOracle}"
+  - title: Weird Science!
+    pieces: "{WeirdScienceOracle}"
+  - title: Western!
+    pieces: "{WesternOracle}"
+  - title: Wuxia!
+    pieces: "{WuxiaOracle}"

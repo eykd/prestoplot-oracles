@@ -1,0 +1,106 @@
+Begin:
+  - |
+    - {Description.One}
+    - {Description.Two}
+    - {Description.Three}
+    - {Description.Four}
+    - {Description.Five}
+    - {Description.Six}
+    - {Description.Seven}
+    - {Description.Eight}
+    - {Description.Nine}
+    - {Description.Ten}
+
+
+Description:
+  - |
+    a {body[key]} body, {eyes[key]} eyes, {hair[key]} hair, {garb[key]} garb, and excess {excess[key]}.
+
+style:
+  - belligerent
+  - calculating
+  - pompous
+  - inspiring
+  - hedonistic
+  - gluttonous
+  - slothful
+  - gregarious
+  - impatient
+  - verbose
+  - paranoid
+  - cowardly
+  - peace-loving
+  - inventive
+  - wyrd
+  - touched
+  - simple
+  - gruff
+
+eyes:
+  - bulging
+  - wild
+  - half-lidded
+  - bloodshot
+  - weary
+  - kind
+  - flashing
+  - laughing
+  - wise
+  - suspicious
+
+body:
+  - squat
+  - thick
+  - wiry
+  - spherical
+  - compact
+  - burly
+  - tight
+  - scrawny
+  - pot-bellied
+  - lean
+
+hair:
+  - frizzy
+  - voluminous
+  - sleek
+  - scraggly
+  - thinning
+  - shorn
+  - mottled
+  - multi-hued
+  - adorned
+  - braided
+
+garb:
+  - grimy
+  - immaculate
+  - simple
+  - decorated
+  - outdoorsy
+  - ceremonial
+  - functional
+  - fashionable
+  - scrappy
+  - worn
+
+excess:
+  - muscle
+  - hairstyling
+  - girth
+  - aroma
+  - ornamentation
+  - emotion
+  - fine taste
+  - ambition
+  - addiction
+  - compassion
+  - generosity
+  - scandal
+  - height
+  - scarring
+  - confidence
+  - anxiety
+  - reverence
+  - infirmity
+  - age

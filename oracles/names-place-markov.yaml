@@ -1,0 +1,15 @@
+include:
+  - names-markov
+
+Begin:
+  - |
+    {NamesMarkov['place'].one}
+    {NamesMarkov['place'].two}
+    {NamesMarkov['place'].three}
+    {NamesMarkov['place'].four}
+    {NamesMarkov['place'].five}
+    {NamesMarkov['place'].six}
+    {NamesMarkov['place'].seven}
+    {NamesMarkov['place'].eight}
+    {NamesMarkov['place'].nine}
+    {NamesMarkov['place'].ten}

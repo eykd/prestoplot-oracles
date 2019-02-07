@@ -1,0 +1,51 @@
+include:
+  - characters
+  - villains
+  - locations
+  - inciting-incidents
+  - outcomes
+  - hooks
+  - crises
+
+Setup:
+  - |
+    Our {hero.Protag}, {Name.Protag}, is {Person.Protag.a} {Person.Protag}.
+
+    {Incident.Inciting.text.capitalize()}, {he.Protag} {HeroOutcome.Protag}.
+
+    Opposing {him.Protag}, {Person.Antag.a} {Person.Antag} ({VillainTheme.Antag}?), who {VillainOutcome.Antag}.
+
+    The villain\'s goal: {VillainVerb.Antag} {VillainObject.Antag}.
+
+    Setting: {Location.Setting}
+
+
+SetupNoVillain:
+  - |
+    Our {hero.Protag}, {Name.Protag}, is {Person.Protag.a} {Person.Protag}.
+
+    {Incident.Inciting.text.capitalize()}, {he.Protag} {HeroOutcome.Protag}.
+
+    Setting: {Location.Setting}
+
+
+SetupMarkovName:
+  - |
+    Our {hero.Protag}, {MarkovName.Protag}, is {Person.Protag.a} {Person.Protag}.
+
+    {Incident.Inciting.text.capitalize()}, {he.Protag} {HeroOutcome.Protag}.
+
+    Opposing {him.Protag}, {Person.Antag.a} {Person.Antag} ({VillainTheme.Antag}), who {VillainOutcome.Antag}.
+
+    The villain\'s goal: {VillainVerb.Antag} {VillainObject.Antag}.
+
+    Setting: {Location.Setting}
+
+
+SetupMarkovNameNoVillain:
+  - |
+    Our {hero.Protag}, {MarkovName.Protag}, is {Person.Protag.a} {Person.Protag}.
+
+    {Incident.Inciting.text.capitalize()}, {he.Protag} {HeroOutcome.Protag}.
+
+    Setting: {Location.Setting}

@@ -1,0 +1,60 @@
+Begin:
+  - |
+    - {SceneAnswer.One}
+    - {SceneAnswer.Two}
+    - {SceneAnswer.Three}
+    - {SceneAnswer.Four}
+
+
+SceneAnswer:
+ - "Yes, but {Everything}"
+ - "No, because {Statement}"
+ - "No, and furthermore, {Statement}"
+ - "No, but {Positive}"
+
+
+Everything:
+  - "{Statement}"
+  - "{Question}"
+
+
+Positive:
+  - mode: pick
+  - "a clue reveals itself."
+  - "something unrelated but useful also occurs."
+  - "you earn a reward."
+  - "you learn something about your enemies in the process."
+  - "you learn something about yourself in the process."
+  - "you make a fast friend."
+  - "your style and panache are duly noted."
+
+Statement:
+  - mode: pick
+  - "an inconvenient attraction is struck."
+  - "in order to do it, you’ll have to do something else first."
+  - "it breaks the alignment of things."
+  - "it costs someone you care about, something they care about."
+  - "it costs you something dear."
+  - "it means closing the door on a future opportunity."
+  - "it only provides a temporary solution. It won’t last that long!."
+  - "it takes longer than you thought it would."
+  - "it works a little too well."
+  - "it’s quiet … too quiet."
+  - "what you want isn’t what you need."
+  - "you can’t do it by yourself."
+  - "you get seriously hurt."
+  - "YOU TOTALLY ALMOST DIE OMG."
+  - "you’re not even supposed to be here."
+  - "your beloved is lost."
+
+Question:
+  - mode: pick
+  - "didn’t it seem a little ''too'' easy? What’s really going on, here?"
+  - "is it not by the path you thought?"
+  - "what does it mean for someone else?"
+  - "what does it mean for the enemy?"
+  - "what is that person doing over there?"
+  - "what really made you want it?"
+  - "why is that character acting so strangely?"
+  - "why now?"
+  - "why you?"

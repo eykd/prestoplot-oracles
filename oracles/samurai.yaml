@@ -1,0 +1,28 @@
+include:
+  - setup
+  - wuxia
+
+Begin:
+  - "{SamuraiOracle}"
+
+SamuraiOracle:
+  - |
+    {Setup}
+
+    - {Wuxia.One}
+    - {Wuxia.Two}
+    - {Wuxia.Three}
+    - {Samurai.Four}
+
+
+
+
+Samurai:
+  - mode: pick
+  - "A northern samurai, sent to collect his lord's rightful tribute."
+  - An interpreter and scholar, a samurai by birth, but possessing no skill at arms.
+  - An elderly Zen Buddhist monk, once a samurai, now searching for a lost book.
+  - "The emperor's most loyal samurai, disguised as a masterless ronin."
+  - An uncouth and brutal samurai, willing to betray his lord.
+  - A bitter ronin who lives only for revenge.
+  - A samurai, on a mission from his lord.

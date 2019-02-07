@@ -1,0 +1,314 @@
+include:
+  - setup
+
+Begin:
+  - "{PiratesOracle}"
+
+
+PiratesOracle:
+  - |
+    {Setup}
+
+    - {Letters.One}
+    - {Letters.Two}
+    - {Letters.Three}
+    - {Letters.Four}
+
+
+  - |
+    {Setup}
+
+    - {CutlassDagger.One}
+    - {CutlassDagger.Two}
+    - {CutlassDagger.Three}
+    - {CutlassDagger.Four}
+
+
+  - |
+    {Setup}
+
+    - {BlackSails.One}
+    - {BlackSails.Two}
+    - {BlackSails.Three}
+    - {BlackSails.Four}
+
+
+  - |
+    {Setup}
+
+    - {AllAshore.One}
+    - {AllAshore.Two}
+    - {AllAshore.Three}
+    - {AllAshore.Four}
+
+
+  - |
+    {Setup}
+
+    - {Letters.One}
+    - {Letters.Two}
+    - {Letters.Three}
+    - {AllAshore.Four}
+
+
+  - |
+    {Setup}
+
+    - {CutlassDagger.One}
+    - {CutlassDagger.Two}
+    - {CutlassDagger.Three}
+    - {AllAshore.Four}
+
+
+  - |
+    {Setup}
+
+    - {BlackSails.One}
+    - {BlackSails.Two}
+    - {BlackSails.Three}
+    - {AllAshore.Four}
+
+
+
+
+Letters:
+  - mode: pick
+  - "Betrayal and treachery!"
+  - "Captured {Nationality} charts, carefully copied, and used by the Royal Navy."
+  - "Dolphins, seen frolicking in the bow-wake of a ship, perhaps leading it toward its goal."
+  - "Flotsam and jetsam, washed ashore after a sea-battle."
+  - "Fo’c’sle gossip blaming the ship’s misfortunes on a crewman who killed an albatross."
+  - "Forged documents, implying that their bearer speaks for the Crown."
+  - "Hidden reefs, which at low tide endanger any ship that passes over them."
+  - "Letters of Marque against the enemies of a European Crown."
+  - "Mutineers, conspiring to seize control of their ship."
+  - "The ship’s fearsome figurehead, carved in the form of a maiden bearing a human skull in her hands."
+  - "The foppish commander of a Naval unit, more interested in furthering his own ambitions than in pursuing his orders."
+  - "The Navigator’s rutter from a Dutch explorer’s vessel, showing sea-routes unknown to other nations."
+  - "The severed head of a pirate, its beard and hair black and tarred."
+  - "An amber signet ring, which had been a Duke’s… until ripped from his finger."
+  - "A bawd, procuring young girls for a dissolute nobleman."
+  - "A brace of pistols, of fine craftsmanship, carried by one who knows nothing of how to use them."
+  - "A cat-o’-nine-tails, caked with the blood of the last man flogged with it."
+  - "A compass said to point only to one’s heart’s desire–or perhaps it is just broken."
+  - "A Corsair, recently escaped from his enemies, rowing away in a small boat."
+  - "A course laid through shark-infested waters."
+  - "A cursed coin, said to bring its owner bad luck."
+  - "A diamond necklace, ripped from the throat of a great lady."
+  - "{Nationality[key].A} {Nationality[key]} buccaneer, a former Naval officer, skilled at ship-handling."
+  - "{Nationality[key].A} {Nationality[key]} merchantman, sailing homeward loaded with cotton, tobacco, and rum."
+  - "A fast ship, sloop-rigged and lightly armed, running before the wind, trying hard to escape pursuit."
+  - "A fortified town, held for ransom by its captors."
+  - "{Nationality[key].A} {Nationality[key]} pirate, so feared that his victims often prefer to take their own lives rather than face capture at his hands."
+  - "A galleon loaded with Aztec gold, commanded by a sneering Spaniard."
+  - "A legendary sea monster, said to entrap ships within its coils and crush their timbers."
+  - "A madwoman, said to be a witch who can control the weather."
+  - "A man willing to sail to the edge of the world to get revenge upon those who have wronged him."
+  - "A peg-legged old pirate, who has seen many things in his time and, for a price, will tell of them."
+  - "A pirate captain, married fourteen times, who strangled each of his wives before throwing them overboard."
+  - "A pirate-hunter turned pirate, betraying his oath to the Crown."
+  - "A plague-ship, spurned by all and unable to make port."
+  - "A pox-scarred sailor, rough and unshaven, becoming drunk and violent over a perceived slight."
+  - "A Quartermaster, lately accused of cheating when dividing up captured booty."
+  - "A Royal Navy ship-of-the-line, commanded to hunt down pirates."
+  - "A sailor, adrift, clutching a floating cask half-filled with rum."
+  - "A sea chest, containing a preserved human heart."
+  - "A ship said to be cursed, her crew doomed never to set foot on land again."
+  - "A ship stricken with scurvy, her sickened, weak sailors unable to defend themselves."
+  - "A silver snuff-box with a secret compartment in its base."
+  - "A sinking ship, its rats fleeing down the anchor chains."
+  - "A gold-and-gem-laden Spanish treasure-ship, forced aground by a storm onto a deserted isle."
+  - "A spyglass, lovingly cared-for, in a leather case."
+  - "A tattoo artist who claims his work gives mystical aid to the wearer."
+  - "A troop of musket-armed Marines, standing at attention for their Lieutenant’s inspection."
+  - "An unknown ship, flying a false flag."
+  - "A wrecked ship, sunk in shallow water, said to be full of treasure and the ghosts of those who went down with her."
+  - "A young Naval Midshipman, assigned to deliver a message to the Governor."
+  - "A young widow, seeking knowledge of the fate of her husband, lost at sea."
+
+
+CutlassDagger:
+  - mode: pick
+  - "Cutthroats and scoundrels, forced to seek honest work."
+  - "Legends tell of a creature of the deep, a leviathan, which haunts the waters off Bermuda."
+  - "Longboats rowing out after dark to rendezvous with a ship."
+  - "The chief administrator of a Crown colony, fearing dismissal."
+  - "The dark, silent, gold-greedy First Mate."
+  - "Worn ropes and rotting spars, showing plainly that this ship has seen better days."
+  - "An actor and playwright, on the run from his creditors and his critics."
+  - "An agent of the Crown, pursuing members of a secret and treasonous society."
+  - "A band of cutthroats, in the pay of a foreign Crown, gathering secretly in the jungle."
+  - "A beautiful foreign spy, with a dagger concealed in her bodice."
+  - "A bewigged merchant, haggling over the price of a cargo."
+  - "A black cat, which always seems to be nearby, purported to be a witch’s familiar."
+  - "A cask, roped and tarred, full of brandywine smuggled all the way from {Nation[key]}."
+  - "A cloaked and hooded figure, skulking in the shadows."
+  - "A cruel reversal of fortunes, which leaves its victim suddenly poverty-stricken."
+  - "A cunning spy, always in disguise, whose true features are unknown."
+  - "A dagger, its blade dripping with viscous green poison."
+  - "A damaged prize ship, sailed by a skeleton crew, making its way back to a safe haven."
+  - "A daring military officer, rumored to have once attempted to steal the Crown Jewels."
+  - "A dashing hero and a dastardly villain, dueling on a narrow spit of land revealed at low tide."
+  - "A diplomatic envoy to a foreign power, sent to negotiate a peace treaty."
+  - "An escaped slave, now a buccaneer captain feared by all."
+  - "{Nationality[key].A} {Nationality[key]} duelist, deadly with a rapier, looking for his enemy."
+  - "A gala fête at the home of the island’s wealthiest lord, where the rich gather and display their wealth."
+  - "A heavy, ornate gold cross affixed to a chain, once the property of a Conquistador cursed and slain by the Aztecs."
+  - "A heretical preacher, converting sailors from his fo’c’sle pulpit."
+  - "An ill-tempered sailor, bearing many lash-marks across his back, and a fetish bag to use against the cruel officer who marked him."
+  - "A learned {Countryman}, reputed to be an alchemist, whose sea-chest contains many heavy books of lore."
+  - "A lone figure, knife clenched in his teeth, scaling a high tower."
+  - "A man who, they say, is the very spit’n’image of a famous (and famously dead) pirate–as if the scoundrel were reborn into new flesh."
+  - "A masked ball, where many assignations are planned."
+  - "A mincing Spanish Grandee, with oiled locks and an oilier smile."
+  - "An officious, businesslike representative of the East India Company."
+  - "A pair of captured pirates, chained together, being marched to the gallows… unaware of the fate of a third crewmember."
+  - "A pardon, offered for any pirate who betrays his crew and captain to the Crown."
+  - "A plaguing swarm of disease-carrying, biting insects."
+  - "A press-gang, rounding up sailors to crew a Naval vessel."
+  - "A Priest of the Inquisition, seeking heretics in the New World, and finding many whom he wishes to see burn."
+  - "A privateering ship, well-equipped, but with a crew both naïve and overly optimistic."
+  - "A proclamation by the Governor offering 500 pieces of eight for the capture of a particular pirate–and a proclamation by the pirate, offering 5,000 for the capture of the Governor!"
+  - "A proclamation of a new tax levied by the colonial Governor, nailed to a notice-board in town."
+  - "A scandal suddenly revealed, throwing a family into chaos."
+  - "A secret benefactor, aiding another for (seemingly) altruistic motives."
+  - "A smuggler’s ship, with lights showing low on the water, signaling her contacts."
+  - "A social gaffe which leads to a duel of honor."
+  - "A spy’s paymaster, on the run with a chest of gold."
+  - "A stowaway with a vendetta against one of the ship’s company."
+  - "A terrorized prisoner, forced to walk the plank."
+  - "A traitor, marooned for many years on a desolate island, now gone savage and hardly sane."
+  - "A treasure hoard, its location known by only three souls–the same three who robbed and murdered to get it."
+  - "A voodoo houngan, practicing his beliefs secretly aboard ship."
+  - "A whaling ship, blown off course into the Great Southern Ocean by a storm."
+
+
+BlackSails:
+  - mode: pick
+  - "Lithe, strong Carib indians, toiling bare-backed in the hot sun."
+  - "Dangerous currents, driving ships toward a rocky coast."
+  - "The Cabin Boy, scrambling nimbly through the riggings, espying something he should not have seen."
+  - "The curse of a Voodoo woman."
+  - "The First Mate of a merchantman, who always keeps a belaying pin close at hand to maintain order on deck."
+  - "The legend of the Sea-Hag, a female figure drenched in blood, who haunts these waters, drawing sailors to their doom."
+  - "The sighting of a ghost ship, crewed, so it is said, by drowned men."
+  - "The son of a pirate, desperately trying not to be drawn into the trade."
+  - "An area of shoals, known to rip the bottom out of any ship larger than a sloop."
+  - "A bejeweled rapier, whose razor-keen edge never dulls."
+  - "A buxom barwench, secretly in love with a man above her station."
+  - "A colorful parrot, with colorful language, perched on a sailor’s shoulder."
+  - "A dashing Naval officer, vowing to sweep the Caribbean free of pirates at any cost."
+  - "A deadly duelist, hired to slay a nobleman in a trumped-up duel."
+  - "A deal with the Devil."
+  - "A dusky-skinned native beauty, sought after by many men."
+  - "A Dutch merchantman, carrying a rich cargo."
+  - "A fearsome pirate, wreathed in brimstone-stinking smoke."
+  - "A female pirate, red-haired and wild, brandishing her pistols against a crowd of men."
+  - "A fog, thick and cloying, within which strange shapes can be seen moving."
+  - "A former slave, leading a revolt against the owners of the plantations."
+  - "A hook-handed sailor, scarred and weathered, looking for a billet."
+  - "A pox epidemic spreads through a ship’s crew, felling those of weak constitution."
+  - "A map showing the path to buried treasure, a blood red ‘X’ marking the spot."
+  - "A Marine sharpshooter, crouched in the Crow’s Nest, drawing a bead on his target."
+  - "A meeting of the leaders of the Brotherhood of the Coast, held in a secret and unlikely location."
+  - "A merchant sailor, ready with his fists, spoiling for a fight."
+  - "A notorious pirate, now down on his luck, drunk on rot-gut rum."
+  - "A pearl of great price, said to protect its owner from both poison and disease."
+  - "A pet monkey, trained to do tricks."
+  - "A phantom vessel, seen and then unseen, striking at will along the shipping lanes."
+  - "A pirate fleet, bearing down on an unsuspecting port."
+  - "A pirate sloop, in good trim and seaworthy, but which has yet to take a prize."
+  - "A pirate, gold rings in his ears and a patch over one eye, swearing a mighty oath and daring God to strike him down."
+  - "A ragged stowaway, searching for her lost brother."
+  - "A rum-bottle, said to contain a draught from the fabled Fountain of Youth."
+  - "A scrimshaw-covered piece of ivory; a map for those with the wit to read it."
+  - "A sea-battle, the decks of both ships awash with blood."
+  - "A sea-captain, widely rumored to be possessed by a demonic force."
+  - "A ship adrift, abandoned in haste by her crew, for reasons unknown."
+  - "A ship bearing a cargo of convicts being transported to plantations in Jamaica."
+  - "A ship bearing a wealthy passenger on the King’s business."
+  - "A ship becalmed, with supplies running low, and desperation rising."
+  - "A silver-tongued captain with a will of iron and a heart of gold."
+  - "A skull-shaped island, a domain of the Devil, which can only be found by sailors on the verge of death."
+  - "A successful merchant, whose ships seem never to encounter pirates as they ply the sea-lanes."
+  - "A swashbuckling pirate captain, who has lost his ship."
+  - "A tattered flag, symbol of a notorious pirate, washed up on the beach."
+  - "A tribal shaman, praying to his mysterious gods, cursing the Europeans who have come to his land."
+  - "A violent storm, driving waves over the deck and sweeping sailors into the sea."
+  - "A white-clad dandy, affecting genteel airs."
+  - "A woman with a mission, disguised as a member of the ship’s company."
+
+
+AllAshore:
+  - mode: pick
+  - "Buccaneers, encamped on the beaches of a verdant island."
+  - "Cibola, the fabled Aztec City of Gold."
+  - "Deep caverns, where the Aztecs once hid their gold from the Conquistadors."
+  - "Half a map."
+  - "Six skeletons, pirates all, hanging in iron cages from a high cliff over the port–a message from the Governor."
+  - "Street urchins, begging for coins."
+  - "The body of a dead buccaneer, staked out in the surf by Royal decree, until three tides have washed over it, then to be buried in an unmarked, unhallowed grave."
+  - "The daughter of a Royal Governor, with piratical dreams."
+  - "The mummified body of a tribal chieftain, brought down from the mountains."
+  - "The Royal Governor, who hates pirates with a passion born in Hell itself."
+  - "The ruins of a long-abandoned Spanish mission."
+  - "The town gaol, made of heavy stone and dripping with moisture, patrolled by oafish, abusive gaolers."
+  - "The widow of a sea-captain, who walks the rooftop balcony of their home, forever watching the sea."
+  - "Thieves and cutpurses, lurking in dingy alleyways."
+  - "A ‘retired’ pirate lord, fat and wealthy, jealously guarding his power and position."
+  - "A boisterous crowd of revelers, spilling from a tavern into the street."
+  - "A castaway, marooned on an otherwise uninhabited island, left with only a pistol and one bullet."
+  - "A chest full of gold doubloons, buried by someone fated never to return for it."
+  - "A coffle of prisoners, being led to the gallows by soldiers of the Crown."
+  - "A deadly whirlpool, dragging down any ship within reach."
+  - "A deck of Tarot cards, soaked with salt water, with one Trump card missing."
+  - "A deep pit, festooned with traps, rumored to have buried treasure at its bottom."
+  - "A dilapidated Spanish mission, with a mad priest as its only caretaker."
+  - "A doxy with an eye for easy money and a penchant for liquor."
+  - "A force of soldiers on patrol, keeping the peace."
+  - "A fort on an isolated island, ripe for capture."
+  - "A hidden cove, ideal for careening."
+  - "An Irish doctor, transported as a criminal, now making his way in the world in a different profession."
+  - "An island known to be overrun by wild goats."
+  - "A lake, far inland, where the natives ritually drowned sacrifices by weighting them down with gold."
+  - "A Mayan temple, rumored to be ornamented with beaten gold."
+  - "A merchant with a reputation as a cheat, who comes offering a bargain."
+  - "A mule train, laden with silver, making its way through the jungle toward the coast."
+  - "A necklace of pearls and diamonds, given as a gift to a dockside whore."
+  - "A night watchman, willing, for a price, to look the other way."
+  - "A peg-legged old man with a watchful eye."
+  - "A pirate haven, doomed to be consumed by the hungry sea."
+  - "A piranha-infested river which must be crossed."
+  - "A ruin, said to be haunted by ghosts."
+  - "A ship, lying at anchor in a secluded cove, her crew ashore gathering fresh water and supplies."
+  - "{Nationality[key].A} {Nationality[key]} fortress, and the beautiful girl imprisoned there."
+  - "{Nationality[key].A} {Nationality[key]} lady, veiled against the harsh Caribbean sun, borne along in her carriage."
+  - "A street preacher, condemning all passersby for their sins and depravity."
+  - "A sudden storm, which drives ships into the nearest port."
+  - "A sugar plantation, where slaves labor in the relentless Caribbean sun."
+  - "A tavern, frequented by scurvy dogs and scoundrels."
+  - "A tribe of cannibals, hungry and dangerous."
+  - "A tunnel, its walls grimy and slime-encrusted, running underneath a fortress."
+  - "A turquoise mask, fashioned for a native prince’s funeral, stolen by Conquistadors."
+  - "A village of natives, who have learned to distrust Europeans."
+  - "A wealthy landowner, resplendent in his powdered wig, riding in a carriage with his lovely daughter."
+  - "A youth who, after years of cruel abuse, finally retaliates against his abuser."
+
+
+Nation:
+  - France
+  - England
+  - Spain
+  - Portugal
+
+Nationality:
+  - French
+  - English
+  - Spanish
+  - Portuguese
+
+Countryman:
+  - Frenchman
+  - Englishman
+  - Spaniard
+  - Portuguese

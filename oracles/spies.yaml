@@ -1,0 +1,257 @@
+include:
+  - setup
+  - casablanca
+  - lovecraft
+
+Begin:
+  - "{SpiesOracle}"
+
+
+SpiesOracle:
+  - |
+    {Setup}
+
+    - {MundaneSpies.One}
+    - {MundaneSpies.Two}
+    - {MundaneSpies.Three}
+    - {StrangeSpies.Four}
+
+
+  - |
+    {Setup}
+
+    - {MundaneSpies.One}
+    - {MundaneSpies.Two}
+    - {Casablanca.Three}
+    - {Casablanca.Four}
+
+
+  - |
+    {Setup}
+
+    - {MundaneSpies.One}
+    - {Casablanca.Two}
+    - {Casablanca.Three}
+    - {StrangeSpies.Four}
+
+
+  - |
+    {Setup}
+
+    - {MundaneSpies.One}
+    - {MundaneSpies.Two}
+    - {StrangeSpies.Three}
+    - {Lovecraft.Four}
+
+
+  - |
+    {Setup}
+
+    - {MundaneSpies.One}
+    - {Casablanca.Two}
+    - {Casablanca.Three}
+    - {Lovecraft.Four}
+
+
+  - |
+    {Setup}
+
+    - {MundaneSpies.One}
+    - {Casablanca.Three}
+    - {StrangeSpies.Two}
+    - {Lovecraft.Four}
+
+
+
+
+MundaneSpies:
+  - mode: pick
+  - "A skilled but aging spy-master forced to retire."
+  - "A stern Russian chairman looking for asylum."
+  - "A dead body in an alley with an ID that doesn’t match its face."
+  - "A waiter carrying a secretly poisoned bottle of wine."
+  - "A famous singer found dead, with no apparent wounds, in her dressing room."
+  - "A weapons dealer waiting for his extremely late buyer to arrive."
+  - "A man hiding in the back seat of a car, bullets shattering the windows of the vehicles around him."
+  - "A clerk dousing desk, computer and cabinets with kerosene while smoke wafts in from other offices already burning."
+  - "A betrayed agent gone AWOL, seeking revenge against his handlers."
+  - "A double-agent, cover blown, attempting covert extraction."
+  - "A {Personality[key]} {SpyRole[key]} selling secrets to the other side."
+  - "An infamous and efficient assassin casing his latest target."
+  - "An undisclosed training facility: fluorescent lights and quiet corridors."
+  - "A dilapidated safe-house in a red-light district, marked for demolition."
+  - "A bloodied prisoner huddled in the corner of a dimly lit interrogation room."
+  - "A park bench marked for a clandestine pickup."
+  - "A long-abandonded POW camp with fresh tire marks leading into its gates."
+  - "A convoy of missile-trucks covertly surveilled by ambushers."
+  - "A cache of man-portable surface-to-air missiles hidden in the village elder’s hut."
+  - "A mysterious package containing a cryptic note and key labeled #106."
+  - "A plane descending out of control over the Korean Demilitarized Zone."
+  - "A train station locker containing a booby-trapped leather case."
+  - "Unmarked crates escorted through the jungle: sweat, machetes, and mosquitos."
+  - "The robbery of a national bank, the culprits operating with military precision."
+  - "A chopper downed in enemy territory, its passengers dead or injured."
+  - "The release of a traitorous agent from prison in exchange for vital information."
+  - "A missed rendezvous with no sign of the second party."
+  - "The signing of a tentative treaty between two countries."
+  - "The controversial decommission of a senior agent for alleged fraternization with an enemy agent."
+  - "An internal {agency[key]} document on the desk of an investigative reporter, its pages listing active field agents."
+  - "The murder of an activist while delivering humanitarian aid, designed to look like local hostility."
+  - "A long-used dead-drop, compromised by foreign agents."
+  - "A partisan putting the final touches on the the wiring on a explosive device."
+  - "The arrival of an unexpected limo, VIP and security detail."
+  - "A fugitive pursued into the night forest; guards, dogs and search-lights."
+  - "A {Personality[key]} warden overseeing a secret prisoner exchange."
+  - "A {SpyRole[key]} charged with treason attempting to flee the country."
+  - "A {Personality[key]} special forces captain seeking to regain the trust of his men."
+  - "A driver and passenger exchange blows as their car speeds down the Autobahn."
+  - "A local law enforcement officer stumbling across a ’false flag’ operation intended to frame his government for a terrorist act."
+  - "A blogger is found shot to death in his home, his last entry written in code."
+
+StrangeSpies:
+  - mode: pick
+  - "Two sets of fingerprints taken from the same man twenty years apart… that don’t match."
+  - "An internal {agency[key]} document on the desk of an investigative reporter, its pages listing active paranormal agents."
+  - "Two satellite photos of same man—one on a Paris street corner, the other at the Kremlin—timestamped a minute apart."
+  - "A poor {thirdworld[key]} boy amusing his friends by raising pencils off his desk without touching them."
+  - "A victim fallen from a twelfth-story balcony, stumbling into a nearby alley uninjured."
+  - "A sniper waiting patiently on a rooftop, his eyes blind with white cataracts."
+  - "A sleeper agent, brainwashed by the other side, a trigger-word buried in his subconscious."
+  - "A dead man slumped over, tied to a chair with a handprint seared into his face."
+  - "A woman, home late from work, turning on the TV to discover her suicide, broadcast live."
+  - "A children’s playground giving off high levels of radiation."
+  - "A clear radar contact for an object that simply isn’t there."
+  - "A West-African warlord who leads his men into battle naked.  It is whispered his skin cannot be pierced."
+  - "An old dead-drop, disused since the Cold War, receives a message from a presumed-dead operative."
+  - "An airliner traveling from Rio to Paris, simply vanished after reporting strange lights over the ocean."
+  - "Strange lights moving over a {nationality[key]} military installation."
+  - "A {nationality[key]} covert operative fleeing in the night from strange lights in the sky."
+  - "A dusty {agency[key]} document on UFOs found in an unrelated file of a government archive."
+  - "A dead {nationality[key]} operative’s body vanishes from a locked mortuary overnight."
+  - "A spectral figure appears near the historic Checkpoint Charlie every night at two o’clock."
+  - "A foreign operative is found dead with all his hair and teeth missing."
+  - "An operative’s routine physical reveals a strange metal object embedded in the bone behind his right ear."
+
+  - "The Chief of {agency[key]}, cold and aloof, concerned about his political career."
+  - "Director of {agency[key]}, brutal and jaded, but still patriotic and clever."
+  - "A mole, endangering the lives of both foreign assets and British spies."
+  - "An old spymaster, forced into retirement, but still capable of using his old network."
+  - "A top special operative, expected never to let personal affairs get in the way of operations."
+  - "D-Int at {agency[key]}, an academic who sees everything in black and white, but who holds his views better than those of Operations."
+  - "{agency[key].A} {agency[key]} surveillance team trailing a foreign trade delegate."
+  - "A lonely {agency[key]} computer forensics technician, longing to be noticed by a top agent."
+  - "An ambitious young agent, worried her good looks keep her superiors from taking her seriously."
+  - "An Irish splinter revolutionary, bent on revenge towards the UK."
+  - "An aging {agency[key]} Ops man, tainted by long competition between departments, hoping to catch {agency[key]} in the wrong."
+  - "A dead drop in Madrid, primed and marked for pickup by a Spanish agent."
+  - "A tourist resort in Italy where an {agency[key]} analyst is meeting his Russian handler, tailed by {agency[key]}."
+  - "A {city[key]} safehouse, tended by an old woman who has seen and done many things over decades of service."
+  - "A Chinese restaurant with a secret cellar used for human trafficking, and its proprietor."
+  - "An {agency[key]} interrogation room, with interrogator, suspect, and watchers behind a one-way mirror."
+  - "The defection of a foreign general which, if genuine, will be a career-maker for his handler."
+  - "A top British agent detained and jailed in a country where she may never be heard from again."
+  - "A false passport for an {agency[key]} officer, obtained without proper permissions."
+  - "A single red rose, left on the desk of a female agent by a secret admirer within the department."
+  - "A scheduled meeting with an IRA source has to be canceled due to \"more pressing\" business."
+  - "The burglary of state secrets from a Minister's home in the country."
+  - "An apparent gang killing of a Ukrainian man with suspected ties to weapon smuggling."
+  - "An envelope full of cash intended for an agent, but pocketed by her handler."
+  - "Incriminating photographs of an illicit affair between two {agency[key]} officers."
+  - "A top {military[key]} commando forced to leave his unit after a deadly accident."
+  - "The Under-Secretary of the Foreign Office, who views everyone as a pawn to be manipulated."
+  - "A powerful oil executive with friends in high places who will shield him from his own wrongdoings."
+  - "A Member of Parliament with a strong anti-immigrant bent."
+  - "A squad leader of the {military[key]}, ashamedly hiding his homosexuality from the men he leads."
+  - "A cryptologist from {agency[key]} with more brains than tact."
+  - "The gentlemen's club of the Home Secretary, where he dines each afternoon with his mistress."
+  - "The beating of an Indian shopkeeper by racist skinheads, one of them the brother of an {agency[key]} officer."
+  - "The funeral of a soldier, his meaningless death the final nail of disillusionment for his sergeant."
+  - "The wedding ring of an MoD Under-Secretary, left behind in a cheap hotel room."
+  - "The laptop of a Home Office accountant lost or stolen, containing records of payments to confidential informants."
+  - "A young crew of idealistic terrorists from a broken country, hoping to call attention to their cause."
+  - "A wily old terrorist financier, living undercover and biding his time."
+  - "A Colombian drug smuggler and the young woman whose life he controls."
+  - "An Egyptian chemist preparing to manufacture sarin gas in a lab deep in the Libyan desert."
+  - "A beautiful mosque, worship place of a radical imam and his fanatical students."
+  - "An underground parking garage, with a black Mercedes sedan carrying a Libyan intelligence agent and a briefcase full of cash."
+  - "An airplane, hijacked and forced to land in Malta, with negotiations dragging from hours into days."
+  - "A cache of plastique, smuggled in a diplomatic pouch."
+  - "The {agency[key]}'s liaison in London, a woman as deadly as she is pretty."
+  - "A visiting French minister, his arrogance hiding his true intentions."
+  - "A pushy American Secret Service agent prepping for a visit from the US President."
+  - "The unwitting girlfriend of an agent, believing every lie he tells her."
+  - "An old friend, accidentally mixed up in things beyond her control, and in need of help."
+  - "An agent's sister and her loud, abusive husband, humiliating her in public."
+  - "The offices of a US Senator on the Intelligence Committee, and his Chief of Staff apparently under foreign control."
+  - "Glossy black and white photographs from a hotel room in Jakarta that French Intelligence uses for honeytraps."
+  - "The gravesite of a dear friend and colleague, the circumstances of his death a secret even within the {agency[key]}."
+  - "The murder of an {agency[key]} agent's wife and her lover, made to look like an accident by professional hands."
+  - "An embassy party where everyone seems to be drunk, but one woman is completely sober and ready for the task at hand."
+  - "Christmas dinner with the extended family, and an uncle who doesn't know when to stop prying into official business."
+  - "A bug in the office of the {nationality[key]} ambassador that transmits everything to a surveillance van."
+  - "An exclusive London card club, used as a front for money-laundering."
+  - "A night at the opera with {agency[key]}'s liason to {agency.other}; the best way to keep him from noticing that {agency.other} is operating where it shouldn't."
+
+
+nationality:
+  - "American"
+  - "British"
+  - "Russian"
+  - "Israeli"
+  - "Chinese"
+  - "Ukrainian"
+  - "Brazilian"
+  - "North Korean"
+  - "Iraqi"
+
+city:
+  - London
+  - Paris
+  - Berlin
+  - Moscow
+  - Shanghai
+  - DC
+  - Mexico City
+  - Rio de Janeiro
+
+agency:
+  - "CIA"
+  - "MI6"
+  - "KGB"
+  - "Mossad"
+  - "MI5"
+
+military:
+  - Army
+  - Rangers
+  - SAS
+  - Marines
+
+thirdworld:
+  - "Mexican"
+  - "Chinese"
+  - "African"
+  - "Middle-Eastern"
+  - "Iraqi"
+
+maguffin:
+  - "nuclear warhead"
+  - "EMP device"
+  - "biological-agent canister"
+  - "computer virus"
+  - "set of coordinates"
+  - "flash drive"
+  - "CD"
+  - "portable hard drive"
+
+SpyRole:
+  - "general"
+  - "government worker"
+  - "high-level official"
+  - "husband"
+  - "intelligence agent"
+  - "scientific researcher"
+  - "spymaster"
+  - "wife"
+  - "secretary"
+  - "bodyguard"

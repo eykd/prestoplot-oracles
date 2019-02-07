@@ -1,0 +1,119 @@
+include:
+  - characters
+  - setup
+
+Begin:
+  - "{SwordPlanetOracle}"
+
+
+SwordPlanetOracle:
+  - |
+    {Setup}
+
+    - {OurHeroes}, {fate.Fate}.
+    - {Peril.One}
+    - {Peril.Two}
+    - {Peril.Three}
+
+
+
+
+OurHeroes:
+  - |
+    {Person.One.A} {Person.One}, {Person.Two.a} {Person.Two} and {Person.Three.a} {Person.Three}
+
+Peril:
+  - "Only the {Occupation[key]}’s unusual knowledge of {Skill[key]} allows survival."
+  - "The {AlienPhysical[key]}, {AlienMental[key]} natives have {Adjective[key]} {AlienPower[key]}."
+  - "{Place.Land.prep.capitalize()} {PlaceDesc.Land} {Place.Land.type}, the {Personality[key]} {Occupation[key]} must {Activity[key]} to {Goal[key]}!"
+
+
+Adjective:
+  - mode: pick
+  - "mysterious"
+  - "great"
+  - "psychic"
+  - "ancient"
+  - "unfathomable"
+  - "unreliable"
+
+Activity:
+  - mode: pick
+  - "fight"
+  - "hide"
+  - "outwit all enemies"
+
+Goal:
+  - "survive"
+  - mode: pick
+  - "escape"
+  - "return home"
+  - "make a place in {PlaceDesc.Land} {Place.Land.type}"
+
+AlienPower:
+  - mode: pick
+  - "powers"
+  - "minds"
+  - "technology"
+  - "abilities"
+  - "magic"
+
+AlienMental:
+  - mode: pick
+  - "cowardly"
+  - "loyal"
+  - "languid"
+  - "bloodthirsty"
+  - "treacherous"
+  - "decadent"
+  - "barbarous"
+  - "savage"
+  - "friendly"
+
+AlienPhysical:
+  - mode: pick
+  - "{color[key]}-skinned"
+  - "tentacled"
+  - "{color[key]}-eyed"
+  - "gaunt"
+  - "lithe"
+  - "fanged"
+  - "furred"
+  - "scaly"
+
+color:
+  - "red"
+  - "orange"
+  - "yellow"
+  - "green"
+  - "blue"
+  - "violet"
+  - "white"
+  - "black"
+  - "octarine"
+  - "opal"
+
+fate:
+  - "marooned {Place.Land.prep} {PlaceDesc.Land} {Place.Land.type}"
+  - "transported to {PlaceDesc.Land} {Place.Land.type}"
+
+PlaceDesc:
+  - mode: pick
+  - "an unfamiliar"
+  - "a mysterious"
+  - "a dangerous"
+  - "an unknown"
+  - "an uncharted"
+
+Place:
+  - type: "land"
+    prep: "in"
+  - type: "territory"
+    prep: "in"
+  - type: "jungle"
+    prep: "in"
+  - type: "planet"
+    prep: "on"
+  - type: "island"
+    prep: "on"
+

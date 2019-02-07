@@ -1,0 +1,73 @@
+include:
+  - setup
+
+Begin:
+  - "{CasablancaOracle}"
+
+
+CasablancaOracle:
+  - |
+    {Setup}
+
+    - {Casablanca.One}
+    - {Casablanca.Two}
+    - {Casablanca.Three}
+    - {Casablanca.Four}
+
+
+
+
+Casablanca:
+  - mode: pick
+  - "A nightclub popular with tourists, expatriates, and the forces of the military occupation alike. "
+  - "The local Chief of Police; no more honest than he has to be."
+  - "A woman with a secret—and a past."
+  - "A piano player, who sees more than most people expect."
+  - "A fogged-in airstrip, with a plane idling on the runway, waiting for take-off."
+  - "A car-load of Gendarmes, ineffectually investigating a crime."
+  - "Soldiers of the occupying army, singing loud patriotic songs."
+  - "Seemingly-impassive native onlookers, their faces veiled, and their eyes hot."
+  - "A man peddling secret papers, for a price."
+  - "Swarms of beggar-children, swirling through the crowded streets."
+  - "A man on the run, seeking asylum from a foreign government."
+  - "An illegal gambling parlor, frequented by the wealthy and those who would prey upon them."
+  - "A Limousine, delivering a beautifully-dressed couple to a fashionable address."
+  - "A young girl, running through the market stalls."
+  - "A bewildered tourist, far from home, who has lost his ticket."
+  - "The blue-tiled walls and fountains of the mazelike bazaar."
+  - "A concealed doorway, leading to a private meeting place."
+  - "A balconied hotel, it's windows hung with gauze curtains that do not conceal the occupants from prying eyes."
+  - "A beautiful woman, who knows that her lover will return to his life across the sea—but not this season."
+  - "A man strolling through the crowded streets, contemplating a crime."
+  - "A girl scented with incense and patchouli, her arm linked with that of a young man as she leads him along."
+  - "A world-map with national borders already out of date, the wash of the tides of war across it shown by trails of pin-holes."
+  - "A village, now an empty shell, abandoned by it's former occupants as war approached."
+  - "Fishing boats going out with the evening tide, their destinations known only to their captains."
+  - "A load of smuggled guns, exchanged for silver at a moonlit rendezvous."
+  - "Well-armed rebels, waiting in the darkness on the border."
+  - "An obese collector of antiquities, well-supplied with cash."
+  - "A spy, trying to survive while working for both sides."
+  - "A monkey, trained to pick pockets by it's unscrupulous owner."
+  - "A foreigner who has 'gone native', no longer trusted by his countrymen."
+  - "Soldiers marching in step down the sun-lit center of a street, warily eyed by natives in the building's shadows."
+  - "An officer, betraying his oaths in service to his secret vice."
+  - "A common criminal, accused of an uncommon crime."
+  - "A treasure looted in a foreign land, imported and hidden from the authorities."
+  - "A woman scorned, who's fury has no equal. "
+  - "A bodyguard, trusted unwisely by his employer."
+  - "A gloomy bartender, wrapped up in his own personal problems, oblivious to those of his clientele."
+  - "A ghostly moon sails among the gathering storm clouds; an old man calls it an omen. "
+  - "Enemies with sweet voices, attempting to seduce or suborn."
+  - "The Muezzin's call to prayer, heard across the city from atop a high spire."
+  - "Pack-camels laden with dates and silk, led into town by wary Bedouin traders."
+  - "Veiled Arab women, gossiping as they draw water from a fountain in the square."
+  - "A tiny coffee-shop, where the mute Turkish waiters are guaranteed not to understand the languages of their customers."
+  - "A fruit-vendor, his cart overturned by a scuffle nearby."
+  - "Sun-dark Lascars, fresh from unloading foreign cargo ships, and looking for rough entertainment."
+  - "Men of rival desert tribes, guilty of a multitude of sins, eying one another warily over their sword-hilts."
+  - "A sudden sandstorm, driving strangers together at the only shelter."
+  - "Sneak-thieves, raiding a wealthy home in the middle of the night."
+  - "An unpreposessing and common object, reputed by the locals to be cursed."
+  - "Torches flaring in the night as armed men gather."
+  - "A braying donkey, overloaded with Berber carpets brought down from the hills for delivery to a rich merchant."
+  - "An Egyptian businessman with contraband to sell."

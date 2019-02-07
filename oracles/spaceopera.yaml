@@ -1,0 +1,158 @@
+include:
+  - characters
+  - setup
+
+Begin:
+  - "{SpaceOperaOracle}"
+
+SpaceOperaOracle:
+  - |
+    {SetupMarkovName}
+
+    - {SpaceOpera.One}
+    - {SpaceOpera.Two}
+    - {SpaceOpera.Three}
+    - {SpaceOpera.Four}
+
+
+  - |
+    {SetupMarkovNameNoVillain}
+
+    - {SpaceOpera.One}
+    - {SpaceOpera.Two}
+    - {SpaceOpera.Three}
+    - {SpaceOpera.Four}
+
+
+
+
+SpaceOpera:
+  - mode: pick
+  - "A galaxy on the cusp of open war."
+  - "The damaged recorder from a shipwreck, with a startling revelation."
+  - "A research team, out of communication for months."
+  - "A mysterious substance that drives men mad."
+  - "An interplanetary cold war, threatening to turn hot in an instant."
+  - "A runaway experiment, with strange, inexplicable powers."
+  - "A couple who have suddenly developed inexplicable powers."
+  - "A ne'er-do-well merchant, in search of a quick profit."
+  - "A ne'er-do-well merchant, engaged in a complex scheme."
+  - "An ancient weapon of mass destruction, left behind by a forgotten race."
+  - "An eccentric inventor, on the run from a dangerous corporate empire."
+  - "{DistressSignal[key]}"
+  - "A small community of Christians, humans and alien converts, on the aliens’ home planet."
+  - "A blue skinned orphan fleeing an arranged marriage to {his[key]} elderly tutor."
+  - "Smuggled goods of rare fortune, small enough to slip in a pocket."
+  - "An alien princess asking for asylum."
+  - "A young fertile planet with a newly awakened consciousness."
+  - "The rotting hulk of a spaceship, flagship of the old empire, found at the end of a beacon."
+  - "A gunship sold at the end of war into private hands."
+  - "A daring young explorer, fresh from {his[key]} stint at the academy, eager to prove {him[key]}self and taking on all comers."
+  - "A sassy spelunker looking for an alien god’s heart in the depths of a planet made up entirely of millions of space ship derelicts that have accreted over time."
+  - "A crew of rogues, led by a former war hero."
+  - "A young doctor, throwing away a promising career over a deadly secret."
+  - "A smuggler of dubious repute, only interested in a quick payday."
+  - "An expert assassin, laying low after a botched job."
+  - "The universally famous monarch, hiding as a citizen of no consequence."
+  - "A brilliant scientist, racing against time to find a cure for {his[key]} affliction."
+  - "The galactic savior-child stolen by pirates who want a planet as ransom."
+  - "A stranded alien, trying to get back to it’s own people."
+  - "A military AI, trying to override it’s destructive programming."
+  - "The first settlers on a newly terraformed frontier world."
+  - "A group of freedom-fighters, waging a desperate war against a tyrannical government."
+  - "A secret technology, unearthed by an archaeologist on the homeworld of a long-dead race."
+  - "A cryptic warning, left behind by an extinct alien race."
+  - "The last survivor of a brutal attack, by a previously unknown race."
+  - "The sole survivor of a terrible disaster."
+  - "A young {man[key]}, selected via lottery by an alien power."
+  - "A wayward traveler, hopping between the stars after {his[key]} homeworld was destroyed."
+  - "An accidental immortal, bored with life, who has become obsessed with carrying out some mundane task."
+  - "A group of alien scientists, trying to recover their lost data, possibly by vivisection."
+  - "An ancient temple defiled by a swarm of insect-bots, sent by a disillusioned adherent."
+  - "The first interspecies child is born."
+  - "A colony of refugees in an asteroid belt."
+  - "The body guard of a powerful black market supplier.               "
+  - "An assortment of medicines bound for a rim world on the verge of an epidemic."
+  - "A female mercenary, small and cunning."
+  - "The arrival of a Reaver raiding party on a peaceful, rim world."
+  - "A crew of rival smugglers, here to help."
+  - "A displaced Alliance tactician full of self-loathing."
+  - "A destroyed township and its silent survivors."
+  - "A tattooed monk, fearsome in battle."
+  - "A squad of veteran Alliance soldiers."
+  - "An abandoned fort used as a base for a group of bandits."
+  - "A bounty hunter who has lost his way in the face of revenge."
+  - "A judge in a lawless land."
+  - "A band of brigands demanding tribute, and their spoils so far."
+  - "A religious community who believes in abducting those who can better their existence."
+  - "A cache of military weapons, and the jealous man who found them."
+  - "The captain and crew of a transport forced into servitude because of a job gone bad."
+  - "An ident card signifying its carrier has priority Alliance access."
+  - "A man in a brown coat drinking alone in a bar on unification day."
+  - "A doctor with a prejudice against the affluent."
+  - "An Alliance agent who has gone AWOL."
+  - "A wave describing an uprising intercepted by an Alliance cruiser."
+  - "The son of a town’s oppressive leader longing for change."
+  - "A herd of stolen cattle needing to be sold."
+  - "An abandoned Alliance checkpoint."
+  - "A woman with a gun, and a hatred of the Alliance."
+  - "A daughter accused of killing her father, the mayor."
+  - "An abandoned Independent blockade runner."
+  - "A pilot with a thirst for close calls."
+  - "A drought, crushing a farms existence, and the irrigation committee demanding too much for relief."
+  - "A core world politician on the run to the rim."
+  - "A space station locked down until the killer of a high ranking official can be found."
+  - "The mayor of a dusty town, and his group of murderous enforcers."
+  - "An alliance operative searching for an escaped reader."
+  - "A legendary gambler being hunted by Alliance agents due to his ability to seemingly read others thoughts"
+  - "A mining community desperate for income discovers live ordinance from an Alliance patrol boat."
+  - "A self serving mercenary looking for work."
+  - "The shepherd who lost his flock."
+  - "A purveyor of stolen goods, who had his goods stolen."
+  - "A registered companion tired of her work."
+  - "A bounty hunter on the trail of his relative."
+  - "An exiled sheriff looking for acceptance."
+  - "A crime boss famed for his torture of those who fail, calls upon a debt owed."
+  - "A member of the syndicate willing to tell all."
+  - "A Reaver warship approaching a space station."
+  - "The captain of a lost ship, and a lost crew, searching for forgiveness."
+  - "A brash young engineer, with a knack for biting off more than they can chew."
+  - "A trigger happy crew member who forgot the loot in favor of shooting folks up."
+  - "A bandit camp, deserted hastily."
+  - "A bar full of patrons, robbed by a group of women."
+  - "An angry man desperate to hide the parentage of a whore’s child."
+  - "A former independent soldier mourning the death of his wife due to an Alliance experiment."
+  - "A group of rebels waiting to strike at the Alliance."
+  - "A young girl, naked, packed into a cryogenic box for transport."
+  - "An antique laser pistol, the last of its kind."
+  - "A beautiful con artist, pretending to be an innocent."
+  - "A pair of emotionless men, wearing blue gloves, on Alliance business."
+  - "An Alliance cruiser, on the lookout for scavengers."
+  - "A Rebel veteran, down on his luck, involved in a dangerous scheme."
+  - "A fake distress beacon."
+
+DistressSignal:
+  - "A distress signal, with no apparent source."
+  - "A distress signal, from {DistressedPlace[key]}."
+  - "A distress signal, from {DistressedShip[key]}."
+
+DistressedPlace:
+  - "{PlaceStatus[key].a} {PlaceStatus[key]} planet"
+  - "{PlaceStatus[key].a} {PlaceStatus[key]} station"
+  - "{PlaceStatus[key].a} {PlaceStatus[key]} colony"
+
+PlaceStatus:
+  - abandoned
+  - unexplored
+  - populous
+  - mysterious
+  - important
+  - frontier
+  - research
+
+
+DistressedShip:
+  - a survey ship
+  - a research ship
+  - a warship
+  - a cargo ship

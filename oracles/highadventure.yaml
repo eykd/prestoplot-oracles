@@ -1,0 +1,101 @@
+include:
+  - characters
+  - setup
+
+Begin:
+  - "{HighAdventureOracle}"
+
+
+HighAdventureOracle:
+  - |
+    {Setup}
+
+    - {HighAdventure.One}
+    - {HighAdventure.Two}
+    - {HighAdventure.Three}
+    - {HighAdventure.Four}
+
+
+
+  - |
+    {SetupNoVillain}
+
+    - {HighAdventure.One}
+    - {HighAdventure.Two}
+    - {HighAdventure.Three}
+    - {HighAdventure.Four}
+
+
+
+
+HighAdventure:
+  - mode: pick
+  - Army ants, devouring everything in their path.
+  - Cannibal pygmies.
+  - Canoes on the banks of a sluggish tropical river, their bottoms slashed by whomever captured their original owners.
+  - Kali-worshiping stranglers, attempting to bring about the end of the world.
+  - Narrow, claustrophobic catacombs, the final resting place of generations of monks and priests.
+  - Spear-wielding tribesmen, furious at a foreigner’s thoughtless transgression.
+  - The black sheep of a family of otherwise unimpeachable reputation.
+  - The bones of the members of a lost expedition, suddenly discovered.
+  - The daughter of a renowned researcher, now the only one who knows his secrets.
+  - The mummy of an ancient priest, preserved with arcane and terrible rites.
+  - The sword of a great general, thought to have been entombed with him.
+  - The throbbing of distant tribal drums; the natives are restless.
+  - The thuggish lieutenant of an evil genius, chafing under his leader’s restrictions.
+  - The tomb of an age-old king, legendary for his wickedness, inscribed with curses against those who would rob it.
+  - Treacherous underlings, ready to betray their employer.
+  - Venomous spiders, used as weapons by a stealthy assassin.
+  - Yet another hasty exit made under hostile circumstances.
+  - An ancient artifact, reputed to have great power.
+  - An ancient city, buried by the dunes for aeons, recently resurfaced.
+  - An ancient pendant, its riddle a key to secret treasures.
+  - An ancient temple, filled with traps.
+  - An army of tattered, zombie-like warriors.
+  - A bazaar, filled with exotic goods and greedy vendors.
+  - A bejeweled scepter, the symbol of rulership of long-dead kings.
+  - A caravanserai on the Silk Road, where merchants bearing exotic goods pause on their long journey to market.
+  - A cunning informer, ingratiating himself to his targets before selling them out.
+  - An expedition to a far corner of the globe, slowly running low on supplies.
+  - An experimental aircraft, fueled and ready.
+  - A fierce sandstorm, howling across the desert with seemingly malevolent intent.
+  - A golden idol, worshipped by the local peoples.
+  - A group of sword-wielding assassins.
+  - A high waterfall, seemingly the only escape from impending doom.
+  - A horse-race through the desert, with a fabulous prize for the winning rider.
+  - An interrogator, whose every word strikes fear into his ‘clients’.
+  - An ivy-clad university, isolated from the cares of everyday life.
+  - A jovial patriarch, surrounded by his extended family.
+  - A lost city, where the descendants of an ancient culture still survive.
+  - A magnificent white stallion, fast as the wind.
+  - A tattered, creased, and bloodstained map, showing the route to a great treasure.
+  - A massive excavation at an ancient site.
+  - A massive tome, its owner unaware that it bears within its pages the mystic secrets of immortality.
+  - A motorcycle and sidecar, careening down a narrow road full of switchbacks.
+  - A narrow opening, concealing both the release mechanism for a secret doorway and a deadly trap.
+  - An opium den, its narcotic-smoke-wreathed denizens oblivious to the squalor around them.
+  - A pack of wild dogs, vicious and starving.
+  - A pet monkey which is far more than it seems.
+  - A pit filled with asps and vipers.
+  - A prestigious museum, seeking the centerpiece for an important exhibit.
+  - A pyramid, long concealed beneath desert sands, targeted by tomb robbers.
+  - A ramshackle airship and its overly-cautious pilot.
+  - A savage tribe of head-hunters, defending their territory against encroachment.
+  - A seaplane which has seen better days.
+  - A secret city, concealed in the jungle.
+  - A secret text, long thought lost, which is suddenly rediscovered.
+  - A sect of warrior monks, dedicated to protecting their holy site.
+  - A seedy bar, with a dangerous clientele.
+  - A seemingly worthless trinket, which will bring its owner nothing but trouble.
+  - A small arsenal of handguns, neatly rolled into a leather satchel.
+  - A soldier-of-fortune, willing to do anything for a price.
+  - A stone city, once the seat of a great kingdom, now choked by the jungle.
+  - A team of Nazi archaeologists, looking for powerful artifacts.
+  - A Tibetan monastery, home to a secretive sect.
+  - A town, recently abandoned by its inhabitants, with food still on the tables and chores left half-complete.
+  - A tramp steamer, probably used for smuggling–or worse.
+  - A Treasure-hunter, seeking a magnificent artifact.
+  - A truck full of explosives.
+  - An urbane, debonair rival.
+  - A woman wronged by the man she loved.
+  - A young scholar, offered the chance to prove her heretical theories.

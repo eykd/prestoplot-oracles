@@ -1,0 +1,168 @@
+include:
+  - characters
+  - setup
+
+Begin:
+  - "{SuperHeroOracle}"
+
+
+SuperHeroOracle:
+  - |
+    {Setup}
+
+    - {ComicBookSuperHero.One}
+    - {ComicBookSuperHero.Two}
+    - {ComicBookSuperHero.Three}
+    - {ComicBookSuperHero.Four}
+
+
+  - |
+    {Setup}
+
+    {ModernSuperHero}
+
+
+  - |
+    {SetupNoVillain}
+
+    - {ComicBookSuperHero.One}
+    - {ComicBookSuperHero.Two}
+    - {ComicBookSuperHero.Three}
+    - {ComicBookSuperHero.Four}
+
+
+  - |
+    {SetupNoVillain}
+
+    {ModernSuperHero}
+
+
+
+ComicBookSuperHero:
+  - mode: pick
+  - "{He[key]} takes up the mantle of a fallen {hero[key]}, desperate to make a difference."
+  - "A young man discovers his birthright and the mask and cape that go with it."
+  - "By day they are lovers; by night they are on other sides of the law. Neither knows the other’s secret."
+  - "An alien civilization bestows a gift of great power to an ordinary youth."
+  - "Changed by radiation, {he[key]} manifests strange powers of the mind."
+  - "{He[key]} is the only surviving volunteer of a genetic experiment. They wonder how long until {he[key]} realizes they can’t control {him[key]}."
+  - "His power is in the suit."
+  - "{He[key]} was content with being the sidekick until the Crisis."
+  - "A masked woman seeks glory and fame."
+  - "The millionaire play{boy[key]} finds {his[key]} true calling among the rooftops, beating up petty criminals."
+  - "{He[key]} came to this planet only recently and tries to fit in."
+  - "Their costumes are mirror images of each other; they can never touch."
+  - "{He[key]} uses future tech here in the past to avert the apocalypse."
+  - "Alarms from the downtown district echo in the city streets."
+  - "A mysterious craft appears over the city."
+  - "A three-alarm fire in the slum district."
+  - "A jumper on the bridge."
+  - "The visiting jewelry display at the museum provides a tempting target."
+  - "A strange visitor from another world arrives in the city with a portent of danger."
+  - "A rift in time disgorges villains from the past."
+  - "A cry for help turns out to be a trap for our heroes."
+  - "A gathering of heroes and villains from around the world."
+  - "The intrepid reporter love interest is in trouble again."
+  - "A gathering of the world’s brightest minds."
+  - "The test of a military weapon goes horribly wrong."
+  - "A government crackdown on costumed vigilantes."
+  - "An underground lair, filled with trophies."
+  - "A penthouse apartment with a secret room."
+  - "The warehouse by the docks, not as abandoned as one might think."
+  - "An orbiting satellite, hidden from the world."
+  - "A flying fortress, invisible to radar."
+  - "The abandoned subway station, never completed and forgotten, now has a new use."
+  - "Beneath the river, an underwater habitat. "
+  - "The sign on the building read “CONDEMNED”, but inside they met."
+  - "The rooftops of the block were all interconnected and had convenient shadows."
+  - "The Gothic cathedral had been undergoing renovations for years; a hidden rooftop entrance was all the security {he[key]} needed."
+  - "Under the ice, the crashed spaceship lies."
+  - "The futuristic city on the Moon, shielded from prying eyes."
+  - "The abandoned government bunker, deep in the mountain."
+  - "His parents murdered, {he[key]} sets off on a complicated method of revenge."
+  - "{He[key]} isn’t fueled by hatred, {he[key]} is Hatred."
+  - "A trio of villains plot their revenge on the {hero[key]} that did them wrong."
+  - "{He[key]} finds committing the perfect crime thrilling."
+  - "Just one more big score, and {he[key]} can retire to that island paradise."
+  - "The parasitic hive-mind seeks hosts."
+  - "Who is behind the robot army?"
+  - "Two villains, after the same score, work against each other."
+  - "A vain billionaire wishes to control the nation."
+  - "A vast organization of masked terrorists plots to overthrow all world governments."
+  - "An immortal villain wages a secret war against all that is good."
+  - "They saved Hitler’s brain!"
+  - "{He[key]}’s a former {hero[key]}, driven mad by the loss of a loved one."
+  - "A museum devoted to gigantic props."
+
+
+ModernSuperHero:
+  - |
+    - {Origins}
+    - {Events}
+    - {Stuff}
+    - {Villainy}
+  - |
+    - {Sub.One}
+    - {Sub.Two}
+    - {Sub.Three}
+    - {Sub.Four}
+
+
+Sub:
+  - "{Origins[key]}"
+  - "{Events[key]}"
+  - "{Stuff[key]}"
+  - "{Villainy[key]}"
+
+
+Origins:
+  - mode: pick
+  - "The citizen of a long hidden nation braving the unknown of the wider world."
+  - "The lone survivor of a far off, destroyed planet, stranded here on earth."
+  - "A patriot, first in line to the defense of their country and it’s ideals."
+  - "A vigilante on a crusade against crime, driven by a tragic past."
+  - "A haggard yet determined soldier hailing from the future, trapped in our own time."
+  - "A former assassin seeking redemption for past sins."
+  - "A member of a corp of galactic protectors patrolling this sector of space."
+  - "A young {hero[key]}, who has discovered that with great power comes great responsibility."
+  - "A demon, rejecting {his[key]} heritage and committed to protecting mankind from darkness."
+
+
+Events:
+  - mode: pick
+  - "An asteroid headed straight for earth, not what it seems."
+  - "A secret identity publicly exposed by an arch-nemesis."
+  - "Uncanny power transfered to an innocent bystander."
+  - "A long lost {hero[key]} seemingly returned from the dead."
+  - "A new {hero[key]}, whose face mirrors your own."
+  - "A former {hero[key]}, corrupted and enslaved to a diabolical will."
+  - "A small child blessed or cursed with unimaginable and uncontrollable power."
+  - "A champion of justice and the common man, leaving it all behind to seek a normal life of {his[key]} own."
+  - "The mantle of a costumed identity passed down to a young but capable sidekick."
+  - "A loved one found murdered, all evidence points to you."
+  - "The hostile takeover of an powerful, international corporation by a shadowy entity."
+  - "A grieving lover cradling the body of a fallen {hero[key]}."
+
+Stuff:
+  - mode: pick
+  - "A lost, yet inhabited, city hidden beneath the sea."
+  - "A previously undiscovered settlement on the dark side of the moon."
+  - "A alien talisman granting cosmic power."
+  - "A forbidden tome destined to awaken a slumbering evil."
+  - "An orbital satellite capable of monitoring all major post-human activity."
+  - "An international agency intervening in post-human emergencies."
+  - "An alien fleet darkening the skies around the world."
+
+Villainy:
+  - mode: pick
+  - "The lord of a burning realm, seeking to corrupt the most pure soul."
+  - "A long-standing enemy, disguised as familiar ally."
+  - "The despotic monarch of an alien civilization with grim designs of conquest."
+  - "Former side-kick seeking painful retribution against {his[key]} one-time allies."
+  - "A minion secretly plotting the betrayal of {his[key]} master."
+  - "A former {hero[key]} capable and determined to grasp the reigns of human destiny, to save us from ourselves."
+
+
+hero:
+  - >
+    {'heroine' if Sex[key] == 'female' else 'hero'}

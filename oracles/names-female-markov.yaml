@@ -1,0 +1,15 @@
+include:
+  - names-markov
+
+Begin:
+  - |
+    {NamesMarkov['female'].one}
+    {NamesMarkov['female'].two}
+    {NamesMarkov['female'].three}
+    {NamesMarkov['female'].four}
+    {NamesMarkov['female'].five}
+    {NamesMarkov['female'].six}
+    {NamesMarkov['female'].seven}
+    {NamesMarkov['female'].eight}
+    {NamesMarkov['female'].nine}
+    {NamesMarkov['female'].ten}

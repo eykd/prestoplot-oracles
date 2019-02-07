@@ -1,0 +1,78 @@
+include:
+  - setup
+
+Begin:
+  - "{MysteryOracle}"
+
+MysteryOracle:
+  - |
+    {Setup}
+
+    - {Mystery.One}
+    - {Mystery.Two}
+    - {Mystery.Three}
+    - {Mystery.Four}
+
+
+
+
+Mystery:
+  - mode: pick
+  - "Betrayal by a trusted friend."
+  - "Cloaked figures, moving in darkness, surrounding their next victim."
+  - "Collaborators, working against their government from within."
+  - "Dimly flickering neon lights, intermittently illuminating a body sprawled across a hotel bed."
+  - "Foreign saboteurs, secretly plotting to plant a bomb."
+  - "Jackbooted thugs, oppressing the locals."
+  - "Secrets, once overheard, are secrets no more."
+  - "The butler for a family of the city’s elite; skilled, impeccably dressed, bearing a secret he will keep to his grave."
+  - "The byways, stalls, and shops of an exotic marketplace."
+  - "The cigar-chomping editor of a daily newspaper, ready to break the story of a political scandal."
+  - "The kingpin of crime in a large city, with a hand in every dirty deal."
+  - "The secret plans to a terrible new weapon, concealed in a lipstick case."
+  - "An airport, filled with lonely travelers."
+  - "A barnstormer, keeping mum about the fact that he flew for an enemy squadron during the Great War."
+  - "A beautiful woman, estranged from her husband."
+  - "A birthright, bestowed upon an impostor, sought by the rightful heir."
+  - "A cargo ship, of uncertain registry, containing elaborate radio-reception gear."
+  - "A charming society couple, with a penchant for getting into trouble."
+  - "A coded message, delivered unwittingly to the wrong recipient."
+  - "A criminal mastermind, holding a city hostage with his latest death machine."
+  - "A cult of fanatic believers, dedicated to bringing about the end of the world."
+  - "A cynical Police Captain, patriotic after his own fashion."
+  - "A double agent, playing both sides, fearing betrayal from both sides."
+  - "An eminent scientist, sought by all for his knowledge."
+  - "A famous actor, accused of treason."
+  - "A former patriot, now looking out only for himself."
+  - "A genius polymath, with the inflexible habit of wearing clothing of only one color at a time."
+  - "A glamorous casino, where the games are not entirely on the up-and-up."
+  - "A group of noted experts, each a master in his field, who seldom agree on anything."
+  - "A group of soldiers on leave, laughing and singing."
+  - "A highly placed informant, passing secrets to her nations’ enemies."
+  - "An illicit betting parlor, with a dozen bookies and phone-operators on staff."
+  - "A killer, on the run and seeking asylum."
+  - "A legendary G-man, known for his incorruptibility, and the inflexible way he enforces the law."
+  - "A little girl, alone and lost on the streets of an unfamiliar city."
+  - "A luxury hotel, with a very discreet staff."
+  - "A master of disguise, who can be anyone at any time."
+  - "A masterful espionage agent, whose name has been erased from all records; only a number remains."
+  - "A network of spies and informants, selling information to the highest bidder."
+  - "A piano player who sees everything, and keeps most of it to himself."
+  - "A reprobate to whom bastardy proved a spur."
+  - "A restaurant, the meeting place between rival factions."
+  - "A secret society, whose membership requirements are… unique."
+  - "A series of poisonings, seemingly unrelated."
+  - "A shadowy avenger, righting wrongs by night."
+  - "A sigil-ring, bearing the shape of a black-widow spider."
+  - "A small boat, freely drifting, abandoned by her crew."
+  - "A South American Indian, wearing a feathered head-dress and bearing an obsidian knife, discovered dead in the city park."
+  - "A stage magician and escape artist, exposing fake mediums and phony psychics."
+  - "A stalwart hero, the product of years of advanced and secret training, sadly lacking in social abilities."
+  - "A submarine pen, used as a base for espionage."
+  - "A tommy-gun toting gun-moll, spoiling for a fight."
+  - "A torch singer, dreaming of making the big time."
+  - "A two-bit hood, suddenly in possession of a secret that will make him rich—or get him killed."
+  - "A victim of blackmail, desperate to keep their secret past a secret."
+  - "A wealthy industrialist and inventor, developing an important and secret military project."
+  - "A wealthy philanthropist, secretly funding a network of agents."
+  - "A young reporter, more interested in chasing skirts than chasing stories."

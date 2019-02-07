@@ -1,0 +1,136 @@
+include:
+  - setup
+
+Begin:
+  - "{WesternOracle}"
+
+WesternOracle:
+  - |
+    {Setup}
+
+    - {Western.One}
+    - {Western.Two}
+    - {Western.Three}
+    - {Western.Four}
+
+
+  - |
+    {SetupNoVillain}
+
+    - {Western.One}
+    - {Western.Two}
+    - {Western.Three}
+    - {Western.Four}
+
+
+
+Western:
+  - mode: pick
+  - "A “mail-order bride” come from back East to meet her new husband."
+  - "A “nun” with an interesting set of vices."
+  - "A band of outlaws seeking a place to hide."
+  - "A barber-dentist who both gambles and drinks to excess."
+  - "A black ex-slave unafraid of hard work."
+  - "A bounty hunter, easy to track by the trail of dead he leaves behind."
+  - "A box canyon with only a single exit, rustlers lying in ambush."
+  - "A box full of gold buried in a half-forgotten cemetery."
+  - "A cattle baron in need of men without conscience to drive off a stubborn settler."
+  - "A cattle drive, beset by rustlers."
+  - "A chainmail shirt found on the body of a dead Lakota Sioux warrior."
+  - "A Chinese railroad camp–and the hatchet-wielding highbinders who run it like a prison."
+  - "A Colt pistol with a silver rattlesnake inlay on the grips."
+  - "A company of US Cavalry troopers riding hard on the trail of an Apache war party."
+  - "A corrupt Indian agent buying cases of liquor."
+  - "A cynical gambler with a pair of loaded dice and a derringer up his sleeve."
+  - "A dangerous-looking man in a flat-brimmed hat, its hatband ringed with tiny skulls made of Mexican silver."
+  - "A dead man’s daughter trying to sell a mine that might have gold in it."
+  - "A desperate group of Mexican outlaws on the wrong side of the border."
+  - "A dime novel, telling the fictional exploits of a real, and infamous, gunman."
+  - "A dude from back East discovering the West isn’t quite what he expected."
+  - "A famous gunfighter concealing his identity to avoid being challenged."
+  - "A fine hotel where visiting cattlemen stay while they make their big-money deals."
+  - "A former Confederate soldier who hasn’t yet given up the war."
+  - "A frontier saloon where the whiskey and the women are both dangerous."
+  - "A gambler, down on his luck, with nothing to his name but a deck of cards."
+  - "A good place for an ambush."
+  - "A gunman hunting an accused rapist, but starting to doubt his quarry’s guilt."
+  - "A headstrong woman who’s too good for any man."
+  - "A high-stakes poker game where a fifth ace just hit the table."
+  - "A kidnapper double-crossed by his partner."
+  - "A lonely buckboard… its only cargo a tiny pine casket."
+  - "A lonely mesa, a day’s ride out of town, and the faint line of campfire smoke rising from it."
+  - "A love-hate relationship between a woman and the bandit who captured her."
+  - "A man bent on revenge for his family’s murder, and a bounty hunter who wants to take the killers alive."
+  - "A man taking up a gun for the first time, ready to kill."
+  - "A man tracking down his wife, kidnapped during their wedding and auctioned to a whorehouse."
+  - "A man with his neck in a noose, hanging from a dead oak tree."
+  - "A Mexican peon who would sell his mother for two bits."
+  - "A Mormon handcart company starting West far too late in the year."
+  - "A nameless stranger, drifting into town intent on upsetting the balance of power."
+  - "A Pinkerton agent hot on the trail of a gang of train thieves."
+  - "A powerful mayor scaring ranchers off their land."
+  - "A pretty young schoolmarm, the most educated woman in town."
+  - "A professional gunman hired for his reputation and given a Sheriff’s badge."
+  - "A retired gunfighter who can’t seem to ’’stay’’ retired."
+  - "A riderless, sweat-lathered cavalry horse galloping into town."
+  - "A rumor of a fortune in Confederate gold."
+  - "A sacred mesa, defiled by rapacious miners, and the price to be paid."
+  - "A seller of patent medicines, in need of a colorful assistant."
+  - "A sharpshooter who had his hands crippled by a former student."
+  - "A shattered man pardoned from a prison work camp."
+  - "A sheriff who puts away his star and heads south to deal some justice."
+  - "A showdown at high noon on a deserted and dusty street, the townsfolk peering fearfully from cover."
+  - "A shy local youth tagging along where no innocent should be."
+  - "A silver dollar with a bullet hole cleanly through the center."
+  - "A skinny cowpoke, bow-legged and leather-skinned, enjoying the first whiskey he’s had all month."
+  - "A soiled dove with a good memory and a bad temper."
+  - "A sour old prospector limping into town beside his loaded mule."
+  - "A stagecoach full of strangers traveling together."
+  - "A tame horse with a hidden brand."
+  - "A team of grifters with a satchel full of blank land deeds."
+  - "A tin star, needing polish, having been unworn for a long time."
+  - "A train full of passengers, all curious about the occupant of the fancy private car in the rear."
+  - "A traveling circus rides into town."
+  - "A traveling preacher who once had a far different career."
+  - "A tribe of Indians forced by privation to hunt for game outside their reservation."
+  - "A wagon loaded with dynamite and the skittish horses pulling it."
+  - "A wagon train headed into Indian territory without sufficient knowledge or preparation."
+  - "A wealthy widow determined to clean up her town."
+  - "A wild young man, fast with a gun, who thinks he has nothing to lose."
+  - "A young deputy who’s runnin’ things while the Sheriff is gone."
+  - "A young feller, dangerous with whiskey and beginner’s luck, testing his new six-gun."
+  - "A young Iroquois brave, searching for his first scalp."
+  - "A young tinhorn from back East looking to make his fortune."
+  - "A young wife and the silent gunman she hired to avenge her husband’s death."
+  - "An Apache war party lying in a dry riverbed."
+  - "An entrance to a huge sinkhole, intentionally hidden in the scrub."
+  - "An honest banker with a silver watch and a dusty three-piece suit."
+  - "An honest Chinese coolie looking for money to send back home."
+  - "An Indian trading post on the edge of a deep valley."
+  - "An isolated stockade fort manned by a troop of U.S. cavalry."
+  - "A newly-abandoned telegraph station with the wires cut."
+  - "An old cannon with a broken wheel–the only defense a small town has."
+  - "An ugly range war with broken fences and murdered cowpokes."
+  - "An upright piano out in the rain."
+  - "Many men and horses went this way, five hours back."
+  - "The bank where every business in town keeps its money, robbed by masked outlaws."
+  - "The box-canyon hideout of a gang of notorious outlaws."
+  - "The boy who out-ropes and out-rides everybody on the cattle drive… is not a boy."
+  - "The girl who shot her husband in the neck."
+  - "The gruff editor of the local paper, telling the truth at any cost."
+  - "The half-dead oak tree where the Vigilance Committee holds its hangings."
+  - "The immigrant sodbuster and his enormous, hardscrabble family, cruelly cheated."
+  - "The local undertaker, concerned that his business is about to improve."
+  - "The sudden discovery of a gold deposit."
+  - "The town drunk, witness to a crime he can’t completely remember."
+  - "Three brothers who refuse to pay protection money to bandits."
+  - "Three dead outlaws propped up for a photograph."
+  - "Two bounty hunters going after the same prey."
+  - "Two Indian tribes smoking the peace pipe together."
+  - "Two men on horseback watching the town below from atop a high ridge."
+  - "Two men plot to break into a bank, in the middle of a revolution."
+  - "Vultures circling over a distant butte."
+  - "The new sheriff in town, ready to prove his worth."
+  - "A drifter arrives, close-mouthed, guarding a terrible secret."
+  - "A boy, ready to prove himself a man."
+  - "A murdered man, his brothers out for revenge."
