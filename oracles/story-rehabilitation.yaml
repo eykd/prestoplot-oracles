@@ -1,0 +1,163 @@
+include:
+  - characters
+  - conflict
+  - crises
+  - hooks
+  - inciting-incidents
+  - physical-description
+  - result
+  - story-crime
+  - story-ending
+  - yes-but
+
+render: jinja2
+
+Begin:
+  - |
+    {{Rehabilitation}}
+
+Rehabilitation:
+  - |
+    # Rehabilitation
+
+    ## Characters
+
+    {{RehabilitationCharacters}}
+
+    ## Plot
+
+    {{RehabilitationPlot}}
+
+
+RehabilitationCharacters:
+  - |
+    ### {{Victim}} ({{Sex.Victim}}): The Victim
+
+    {{FullDescription.Victim}}
+
+    ### {{Criminal}} ({{Sex.Criminal}}): The {{CriminalPosture.capitalize()}} Criminal
+
+    {{FullDescription.Criminal}}
+
+    {{CriminalAct.Criminal}}
+
+    ### {{Healer}} ({{Sex.Healer}}): The Healer
+
+    {{FullDescription.Healer}}
+
+    ### {{ThirdParty}} ({{Sex.ThirdParty}}): A Third Party
+
+    {{FullDescription.ThirdParty}}
+
+
+RehabilitationPlot:
+  - |
+    ### Beginning
+
+    Hook, Characters, Trouble, Conflict.
+
+    {{RehabilitationBeginning}}
+
+    Twist: {{YesButEverything.beginning}}
+
+    ### First Complication
+
+    Grief, Struggle, Conflict.
+
+    {{RehabilitationMiddle.one}}
+
+    {{RehabilitationMiddle.two}}
+
+    Twist: {{YesButEverything.first}}
+
+    ### Second Complication
+
+    {{RehabilitationMiddle.three}}
+
+    {{RehabilitationMiddle.four}}
+
+    Setback: {{YesButEverything.second}}
+
+    ### Resolution
+
+    Shovel Difficulty, All is Lost, Self-rescue, Conflict.
+
+    {{RehabilitationEnd}}
+
+
+RehabilitationBeginning:
+  - |
+    Hook: {{Hook.Rehabilitation}}
+
+    {{CriminalAct.Criminal}}{% if Result.happened_prior %} This takes place before the story begins.{% endif %} {{He.Criminal}} {% if Result.accomplice %}is assisted by {{ThirdParty}}.{% else %}acts alone.{% endif %}
+
+    {{Victim}} {% if Result.victim_active %}is active and present throughout the story and {{VictimPosture}}{% else %}has been incapacitated by the crime, but at the last moment {{VictimPosture}}{% endif %}.
+
+    {{Healer}} {% if Result.witnessed %}witnessed the crime{% else %}was elsewhere at the time{% endif %}. {{HealerPosture}}
+
+VictimPosture:
+  - desires vengeance on {{Criminal}}
+  - does not hold a grudge against {{Criminal}}
+  - seeks the restoration of {{Criminal}}
+  - makes it clear that {{he.Victim}} does not believe in vengeance
+  - must put {{his.Victim}} ideals of nonviolence to the test
+
+HealerPosture:
+  - "{{He.Healer}} knows both {{Victim}} and {{Criminal}} and doesn't want to see either one harmed."
+  - "{{He.Healer}} takes pride in helping restoration along."
+  - "{{He.Healer}} loves {{Criminal}} dearly and wants to see {{him.Criminal}} restored."
+  - "{{He.Healer}} loves {{Criminal}} dearly and risks his reputation to see {{him.Criminal}} restored."
+  - "{{He.Healer}} loves {{Victim}} dearly yet cannot countenance vengeance. Reconciliation is the only viable option."
+  - "{{He.Healer}} loves {{Victim}} dearly and must let go of {{his.Healer}} anger."
+
+CriminalPosture:
+  - |
+    {% if Result.remorse %}remorseful{% else %}unrepentant{% endif %}
+
+RehabilitationMiddle:
+  - mode: pick
+  - "{{Criminal}} and {{Healer}} meet, and hard words are exchanged. {{Criminal}} expresses {{his.Criminal}} {% if Result.remorse %}remorse{% else %}justification{% endif %}."
+  - "{{ThirdParty}} threatens {{Healer}} if {{he.Healer}} doesn't stay out of it."
+  - The location adds further to the danger and conflict.
+  - "{% if Result.victim_active %}{{Victim}}{% else %}{{ThirdParty}}{% endif %} complicates things further with attempts to help."
+  - "{% if Result.victim_active %}{{Victim}}{% else %}{{ThirdParty}}{% endif %} complicates things further with attempts to meddle."
+  - "{{Healer}} delays punishment of {{Criminal}}."
+  - "{{Healer}} seeks a confession from {{Criminal}}."
+  - "Emboldened, {{Criminal}} acts to hurt someone else."
+  - "{{Healer}} attempts to work with authorities to seek mercy."
+  - "{% if Result.victim_active %}{{Victim}}{% else %}{{ThirdParty}}{% endif %} attempts to work with authorities to seek mercy."
+  - "{{Healer}} almost catches up with {{Criminal}}."
+  
+
+RehabilitationEnd:
+  - |
+    {{Healer}} catches up with {{Criminal}}. Now reconciliation can begin{% if Result.accomplice %}, but first {{Healer}} must deal with {{ThirdParty}}.{% else %}!{% endif %}
+
+    {{Criminal}}{% if Result.remorse %} demonstrates {{his.Criminal}} remorse{% else %}begins to self-destruct, and {{Healer}} must make a last-ditch effort to save {{him.Criminal}}{% endif %}. Will {{he.Criminal}} survive?
+
+    {%- if Result.victim_active %}
+
+    {{Victim}} {{VictimPosture}} How will {{he.Victim}} deal with {{Criminal}}'s capture?
+    {%- endif %}
+
+    {{ThirdParty}} expresses a desire to see {{Criminal}} punished for {{his.Criminal}} crimes.
+
+    How does the setting play into {{Healer}}'s mode of healing?
+
+    What has {{Healer}} risked, and what will {{he.Healer}} lose? How has {{his.Healer}} relationship with {{Criminal}} changed?
+
+    {{StoryEnd.Healer}}
+
+Criminal:
+  - "{{Name.Criminal}}"
+Victim:
+  - "{{Name.Victim}}"
+ThirdParty:
+  - "{{Name.ThirdParty}}"
+Healer:
+  - "{{Name.Healer}}"
+
+
+RehabilitationResult:
+  - yes
+  - no

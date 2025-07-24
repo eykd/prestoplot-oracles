@@ -1,0 +1,209 @@
+include:
+  - characters
+  - conflict
+  - crises
+  - hooks
+  - inciting-incidents
+  - physical-description
+  - result
+  - story-ending
+  - yes-but
+
+render: jinja2
+
+Begin:
+  - |
+    {{Flight}}
+
+Flight:
+  - |
+    # Flight
+
+    ## Characters
+
+    {{FlightCharacters}}
+
+    ## Plot
+
+    {{FlightPlot}}
+
+
+FlightCharacters:
+  - |
+    ### {{Fugitive}} ({{Sex.Fugitive}}): The Fugitive
+
+    {{FullDescription.Fugitive}}
+
+    ### {{Punisher}} ({{Sex.Punisher}}): The Punisher
+
+    {{FullDescription.Punisher}}
+    {%- if Result.witness %}
+
+    ### {{Witness}} ({{Sex.Witness}}): The Witness
+
+    {{FullDescription.Witness}}
+    {%- endif %}
+    {%- if Result.ally %}
+
+    ### {{Ally}} ({{Sex.Ally}}): The Ally
+
+    {{FullDescription.Ally}}
+    {%- endif %}
+    
+
+
+FlightPlot:
+  - |
+    ### Beginning
+
+    Hook, Characters, Trouble, Conflict.
+
+    {{FlightBeginning}}
+
+    Twist: {{YesButEverything.beginning}}
+
+    ### First Complication
+
+    Grief, Struggle, Conflict.
+
+    What punishment will {{Fugitive}} suffer if caught?
+
+    What motivates {{Punisher}}? 
+
+    {{FlightMiddleProblem.one}} {{FlightMiddleSolution.one}}
+
+    {% if Result.steadfast -%}
+    {{Fugitive}} remains steadfast.
+    {%- else -%}
+    {{Fugitive}} begins to show signs of stress.
+    {%- endif %}
+
+    {{FlightMiddleProblem.two}} {{FlightMiddleSolution.two}}
+
+    Twist: {{YesButEverything.first}}
+
+    ### Second Complication
+
+    {{FlightMiddleProblem.three}} {{FlightMiddleSolution.three}}
+
+    {% if Result.steadfast -%}
+    {{Fugitive}} remains steadfast.
+    {%- else -%}
+    The stress is beginning to wear on {{Fugitive}}, and {{his.Fugitive}} personality is beginning to change.
+    {%- endif %}
+
+    {{FlightMiddleProblem.four}} {{FlightMiddleSolution.four}}
+
+    Setback: {{YesButEverything.second}}
+
+    ### Resolution
+
+    Shovel Difficulty, All is Lost, Self-rescue, Conflict.
+
+    {{FlightEnd}}
+
+
+FlightBeginning:
+  - |
+    Hook: {{Hook.Flight}}
+
+    {{FugitiveOrigin[PunishmentType.Fugitive]}} How? Why?
+    {%- if Result.taste_of_punishment %} {{Fugitive}} already has a taste of punishment.
+    {%- endif %}
+
+    {{Punisher}} gives chase. How? Why?
+    {%- if Result.ally %}
+
+    {{Ally}} is prepared to help {{Fugitive}}. Why?
+    {%- endif %}
+
+PunishmentType:
+  - just
+  - injust
+  - unjust
+
+FugitiveOrigin:
+  just:
+    - "{{Fugitive}} has committed a crime, though {{his.Fugitive}} actions may be justifiable."
+  injust:
+    - "{{Fugitive}} is accused of a crime {{he.Fugitive}} did not commit. {{He.Fugitive}} seeks to expose the real criminal."
+    - "{{Fugitive}} is accused of a crime {{he.Fugitive}} did not commit. {{He.Fugitive}} just wants to escape."
+  unjust:
+    - "{{Fugitive}} has exposed an evil practice."
+    - "{{Fugitive}} has exposed an illegal practice."
+    - "{{Fugitive}} has offended the wrong people."
+    - "{{Fugitive}} just wants to get by without the authority's help."
+    - "{{Fugitive}} has seen something {{he.Fugitive}} shouldn't have, and is now a threat."
+    - "{{Fugitive}} is protecting a friend who is in trouble."
+    - "The authorities mistakenly consider {{Fugitive}} a threat."
+
+
+FlightMiddleProblem:
+  - mode: pick
+  - "{{Fugitive}} encounters a major obstacle."
+  - "{{Fugitive}} encounters a major obstacle."
+  - "{{Fugitive}} encounters a minor obstacle."
+  - "{{Fugitive}} encounters a minor obstacle."
+  - "{{Punisher}} nearly catches up with {{Fugitive}}."
+  - "{{Punisher}} nearly catches up with {{Fugitive}}."
+  - "{{Punisher}} springs a trap on {{Fugitive}}!"
+  - "{{Punisher}} springs a trap on {{Fugitive}}!"
+  - "{{Fugitive}} has unfinished business that {{he.Fugitive}} must attend to."
+  - "{{Witness}} offers {{his.Witness}} services to {{Punisher}}."
+
+FlightMiddleSolution:
+  - mode: pick
+  - "{% if Result.witness %}{{Witness}}{% else %}Someone encountered by chance{% endif %} helps {{Fugitive}} out of a tight spot."
+  - "{% if Result.ally %}{{Ally}}{% else %}Someone encountered by chance{% endif %} helps {{Fugitive}} out of a tight spot."
+  - "{{Fugitive}} seeks aid from {% if Result.ally %}{{Ally}}{% else %}a chance encounter{% endif %}."
+  - "Someone encountered by chance helps {{Fugitive}} out of a tight spot."
+  - "{{Fugitive}} seeks aid from a chance encounter."
+  - "{{Fugitive}} rescues {{himself.Fugitive}}."
+  - "{{Fugitive}} rescues {{himself.Fugitive}}."
+  - "{{Fugitive}} rescues {{himself.Fugitive}}."
+
+
+FlightEnd:
+  - |
+    {{Fugitive}} faces {{Punisher}} and finally gets away.
+    {%- if PunishmentType.Fugitive != 'just' and Result.exposed %} Injustice is exposed{% endif %}
+    {%- if Result.steadfast %} {{Fugitive}} has remained steadfast through it all.
+    {%- else %} {{Fugitive}} will never be the same, never be able to return to a normal life.
+    {%- endif %}
+
+    {{StoryEnd.Fugitive}}
+
+Fugitive:
+  - "{{Name.Fugitive}}"
+Witness:
+  - "{{Name.Witness}}"
+Punisher:
+  - "{{Name.Punisher}}"
+Ally:
+  - "{{Name.Ally}}"
+
+JusticeMethod:
+  - "{{JusticeStyle}} and physical"
+  - "{{JusticeStyle}} and ruinous"
+  - "{{JusticeStyle}} and humiliating"
+
+JusticeStyle:
+  - swift
+  - tortuous
+
+GuiltyReaction:
+  - "{{Authority}} repents over his crime."
+  - "{{Authority}} begs forgiveness for his crime."
+  - "{{Authority}} justifies his crime to the bitter end."
+  - "{{Authority}} curses his family."
+
+KinsmanAuthorityAct:
+  - "{{Incident.Crime.capitalize()}}, {{Authority}}, in {{KinsmanCrimeMode.mode.an}} {{KinsmanCrimeMode.mode}} act, murders {{Fugitive}} because {{AuthorityMotive}}."
+
+KinsmanCrimeMode:
+  - premeditated
+  - impulsive
+
+FlightResult:
+  - yes
+  - no

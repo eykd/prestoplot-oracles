@@ -69,6 +69,14 @@ PiratesOracle:
     - {AllAshore.Four}
 
 
+PiratesShort:
+  - "{Letters}"
+  - "{CutlassDagger}"
+  - "{BlackSails}"
+  - "{AllAshore}"
+  - "{Letters}"
+  - "{CutlassDagger}"
+  - "{BlackSails}"
 
 
 Letters:

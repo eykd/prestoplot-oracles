@@ -17,6 +17,7 @@ LovecraftOracle:
 
 
 Lovecraft:
+  - mode: pick
   - "{WeirdNoir}"
   - "{Weird}"
   - "{TwilightZone}"

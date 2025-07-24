@@ -1,0 +1,158 @@
+include:
+  - characters
+  - conflict
+  - hooks
+  - inciting-incidents
+  - physical-description
+  - result
+  - story-ending
+  - yes-but
+
+render: jinja2
+
+Begin:
+  - |
+    {{Supplication}}
+
+
+Supplication:
+  - |
+    # Supplication
+
+    ## Characters
+
+    {{SupplicationCharacters[key]}}
+
+    ## Plot
+
+    {{SupplicationPlot}}
+    
+
+SupplicationCharacters:
+  - |
+    ### {{Supplicant}} ({{Sex.Supplicant}}): The Supplicant
+
+    {{FullDescription.Supplicant}}
+
+    ### {{Persecutor}} ({{Sex.Persecutor}}): The Persecutor
+
+    {{FullDescription.Persecutor}}
+
+    ### {{Power}} ({{Sex.Power}}): The Power in Authority
+
+    {{FullDescription.Power}}
+
+    ### {{ThirdParty}} ({{Sex.ThirdParty}}): A Third Party
+
+    {{FullDescription.ThirdParty}}
+
+SupplicationPlot:
+  - |
+    ### Beginning
+
+    Hook, Characters, Trouble, Conflict.
+
+    {{SupplicationBeginning}}
+
+    Twist: {{YesButEverything.beginning}}
+
+    ### First Complication
+
+    Grief, Struggle, Conflict.
+
+    {% if Result.granted %}{{SupplicationMiddleGranted.one}}{% else %}{{SupplicationMiddleRejected.one}}{% endif %}
+
+    {% if Result.granted %}{{SupplicationMiddleGranted.two}}{% else %}{{SupplicationMiddleRejected.two}}{% endif %}
+
+    Twist: {{YesButEverything.first}}
+
+    ### Second Complication
+
+    Grief, Headway, Conflict.
+
+    {% if Result.granted %}{{SupplicationMiddleGranted.three}}{% else %}{{SupplicationMiddleRejected.three}}{% endif %}
+
+    {% if Result.granted %}{{SupplicationMiddleGranted.four}}{% else %}{{SupplicationMiddleRejected.four}}{% endif %}
+
+    Setback: {{YesButEverything.second}}
+
+    ### Resolution
+
+    Shovel Difficulty, All is Lost, Self-rescue, Conflict.
+
+    {{SupplicationEnd}}
+
+
+SupplicationBeginning:
+  - |
+    Hook: {{Hook.Supplication}}
+
+    {{Incident.Supplication.capitalize()}}, and out of {{SupplicationReason.Supplicant}}, {{Supplicant}} approaches {{Persecutor}} for {{his.Persecutor}} help because {{PersecutorPower}}
+
+    {{SupplicantPosture}}
+
+    {{His.Supplicant}} request is {% if Result.granted %}granted{% else %}rejected{% endif %}!
+
+
+SupplicationMiddleGranted:
+  - mode: pick
+  - "{{Supplicant}} plays the victim, and will not help {{his.Supplicant}} rescuer to change {{his.Supplicant}} situation."
+  - "{{Supplicant}} takes an active role in helping {{himself.Supplicant}} as {{he.Supplicant}} works with {{his.Supplicant}} rescuer."
+  - "{{Power}}, the Power in Authority, gets involved, and complicates things with {{his.Power}} help."
+  - "{{Power}}, the Power in Authority, gets involved, and complicates things with {{his.Power}} meddling."
+  - "A third party, {{ThirdParty}} complicates matters with {{his.ThirdParty}} help."
+  - "A third party, {{ThirdParty}} complicates matters with {{his.ThirdParty}} meddling."
+
+
+SupplicationMiddleRejected:
+  - mode: pick
+  - "{{Supplicant}} plays the victim, and will not help {{himself.Supplicant}}, despite {{his.Supplicant}} situation."
+  - "{{Supplicant}} picks {{himself.Supplicant}} up and works to solve {{his.Supplicant}} own problem, despite {{Persecutor}}."
+  - "{{Power}}, the Power in Authority, gets involved, and complicates things with {{his.Power}} help."
+  - "{{Power}}, the Power in Authority, gets involved, and complicates things with {{his.Power}} meddling."
+  - "A third party, {{ThirdParty}} complicates matters with {{his.ThirdParty}} help."
+  - "A third party, {{ThirdParty}} complicate matters with {{his.ThirdParty}} meddling."
+
+SupplicationEnd:
+  - |
+    {{Supplicant}} seals {{his.Supplicant}} own fate by {{his.Supplicant}} response to the events.
+
+    {{StoryEnd.Supplicant}}
+
+
+SupplicationReason:
+  - need
+  - desperation
+  - superstition
+  - fear
+  - laziness
+  - inertia
+
+PersecutorPower:
+  - "{{Persecutor}} has the power to coerce or punish {{Supplicant}}."
+  - "{{Persecutor}} has the power to reward {{Supplicant}}."
+  - "{{Persecutor}} has legitimate authority to help {{Supplicant}}."
+  - "{{Persecutor}} is an expert in {{Supplicant}}'s problem."
+  - "{{Supplicant}} admires {{Persecutor}}."
+  - "{{Supplicant}} respects {{Persecutor}}."
+
+SupplicationProtagonist:
+  - "{{Supplicant}}"
+
+Supplicant:
+  - "{{Name.Supplicant}}"
+Persecutor:
+  - "{{Name.Persecutor}}"
+ThirdParty:
+  - "{{Name.ThirdParty}}"
+Power:
+  - "{{Name.Power}}"
+
+SupplicantPosture:
+  - "{{He.Supplicant}} feels humiliated to have to ask."
+  - "{{He.Supplicant}} feels that {{he.Supplicant}} is entitled to {{his.Persecutor}} help."
+  - "{{He.Supplicant}} has been pushed into asking by someone else."
+  - "{{He.Supplicant}} doesn't really need {{his.Persecutor}} help."
+  - "{{His.Supplicant}} situation is dire."
+  - "{{He.Supplicant}} is asking for help to assist someone else."
+

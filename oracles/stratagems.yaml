@@ -1,0 +1,59 @@
+include:
+  - sex
+
+
+Stratagem:
+  - "{StrategemCommandingSuperiority[key]}"
+  - "{StrategemConfrontation[key]"
+  - "{StratagemAttack[key]}"
+  - "{StratagemConfusion[key]}"
+  - "{StratagemGain[key]}"
+  - "{StratagemDesperate[key]}"
+
+
+StrategemCommandingSuperiority:
+  - masks {his[key]} real goal with a false one
+  - avoids a head-on confrontation and attacks a weakness
+  - kills with a borrowed knife
+  - exhausts {his[key]} opponent and confronts him with fresh reserves
+  - loots a burning house
+  - causes a clamor in the east and attacks in the west
+
+StrategemConfrontation:
+  - confuses {his[key]} opponent with repeated tricks
+  - openly repairs the bridge, but sneaks in across the ford
+  - delays confrontation until {his[key]} opponents have exhausted themselves
+  - hides a knife behind a smile
+  - sacrifices a short-term objective to gain a long-term goal
+  - takes advantage of an unforeseen opportunity
+
+StratagemAttack:
+  - makes aimless but spectacular efforts to provoke an opponent's response
+  - revives something long past, giving it new purpose and advantage
+  - lures {his[key]} opponent away from his field of advantage
+  - allows {his[key]} opponent a route of escape, then pursues
+  - baits {his[key]} opponent to lure him away from a guarded treasure
+  - attacks a prominent opposing leader to gain advantage over his followers
+
+StratagemConfusion:
+  - steals or destroys {his[key]} opponent's leading asset or resource
+  - stirs up confusion to obscure {his[key]} actions
+  - creates an illusion to distract {his[key]} opponents
+  - shuts the door to capture the thief
+  - makes alliance with a distant power to attack {his[key]} own neighbor
+  - borrows the resources of an ally to attack a common opponent
+
+StratagemGain:
+  - secretly replaces {his[key]} opponent's solid foundation with rotten beams
+  - indirectly warns a secret ally
+  - feigns madness, foolishness, or drunkenness to hide {his[key]} true intentions
+  - lures {his[key]} opponent to the roof and takes away the ladder
+  - uses artifice and disguise to make something worthless appear useful, valuable, or dangerous
+  - infiltrates a target and usurps leadership from inside
+
+StratagemDesperate:
+  - sends enticements to distract and divide {his[key]} opponents
+  - acts calmly when secretly overrun, deceiving {his[key]} opponent into suspecting a trap
+  - undermines {his[key]} opponent by spies and false information
+  - pretends to be injured in order to lower {his[key]} opponent's guard
+  - retreats and regroups

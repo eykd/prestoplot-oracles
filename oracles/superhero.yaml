@@ -37,6 +37,14 @@ SuperHeroOracle:
     {ModernSuperHero}
 
 
+SuperHeroShort:
+  - mode: pick
+  - "{ComicBookSuperHero}"
+  - "{Origins}"
+  - "{Events}"
+  - "{Stuff}"
+  - "{Villainy}"
+
 
 ComicBookSuperHero:
   - mode: pick
@@ -119,7 +127,7 @@ Origins:
   - mode: pick
   - "The citizen of a long hidden nation braving the unknown of the wider world."
   - "The lone survivor of a far off, destroyed planet, stranded here on earth."
-  - "A patriot, first in line to the defense of their country and it’s ideals."
+  - "A patriot, first in line to the defense of {his[key]} country and its ideals."
   - "A vigilante on a crusade against crime, driven by a tragic past."
   - "A haggard yet determined soldier hailing from the future, trapped in our own time."
   - "A former assassin seeking redemption for past sins."

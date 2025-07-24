@@ -1,24 +1,25 @@
+include:
+  - sex
+
 Begin:
   - |
     - {SceneAnswer.One}
     - {SceneAnswer.Two}
-    - {SceneAnswer.Three}
-    - {SceneAnswer.Four}
 
 
 SceneAnswer:
- - "Yes, but {Everything}"
- - "No, because {Statement}"
- - "No, and furthermore, {Statement}"
- - "No, but {Positive}"
+ - "Yes, but {YesButEverything}"
+ - "No, because {YesButStatement}"
+ - "No, and furthermore, {YesButStatement}"
+ - "No, but {YesButPositive}"
 
 
-Everything:
-  - "{Statement}"
-  - "{Question}"
+YesButEverything:
+  - "{YesButStatement}"
+  - "{YesButQuestion}"
 
 
-Positive:
+YesButPositive:
   - mode: pick
   - "a clue reveals itself."
   - "something unrelated but useful also occurs."
@@ -28,28 +29,56 @@ Positive:
   - "you make a fast friend."
   - "your style and panache are duly noted."
 
-Statement:
+YesButStatement:
   - mode: pick
   - "an inconvenient attraction is struck."
   - "in order to do it, you’ll have to do something else first."
   - "it breaks the alignment of things."
-  - "it costs someone you care about, something they care about."
+  - "it costs someone you care about something they care about."
   - "it costs you something dear."
   - "it means closing the door on a future opportunity."
   - "it only provides a temporary solution. It won’t last that long!."
   - "it takes longer than you thought it would."
   - "it works a little too well."
-  - "it’s quiet … too quiet."
+  - "it’s quiet… too quiet."
   - "what you want isn’t what you need."
   - "you can’t do it by yourself."
   - "you get seriously hurt."
-  - "YOU TOTALLY ALMOST DIE OMG."
+  - "you almost die."
   - "you’re not even supposed to be here."
   - "your beloved is lost."
-
-Question:
+  - there’s now a very sharp time limit for any resolution.
+  - a sympathetic ally has a dark secret.
+  - there’s an easy but very repugnant solution to hand.
+  - success will mean a big benefit to an enemy.
+  - the real bone of contention is hidden from most.
+  - a sympathetic figure’s revealed to be on an unsympathetic side.
+  - there’s a profitable chance for you to turn traitor.
+  - the “winner” will actually get in terrible trouble.
+  - a very appealing third party enters the mix.
+  - you could really profit off the focus of the strife.
+  - you is mistaken for another involved party.
+  - somebody plans on screwing you over.
+  - both sides think the you're working for them.
+  - a side wants to use the you as a distraction for foes.
+  - your main contact is mistrusted by their allies.
+  - if the other side can’t get it, they’ll destroy it.
+  - the prize isn’t nearly as valuable as everyone thinks.
+  - success will drastically change the victor.
+  - security is unexpectedly high.
+  - a complicating third party enters the mix.
+  - something is not what it appears to be.
+  - someone is not what who {he} appears to be.
+  - success requires a rare piece of equipment.
+  - something has been moved.
+  - something is being moved right now.
+  - someone double-crosses you.
+  - someone makes a sudden confession.
+  - you should be careful what you wish for.
+  - someone receives a career-ending injury.
+YesButQuestion:
   - mode: pick
-  - "didn’t it seem a little ''too'' easy? What’s really going on, here?"
+  - "didn’t it seem a little *too* easy? What’s really going on here?"
   - "is it not by the path you thought?"
   - "what does it mean for someone else?"
   - "what does it mean for the enemy?"
@@ -58,3 +87,4 @@ Question:
   - "why is that character acting so strangely?"
   - "why now?"
   - "why you?"
+

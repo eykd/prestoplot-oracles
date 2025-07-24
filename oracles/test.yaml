@@ -1,0 +1,9 @@
+render: jinja2
+
+Begin:
+  - "{{ Foo.blah.an }} {{ Foo.blah }}"
+
+
+Foo:
+  - bar
+  - enigma

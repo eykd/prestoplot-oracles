@@ -1,0 +1,197 @@
+include:
+  - characters
+  - conflict
+  - crises
+  - hooks
+  - inciting-incidents
+  - physical-description
+  - result
+  - story-ending
+  - yes-but
+
+render: jinja2
+
+Begin:
+  - |
+    {{NewKin}}
+
+NewKin:
+  - |
+    # Appearance of a New Kinsman
+
+    ## Characters
+
+    {{NewKinCharacters}}
+
+    ## Plot
+
+    {{NewKinPlot}}
+
+
+NewKinCharacters:
+  - |
+    ### {{NewKinsman}} ({{Sex.NewKinsman}}): The New Kinsman
+
+    {{FullDescription.NewKinsman}}
+
+    ### {{Protector}} ({{Sex.Protector}}): The Protector Kinsman
+
+    {{FullDescription.Protector}}
+
+    {{Protector}} and {{NewKinsman}} are related by {% if Result.prot_blood %}blood{% else %}marriage{% endif %}.
+
+    ### {{Enemy}} ({{Sex.Enemy}}): The Enemy Kinsman
+
+    {{FullDescription.Enemy}}
+
+    {{Enemy}} and {{NewKinsman}} are related by {% if Result.enemy_blood %}blood{% else %}marriage{% endif %}.
+
+    ### {{Ally}} ({{Sex.Ally}}): An Ally of {{Protector}}
+
+    {{FullDescription.Enemy}}
+
+    {{Enemy}} and {{Protector}} are related by {% if Result.ally_blood %}blood{% else %}marriage{% endif %}.
+
+    ### {{Relative}} ({{Sex.Relative}}): A Relative
+
+    {{FullDescription.Relative}}
+
+    {{Relative}} and {{NewKinsman}} are related by {% if Result.rel_blood %}blood{% else %}marriage{% endif %}.
+
+
+NewKinPlot:
+  - |
+    ### Beginning
+
+    Hook, Characters, Trouble, Conflict.
+
+    {{NewKinBeginning}}
+
+    Twist: {{YesButEverything.beginning}}
+
+    ### First Complication
+
+    Grief, Struggle, Conflict.
+
+    Why does {{Protector}} guard {{NewKinsman}}? What's at stake for {{him.Protector}}?
+
+    What motivates {{Enemy}}? 
+
+    {{NewKinMiddle.one}}
+
+    {{NewKinMiddle.two}}
+
+    Twist: {{YesButEverything.first}}
+
+    ### Second Complication
+
+    {{NewKinMiddle.three}}
+
+    {{NewKinMiddle.four}}
+
+    Setback: {{YesButEverything.second}}
+
+    ### Resolution
+
+    Shovel Difficulty, All is Lost, Self-rescue, Conflict.
+
+    {{NewKinEnd}}
+
+
+NewKinBeginning:
+  - |
+    Hook: {{Hook.NewKin}}
+
+    {{NewKinsmanOrigin}}
+
+    {{Enemy}} {% if Result.suspicious %}is immediately{% else %}eventually becomes{% endif %} suspicious of {{him.NewKinsman}}. Why?
+
+    {{Protector}} decides to guard {{NewKinsman}} at all costs.
+
+    What type of power does {{NewKinsman}} have? Does {{he.NewKinsman}} have any allies besides {{Protector}}?
+
+    How might {{NewKinsman}} benefit the clan? Will some want to use {{him.NewKinsman}} as a pawn?
+
+
+NewKinsmanOrigin:
+  - "{{NewKinsman}} is born {% if Result.prot_blood %}to {{Protector}}{% else %}into the clan{% endif %}."
+  - "{{NewKinsman}}, an old friend of {{Protector}}, wishes to marry into the clan."
+  - "{{NewKinsman}}, an old ally of {{Protector}}, wishes to marry into the clan."
+  - "Long thought lost, {{NewKinsman}} returns after many harrowing adventures."
+  - "{{NewKinsman}}, with newly-developed skill or talent, wishes to advance in the clan."
+  - "{{NewKinsman}} wishes to break with an accepted role."
+
+NewKinMiddle:
+  - mode: pick
+  - "{{NewKinsman}} puts {{his.NewKinsman}} trust in the wrong people."
+  - "{{Enemy}} and {{Protector}} meet. Hard words are exchanged."
+  - "{{Enemy}} and {{NewKinsman}} meet. Hard words are exchanged."
+  - The location adds further to the danger and conflict.
+  - "{{Enemy}} makes a stand, confronting {{Protector}} with a group of allies."
+  - "{{Enemy}} makes a stand, confronting {{NewKinsman}} with a group of allies."
+  - "{{Protector}} confronts {{Enemy}}. Hard words are exchanged."
+  - "{{Protector}} uses a special skill or talent to affect the {{Enemy}}."
+  - "{{NewKinsman}} uses a special skill or talent to affect the {{Enemy}}."
+  - "{{Ally}} pretends to be for {{Enemy}}."
+  - "{{Ally}} complicates things further with attempts to help."
+  - "{{Relative}} pretends to be for {{Enemy}}."
+  - "{{Relative}} pretends to be for {{NewKinsman}}."
+  - "{{Relative}} sides with {{Enemy}}."
+  - "{{Relative}} sides with {{NewKinsman}}."
+  - "{{Relative}} complicates things further with attempts to help."
+  - "{{Relative}} complicates things further with attempts to meddle."
+  
+
+NewKinEnd:
+  - |
+    {{Enemy}} makes a last-ditch effort to eject {{NewKinsman}}.
+
+    {{Protector}} defeats {{Enemy}}, and {{NewKinsman}} contributes to the clan in a positive way.
+
+    How does {{Protector}} make everyone see what has happened?
+
+    How is {{NewKinsman}} transformed through the experience?
+
+    How is the clan strengthened by {{him.NewKinsman}}?
+
+    How is {{Enemy}} punished?
+
+    {{StoryEnd.NewKinsman}}
+
+Enemy:
+  - "{{Name.Enemy}}"
+Ally:
+  - "{{Name.Ally}}"
+NewKinsman:
+  - "{{Name.NewKinsman}}"
+Relative:
+  - "{{Name.Relative}}"
+Protector:
+  - "{{Name.Protector}}"
+
+
+JusticeMethod:
+  - "{{JusticeStyle}} and physical"
+  - "{{JusticeStyle}} and ruinous"
+  - "{{JusticeStyle}} and humiliating"
+
+JusticeStyle:
+  - swift
+  - tortuous
+
+GuiltyReaction:
+  - "{{Enemy}} repents over his crime."
+  - "{{Enemy}} begs forgiveness for his crime."
+  - "{{Enemy}} justifies his crime to the bitter end."
+  - "{{Enemy}} curses his family."
+
+KinsmanEnemyAct:
+  - "{{Incident.Crime.capitalize()}}, {{Enemy}}, in {{KinsmanCrimeMode.mode.an}} {{KinsmanCrimeMode.mode}} act, murders {{NewKinsman}} because {{EnemyMotive}}."
+
+KinsmanCrimeMode:
+  - premeditated
+  - impulsive
+
+NewKinResult:
+  - yes
+  - no

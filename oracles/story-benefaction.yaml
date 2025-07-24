@@ -1,0 +1,185 @@
+include:
+  - characters
+  - conflict
+  - crises
+  - hooks
+  - inciting-incidents
+  - physical-description
+  - result
+  - story-ending
+  - yes-but
+
+render: jinja2
+
+Begin:
+  - |
+    {{Benefaction}}
+
+
+Benefaction:
+  - |
+    # Benefaction
+
+    ## Characters
+
+    {{BenefactionCharacters}}
+
+    ## Plot
+
+    {{BenefactionPlot}}
+
+
+BenefactionCharacters:
+  - |
+    ### {{Benefactor}} ({{Sex.Benefactor}}): The Benefactor
+
+    {{FullDescription.Benefactor}}
+
+    ### {{Recipient}} ({{Sex.Recipient}}): The Recipient
+
+    {{FullDescription.Recipient}}
+
+    ### {{Persecutor}} ({{Sex.Persecutor}}): The Persecutor
+
+    {{FullDescription.Persecutor}}
+
+    ### {{Power}} ({{Sex.Power}}): The Power in Authority
+
+    {{FullDescription.Power}}
+
+    ### {{ThirdParty}} ({{Sex.ThirdParty}}): A Third Party
+
+    {{FullDescription.ThirdParty}}
+
+
+
+BenefactionPlot:
+  - |
+    ### Beginning
+
+    Hook, Characters, Trouble, Conflict.
+
+    {{BenefactionBeginning}}
+
+    Twist: {{YesButEverything.beginning}}
+
+    ### First Complication
+
+    Grief, Struggle, Conflict.
+
+    {% if Result.will_help %}{{BenefactionMiddleHelping.one}}{% else %}{{BenefactionMiddleIgnoring.one}}{% endif %}
+
+    {% if Result.will_help %}{{BenefactionMiddleHelping.two}}{% else %}{{BenefactionMiddleIgnoring.two}}{% endif %}
+
+    Twist: {{YesButEverything.first}}
+
+    ### Second Complication
+
+    Grief, Headway, Conflict.
+
+    {% if Result.will_help %}{{BenefactionMiddleHelping.three}}{% else %}{{BenefactionMiddleIgnoring.thtree}}{% endif %}
+
+    {% if Result.will_help %}{{BenefactionMiddleHelping.four}}{% else %}{{BenefactionMiddleIgnoring.four}}{% endif %}
+
+    Setback: {{YesButEverything.second}}
+
+    ### Resolution
+
+    Shovel Difficulty, All is Lost, Self-rescue, Conflict.
+
+    {{BenefactionEnd}}
+
+
+BenefactionBeginning:
+  - |
+    Hook: {{Hook.Benefaction}}
+
+    {{Incident.Benefaction.capitalize()}}, and out of {{BenefactionReason.Benefactor}}, {{Benefactor}} approaches {{Recipient}} in order to help {{him.Recipient}}.
+
+    {{Persecutor}} intervenes because {{PersecutorReason}} {{PersecutorPower}}
+
+    {{BenefactorPosture}}
+
+    {{He.Benefactor}} {% if Result.will_help %}presses on anyway{% else %}gives up{% endif %}!
+
+
+BenefactionMiddleHelping:
+  - mode: pick
+  - "{{Benefactor}} changes {{his.Benefactor}} mind."
+  - "{{Persecutor}} introduces a problem."
+  - "{{Persecutor}} tries to convince {{Benefactor}} not to help."
+  - "{{Persecutor}} tries to guilt {{Benefactor}} into not helping."
+  - "{{Power}}, the Power in Authority, gets involved, and complicates things with {{his.Power}} help."
+  - "{{Power}}, the Power in Authority, gets involved, and complicates things with {{his.Power}} meddling."
+  - "{{ThirdParty}} complicates matters with {{his.ThirdParty}} help."
+  - "{{ThirdParty}} complicates matters with {{his.ThirdParty}} meddling."
+  - "{{ThirdParty}} tries to convince {{Benefactor}} not to help."
+  - "{{ThirdParty}} tries to guilt {{Benefactor}} into not helping."
+
+BenefactionMiddleIgnoring:
+  - mode: pick
+  - "{{Benefactor}} changes {{his.Benefactor}} mind."
+  - "{{Persecutor}} introduces a problem."
+  - "{{Power}}, the Power in Authority, gets involved, and complicates things with {{his.Power}} help."
+  - "{{Power}}, the Power in Authority, gets involved, and complicates things with {{his.Power}} meddling."
+  - "{{ThirdParty}} complicates matters with {{his.ThirdParty}} help."
+  - "{{ThirdParty}} complicates matters with {{his.ThirdParty}} meddling."
+  - "{{ThirdParty}} tries to convince {{Benefactor}} not to help."
+  - "{{ThirdParty}} tries to guilt {{Benefactor}} into not helping."
+
+BenefactionEnd:
+  - |
+    {{Benefactor}} {% if Result.face_off %}faces off with{% else %}sneaks around{% endif %} {{Persecutor}} and tries to do what {{he.Benefactor}} feels is right.
+
+    {{Benefactor}} {% if Result.counting_on %}is counting on{% else %}has no hope for{% endif %} help from {{Power}}. {{Power}} {% if Result.power_helps %}supports{% else %}opposes{% endif %} {{him.Benefactor}} in the end.
+
+    How important is it for {{Benefactor}} to help {{Recipient}}? What are the stakes? What does the reader want {{him.Benefactor}} to do?
+
+    {{StoryEnd.Benefactor}}
+
+
+BenefactionReason:
+  - selfish desire
+  - unselfish love
+
+PersecutorPower:
+  - "{{Persecutor}} has the power to coerce or punish {{Benefactor}}."
+  - "{{Persecutor}} has the power to reward {{Benefactor}}."
+  - "{{Persecutor}} has legitimate authority to help {{Benefactor}}."
+  - "{{Persecutor}} is an expert in {{Benefactor}}'s problem."
+  - "{{Benefactor}} admires {{Persecutor}}."
+  - "{{Benefactor}} respects {{Persecutor}}."
+
+PersecutorReason:
+  - "{{Persecutor}} resents {{Benefactor}}."
+  - "{{Persecutor}} resents {{Recipient}}."
+  - "{{Persecutor}} bears a grudge against {{Benefactor}}."
+  - "{{Persecutor}} bears a grudge against {{Recipient}}."
+  - "{{Persecutor}} benefits from {{Recipient}}'s problem."
+  - "{{Persecutor}} is just a nasty piece of work."
+  - "{{Persecutor}} is afraid of something."
+
+BenefactionProtagonist:
+  - "{{Benefactor}}"
+
+Benefactor:
+  - "{{Name.Benefactor}}"
+Recipient:
+  - "{{Name.Recipient}}"
+Persecutor:
+  - "{{Name.Persecutor}}"
+ThirdParty:
+  - "{{Name.ThirdParty}}"
+Power:
+  - "{{Name.Power}}"
+
+BenefactorPosture:
+  - "{{Benefactor}} feels humiliated by this opposition."
+  - "{{Benefactor}} feels that {{he.Benefactor}} is entitled to help, and resents the opposition."
+  - "{{Benefactor}} has been pushed into helping by someone else, and the opposition makes {{him.Benefactor}} reticent."
+  - "{{Benefactor}} doesn't really want to help, but feels compelled despite the opposition."
+  - "{{Benefactor}} is desperate to help, despite opposition, because {{Recipient}}'s situation is dire."
+
+BenefactionResult:
+  - yes
+  - no

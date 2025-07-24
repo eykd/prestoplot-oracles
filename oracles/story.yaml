@@ -1,0 +1,22 @@
+include:
+  - story-benefaction
+  - story-deliverance
+  - story-new-kinsman
+  - story-rehabilitation
+  - story-sojourn
+  - story-supplication
+  - story-vengeance
+  - story-vengeance-kinsman
+  - story-flight
+  
+
+Begin:
+  - "{Benefaction}"
+  - "{Deliverance}"
+  - "{NewKin}"
+  - "{Rehabilitation}"
+  - "{Sojourn}"
+  - "{Supplication}"
+  - "{Vengeance}"
+  - "{VengeanceKin}"
+  - "{Flight}"

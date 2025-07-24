@@ -1,0 +1,192 @@
+include:
+  - characters
+  - conflict
+  - crises
+  - hooks
+  - inciting-incidents
+  - physical-description
+  - result
+  - story-ending
+  - yes-but
+
+render: jinja2
+
+Begin:
+  - |
+    {{Deliverance}}
+
+
+Deliverance:
+  - |
+    # Deliverance
+
+    ## Characters
+
+    {{DeliveranceCharacters}}
+
+    ## Plot
+
+    {{DeliverancePlot}}
+
+
+DeliveranceCharacters:
+  - |
+    ### {{Unfortunate}} ({{Sex.Unfortunate}}): The Unfortunate
+
+    {{FullDescription.Unfortunate}}
+
+    ### {{Threatener}} ({{Sex.Threatener}}): The Threat
+
+    {% if ThreatenerType.Threat == "Person" -%}
+    {{FullDescription.Threatener}}
+    {% else %}{{Threatener}}{% endif %}
+
+    ### {{Rescuer}} ({{Sex.Rescuer}}): The {{RescuerType.Rescuer}}
+
+    {{FullDescription.Rescuer}}
+
+    ### {{ThirdParty}} ({{Sex.ThirdParty}}): A Third Party
+
+    {{FullDescription.ThirdParty}}
+
+DeliverancePlot:
+  - |
+    ### Beginning
+
+    Hook, Characters, Trouble, Conflict.
+
+    {{DeliveranceBeginning}}
+
+    Twist: {{YesButEverything.beginning}}
+
+    ### First Complication
+
+    Grief, Struggle, Conflict.
+
+    {{Rescuer}} arrives {% if Result.on_time -%}just in time{% else %}too late{% endif %} to save {{Unfortunate}} from serious damage.
+
+    {{Rescuer}} {% if Result.understands %}sees and understands{% else %}doesn't see or understand{% endif %} the threat immediately.
+
+    {{DeliveranceMiddle.one}}
+
+    {{DeliveranceMiddle.two}}
+
+    Twist: {{YesButEverything.first}}
+
+    ### Second Complication
+
+    Grief, Headway, Conflict.
+
+    {{DeliveranceMiddle.three}}
+
+    {{DeliveranceMiddle.four}}
+
+    Setback: {{YesButEverything.second}}
+
+    ### Resolution
+
+    Shovel Difficulty, All is Lost, Self-rescue, Conflict.
+
+    {{DeliveranceEnd}}
+
+
+DeliveranceBeginning:
+  - |
+    Hook: {{Hook.Deliverance}}
+
+    {{Incident.Deliverance.capitalize()}}, {{Unfortunate}} finds {{himself.Unfortunate}} in trouble with {{Threatener}}.
+
+    The trouble is {% if Result.starts_small %}small, even unnoticeable{% else %}overwhelming{% endif %} at first, and escalates from there.
+
+    {{Threatener}} is {% if Result.serious %}deadly serious{% else %}just toying with {{him.Unfortunate}} at first{% endif %}.
+
+    {{Unfortunate}} feels completely {% if Result.capable %}capable{% else %}incapable{% endif %} of rescuing {{himself.Unfortunate}}.
+
+    {% if Result.already_rescuing -%}
+    {{He.Unfortunate}} was trying to rescue {{ThirdParty}}, but found {{himself.Unfortunate}} in over {{his.Unfortunate}} head.
+    {%- else -%}
+    What events led up to this predicament?
+    {%- endif %}
+
+    {{Rescuer}} knows someone is in trouble and rushes to help.
+
+    {{UnfortunatePosture}}
+
+    {{RescuerPosture}}
+
+
+DeliveranceMiddle:
+  - mode: pick
+  - "{{Unfortunate}} ignores {{Rescuer}} and tries to save {{himself.Unfortunate}}!, winding up in more trouble."
+  - "{{Unfortunate}} gets {{himself.Unfortunate}} in deeper trouble."
+  - "{{Unfortunate}} mistakes {{Rescuer}} for a threat and tries to fight {{him.Rescuer}} off."
+  - "{{Unfortunate}} is angry at {{Rescuer}} for rescuing {{him.Rescuer}}."
+  - "{{Unfortunate}} critiques {{Rescuer}}'s plan, driving {{him.Rescuer}} crazy."
+  - "{{Unfortunate}} critiques {{Rescuer}}'s technique, driving {{him.Rescuer}} crazy."
+  - "{{Unfortunate}} antagonizes {{Threatener}}, making the danger more forceful than ever toward {{Rescuer}}."
+  - "{{Unfortunate}} misjudges {{Threatener}}, thinking {{he.Unfortunate}} is safe."
+  - "{{Unfortunate}} is oblivious to {{Threatener}}, thinking {{Rescuer}} crazy to warn {{him.Unfortunate}} of danger."
+  - "{{Rescuer}} faces unexpected dangers that slow {{his.Rescuer}} ability to rescue {{Unfortunate}}."
+  - The location adds further to the danger and conflict.
+  - "{{ThirdParty}} complicates things further with {{his.ThirdParty}} attempts to help."
+  - "{{ThirdParty}} complicates things further with {{his.ThirdParty}} attempts to meddle."
+
+
+DeliveranceEnd:
+  - |
+    {{Rescuer}} defeats {{Threatener}}.
+
+    {% if Result.saved -%}
+    {{Unfortunate}} is saved{% if not Result.grateful %}, though {{he.Unfortunate}} is not grateful{% endif %}!
+    {%- else -%}
+    {{Unfortunate}} is lost, however. How does this affect {{Rescuer}}?
+    {%- endif %}
+
+    {{StoryEnd.Rescuer}}
+
+
+DeliveranceProtagonist:
+  - "{{Unfortunate}}"
+
+Unfortunate:
+  - "{{Name.Unfortunate}}"
+Recipient:
+  - "{{Name.Recipient}}"
+ThreatenerType:
+  - Person
+  - "[Threatening Place]"
+  - "[Dangerous Animal or Actor]"
+  - "[Threatening Institution]"
+  - "[Threatening Environment]"
+Threatener:
+  - |
+    {% if ThreatenerType.Threat == "Person" %}{{Name.Threatener }}{% else %}{{ThreatenerType.Threat}}{% endif %}
+ThirdParty:
+  - "{{Name.ThirdParty}}"
+Rescuer:
+  - "{{Name.Rescuer}}"
+RescuerType:
+  - Savior
+  - Samaritan
+  - Opportunist
+
+UnfortunatePosture:
+  - "{{Unfortunate}} feels humiliated by needing help."
+  - "{{Unfortunate}} feels that {{he.Unfortunate}} is entitled to help."
+  - "{{Unfortunate}} will welcome any help {{he.Unfortunate}} can get."
+  - "{{Unfortunate}} doesn't really want help, but feels compelled to accept."
+  - "{{Unfortunate}} is desperate for help, because {{his.Unfortunate}} situation is dire."
+
+RescuerPosture:
+  - "{{Rescuer}}, {{RescuerType.Rescuer.a}} {{RescuerType.Rescuer}}, has faced {{Threatener}} before and overcome the danger."
+  - "{{Rescuer}}, {{RescuerType.Rescuer.a}} {{RescuerType.Rescuer}}, has faced {{Threatener}} before and has the scars to prove it."
+  - "{{Rescuer}}, {{RescuerType.Rescuer.a}} {{RescuerType.Rescuer}}, has faced {{Threatener}} before and still has nightmares."
+  - "{{Rescuer}}, {{RescuerType.Rescuer.a}} {{RescuerType.Rescuer}}, has faced {{Threatener}} before and knows {{he.Rescuer}} is out of {{his.Rescuer}} league."
+  - "{{Rescuer}}, {{RescuerType.Rescuer.a}} {{RescuerType.Rescuer}}, has never faced {{Threatener}} before and immediately knows that {{he.Rescuer}}'s out of {{his.Rescuer}} league."
+  - "{{Rescuer}}, {{RescuerType.Rescuer.a}} {{RescuerType.Rescuer}}, has never faced {{Threatener}} before and doesn't realize that {{he.Rescuer}}'s out of {{his.Rescuer}} league."
+  - "{{Rescuer}}, {{RescuerType.Rescuer.a}} {{RescuerType.Rescuer}}, has never faced {{Threatener}} before, but immediately understands the danger."
+  - "{{Rescuer}}, {{RescuerType.Rescuer.a}} {{RescuerType.Rescuer}}, has never faced {{Threatener}} before, and doesn't immediately understand the danger."
+
+DeliveranceResult:
+  - yes
+  - no

@@ -1,0 +1,60 @@
+include:
+  - setup
+
+Begin:
+  - "{CascadianFolkloreOracle}"
+
+
+CascadianFolkloreOracle:
+  - |
+    {Setup}
+
+    - {CascadianFolklore.One}
+    - {CascadianFolklore.Two}
+    - {CascadianFolklore.Three}
+    - {CascadianFolklore.Four}
+
+
+
+
+CascadianFolklore:
+  - mode: pick
+  - "A beloved mummy, wrapped in cedar-bark blankets"
+  - "A bonecleaner, and the nice white skeletons she leaves behind"
+  - "A clever Elk, leading a frustrated hunter far afield"
+  - "A company of families, split apart, compelled to travel into the four directions"
+  - "A drowning, easy to predict"
+  - "A gazing beast, tragic and wise"
+  - "A giant, appearing and disappearing amongst the whirling snow"
+  - "A girl leaving for her first Vision Quest, proud and frightened"
+  - "A great bear’s spirit, offered some of its own flesh in thanks"
+  - "A great stone, upon which climbers receive prophecies"
+  - "A haunted Lake, full of spirits that test any visitor"
+  - "A lake, sprung from where she died, a girl tender and gentle as a fawn"
+  - "A mountain, easily annoyed, thrower of boulders"
+  - "A peerless hunter, sworn never to take more than his need, or lose his soul"
+  - "A plaintive and lonely loon, once a disobedient boy"
+  - "A reunion of old friends, intent on finishing work long left undone"
+  - "A Salmon-boy, handsome and glittering"
+  - "A shaman’s apprentice, jealous of those who have a Spirit Guide"
+  - "A short-stemmed brass pipe, filled with power"
+  - "A sorry prophecy, hard to hear after so many happy ones have come to fruition"
+  - "A sudden storm, wrathful and focused"
+  - "A warrior, wielding copper sword and cougarskin cap, jealous and ready for love"
+  - "A watching face, painted by ancients"
+  - "A white ghoul, infamous collector of corpses"
+  - "A wounded Deer, cruelly abandoned"
+  - "A young man, lost, pulled along many long roads by a mysterious will, to his new Family"
+  - "A younger brother, poet and prophet"
+  - "An ancient woman, grandmother to all, full of vitality, venomous to outsiders, bent over the campfire"
+  - "An isolated place, dangerous to hunt"
+  - "An old fisherman, asleep in a boat, but far away in dream"
+  - "Once a Great Lake, full of voices, now a hot Desert, where the spirits meet"
+  - "Papa Coyote, pushed to act against his human child’s foolishness"
+  - "Rain’s daughter, beautiful sorceress, in ermine pelts and long white hair"
+  - "Signs of Power, carved into the rock-face by ancient hands"
+  - "The grandmother of all drums, still and silent, deep in the womb of the hidden cave"
+  - "The last of his people left, the ravaging demon gone"
+  - "The Moon, lured to Earth by words sweet and magical"
+  - "Three sisters, silent, quick, and watchful"
+  - "Two of the Chief’s finest Scouts, intent on chaos"

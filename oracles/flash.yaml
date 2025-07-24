@@ -1,0 +1,29 @@
+include:
+  - characters
+  - conflict
+  - crises
+  - hooks
+  - inciting-incidents
+  - physical-description
+  - result
+  - story-ending
+  - yes-but
+  - outcomes
+  - villains
+
+render: jinja2
+
+Begin:
+  - |
+    The Villain: {{ Name.Antag }}, {{ Villain.Antag }}
+
+    {{ His.Antag }} Goal: {{ VillainVerb }} {{ VillainObject }}
+
+    Opposing {{ Him.Antag }}: {{ Name.Protag }}, {{ Character.Protag }}
+
+    Inciting Incident: {{ Incident.Inciting }}
+
+    Outcome: {{ Outcome.Protag }}
+
+    Ending: {{ StoryEnd.Protag }}
+    

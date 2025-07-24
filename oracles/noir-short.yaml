@@ -1,0 +1,17 @@
+include:
+  - noir
+  - inciting-incidents
+
+
+Begin:
+  - |
+    #
+
+    Noir!
+
+    {Incident.Inciting}
+
+    - {Noir.One}
+    - {Noir.Two}
+
+    #

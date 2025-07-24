@@ -62,6 +62,12 @@ SpiesOracle:
     - {Lovecraft.Four}
 
 
+SpiesShort:
+  - mode: pick
+  - "{MundaneSpies}"
+  - "{Casablanca}"
+  - "{StrangeSpies}"
+  - "{Lovecraft}"
 
 
 MundaneSpies:
@@ -131,7 +137,6 @@ StrangeSpies:
   - "A spectral figure appears near the historic Checkpoint Charlie every night at two o’clock."
   - "A foreign operative is found dead with all his hair and teeth missing."
   - "An operative’s routine physical reveals a strange metal object embedded in the bone behind his right ear."
-
   - "The Chief of {agency[key]}, cold and aloof, concerned about his political career."
   - "Director of {agency[key]}, brutal and jaded, but still patriotic and clever."
   - "A mole, endangering the lives of both foreign assets and British spies."
@@ -144,7 +149,7 @@ StrangeSpies:
   - "An Irish splinter revolutionary, bent on revenge towards the UK."
   - "An aging {agency[key]} Ops man, tainted by long competition between departments, hoping to catch {agency[key]} in the wrong."
   - "A dead drop in Madrid, primed and marked for pickup by a Spanish agent."
-  - "A tourist resort in Italy where an {agency[key]} analyst is meeting his Russian handler, tailed by {agency[key]}."
+  - "A tourist resort in Italy where {agency[key].an} {agency[key]} analyst is meeting his Russian handler, tailed by {agency[key]}."
   - "A {city[key]} safehouse, tended by an old woman who has seen and done many things over decades of service."
   - "A Chinese restaurant with a secret cellar used for human trafficking, and its proprietor."
   - "An {agency[key]} interrogation room, with interrogator, suspect, and watchers behind a one-way mirror."

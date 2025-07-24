@@ -1,0 +1,149 @@
+include:
+  - characters
+  - conflict
+  - crises
+  - hooks
+  - inciting-incidents
+  - physical-description
+  - result
+  - story-crime
+  - story-ending
+  - yes-but
+
+render: jinja2
+
+Begin:
+  - |
+    {{Vengeance}}
+
+Vengeance:
+  - |
+    # Vengeance
+
+    ## Characters
+
+    {{VengeanceCharacters}}
+
+    ## Plot
+
+    {{VengeancePlot}}
+
+
+VengeanceCharacters:
+  - |
+    ### {{Victim}} ({{Sex.Victim}}): The Victim
+
+    {{FullDescription.Victim}}
+
+    ### {{Criminal}} ({{Sex.Criminal}}): The {% if Result.remorse %}Remorseful{% else %}Unrepentant{% endif %} Criminal
+
+    {{FullDescription.Criminal}}
+
+    {{CriminalAct.Criminal}}
+
+    ### {{Avenger}} ({{Sex.Avenger}}): The Avenger
+
+    {{FullDescription.Avenger}}
+
+    ### {{ThirdParty}} ({{Sex.ThirdParty}}): A Third Party
+
+    {{FullDescription.ThirdParty}}
+
+
+VengeancePlot:
+  - |
+    ### Beginning
+
+    Hook, Characters, Trouble, Conflict.
+
+    {{VengeanceBeginning}}
+
+    Twist: {{YesButEverything.beginning}}
+
+    ### First Complication
+
+    Grief, Struggle, Conflict.
+
+    {{VengeanceMiddle.one}}
+
+    {{VengeanceMiddle.two}}
+
+    Twist: {{YesButEverything.first}}
+
+    ### Second Complication
+
+    {{VengeanceMiddle.three}}
+
+    {{VengeanceMiddle.four}}
+
+    Setback: {{YesButEverything.second}}
+
+    ### Resolution
+
+    Shovel Difficulty, All is Lost, Self-rescue, Conflict.
+
+    {{VengeanceEnd}}
+
+
+VengeanceBeginning:
+  - |
+    Hook: {{Hook.Vengeance}}
+
+    {{CriminalAct.Criminal}}{% if Result.happened_prior %} This takes place before the story begins.{% endif %} {{He.Criminal}} {% if Result.accomplice %}is assisted by {{ThirdParty}}.{% else %}acts alone.{% endif %}
+
+    {{Avenger}} {% if Result.witnessed %}witnessed the crime{% else %}was elsewhere at the time{% endif %}.
+
+    {{Victim}} {% if Result.victim_active %}is active and present throughout the story{% else %}has been incapacitated by the crime{% endif %}.
+
+VengeanceMiddle:
+  - mode: pick
+  - "{{Criminal}} and {{Avenger}} meet, and hard words are exchanged."
+  - "{{ThirdParty}} threatens {{Avenger}} if {{he.Avenger}} doesn't leave."
+  - The location adds further to the danger and conflict.
+  - "{% if Result.victim_active %}{{Victim}}{% else %}{{ThirdParty}}{% endif %} complicates things further with attempts to help."
+  - "{% if Result.victim_active %}{{Victim}}{% else %}{{ThirdParty}}{% endif %} complicates things further with attempts to meddle."
+  - "{{Avenger}} delays punishment to torture {{Criminal}}."
+  - "{{Avenger}} attempts to terrorize {{Criminal}} into confession."
+  - "{{Avenger}} attempts to arrange for {{Criminal}} the same fate that {{Victim}} suffered."
+  - "{{Avenger}} works to devise an intricate plan to make {{Criminal}} punish {{himself.Criminal}}."
+  - "Emboldened, {{Criminal}} acts to hurt someone else."
+  - "{{Avenger}} attempts to work with authorities to seek justice."
+  - "{{Avenger}} almost catches up with {{Criminal}}."
+  - "{{Avenger}} uses a special skill or talent to affect the {{Criminal}}."
+  
+
+VengeanceEnd:
+  - |
+    {{Avenger}} catches up with {{Criminal}}. Now {{he.Criminal}} will pay! Justice will be {{JusticeMethod}}{% if Result.accomplice %}, but first {{Avenger}} must deal with {{ThirdParty}}.{% else %}!{% endif %}
+
+    {{Criminal}} makes a last-ditch effort to save {{himself.Criminal}}.
+
+    How does the setting play into {{Avenger}}'s mode of justice?
+
+    {%- if Result.victim_active and Result.witness %}
+
+    {{Victim}} is present to witness justice enacted.{% if Result.victim_forgives %} {{Victim}} has forgiven {{Criminal}} and attempts to stop {{Avenger}}.{% endif %}{% endif %}
+
+    {{StoryEnd.Avenger}}
+
+Criminal:
+  - "{{Name.Criminal}}"
+Victim:
+  - "{{Name.Victim}}"
+ThirdParty:
+  - "{{Name.ThirdParty}}"
+Avenger:
+  - "{{Name.Avenger}}"
+
+JusticeMethod:
+  - "{{JusticeStyle}} and physical"
+  - "{{JusticeStyle}} and ruinous"
+  - "{{JusticeStyle}} and humiliating"
+
+JusticeStyle:
+  - swift
+  - tortuous
+
+VengeanceResult:
+  - yes
+  - no

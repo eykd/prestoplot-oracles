@@ -1,0 +1,173 @@
+include:
+  - characters
+  - conflict
+  - crises
+  - hooks
+  - inciting-incidents
+  - physical-description
+  - result
+  - story-crime
+  - story-ending
+  - yes-but
+
+render: jinja2
+
+Begin:
+  - |
+    {{VengeanceKin}}
+
+VengeanceKin:
+  - |
+    # Vengeance Taken for Kindred upon Kindred
+
+    ## Characters
+
+    {{VengeanceKinCharacters}}
+
+    ## Plot
+
+    {{VengeanceKinPlot}}
+
+
+VengeanceKinCharacters:
+  - |
+    ### {{Victim}} ({{Sex.Victim}}): The Victim
+
+    {{FullDescription.Victim}}
+
+    ### {{Criminal}} ({{Sex.Criminal}}): The Guilty
+
+    {{FullDescription.Criminal}}
+
+    {{Criminal}} and {{Victim}} are related by {% if Result.blood %}blood{% else %}marriage{% endif %}.
+
+    {{KinsmanCriminalAct.Criminal}}
+
+    ### {{Avenger}} ({{Sex.Avenger}}): The Avenger
+
+    {{FullDescription.Avenger}}
+
+    ### {{Relative}} ({{Sex.Relative}}): A Relative
+
+    {{FullDescription.Relative}}
+
+
+VengeanceKinPlot:
+  - |
+    ### Beginning
+
+    Hook, Characters, Trouble, Conflict.
+
+    {{VengeanceKinBeginning}}
+
+    Twist: {{YesButEverything.beginning}}
+
+    ### First Complication
+
+    Grief, Struggle, Conflict.
+
+    {{VengeanceKinMiddle.one}}
+
+    {{VengeanceKinMiddle.two}}
+
+    Twist: {{YesButEverything.first}}
+
+    ### Second Complication
+
+    {{VengeanceKinMiddle.three}}
+
+    {{VengeanceKinMiddle.four}}
+
+    Setback: {{YesButEverything.second}}
+
+    ### Resolution
+
+    Shovel Difficulty, All is Lost, Self-rescue, Conflict.
+
+    {{VengeanceKinEnd}}
+
+
+VengeanceKinBeginning:
+  - |
+    Hook: {{Hook.VengeanceKin}}
+
+    {{Criminal}} and {{Victim}} are related by {% if Result.blood %}blood{% else %}marriage{% endif %}.
+
+    {{KinsmanCriminalAct.Criminal}}{% if Result.happened_prior %} This takes place before the story begins.{% endif %}
+
+    {{Avenger}} {% if Result.witnessed %}witnessed the crime{% else %}was elsewhere at the time{% endif %}.
+
+    {% if Result.victim_asks %}Before {{he.Victim}} dies, {{Victim}}{% else %}{{Relative}}{% endif %} begs {{Avenger}} to act, and extracts {{his.Avenger}} promise.
+
+    What does {{Criminal}} do after the act?
+
+
+VengeanceKinMiddle:
+  - mode: pick
+  - "{{Criminal}} and {{Avenger}} meet. Hard words are exchanged."
+  - The location adds further to the danger and conflict.
+  - "{{Criminal}} makes a stand, confronting {{Avenger}} with a group of allies."
+  - "{{Avenger}} delays punishment to torture {{Criminal}}."
+  - "{{Avenger}} attempts to terrorize {{Criminal}} into confession."
+  - "{{Avenger}} attempts to arrange for {{Criminal}} the same fate that {{Victim}} suffered."
+  - "{{Avenger}} works to devise an intricate plan to make {{Criminal}} punish {{himself.Criminal}}."
+  - "{{Avenger}} attempts to work with authorities to seek justice."
+  - "{{Relative}} attempts to work with authorities to seek justice."
+  - "{{Avenger}} almost catches up with {{Criminal}}."
+  - "{{Avenger}} uses a special skill or talent to affect the {{Criminal}}."
+  - "{{Relative}} pretends to be for {{Criminal}}."
+  - "{{Relative}} complicates things further with attempts to help."
+  - "{{Relative}} complicates things further with attempts to meddle."
+  - "Local authorities complicate things further with attempts to help."
+  - "Local authorities complicate things further with attempts to meddle."
+  
+
+VengeanceKinEnd:
+  - |
+    {{Avenger}} catches up with {{Criminal}}. Now {{he.Criminal}} will pay! Justice will be {{JusticeMethod}}!
+
+    {{Criminal}} makes a last-ditch effort to save {{himself.Criminal}}.
+
+    How does the setting play into {{Avenger}}'s mode of justice?
+
+    {{GuiltyReaction}}
+
+    How does the family feel after it's all over? How do {{Avenger}} and {{Relative}} feel? Will they formally remember {{Victim}} at the end?
+
+    {{StoryEnd.Avenger}}
+
+Criminal:
+  - "{{Name.Criminal}}"
+Victim:
+  - "{{Name.Victim}}"
+Relative:
+  - "{{Name.Relative}}"
+Avenger:
+  - "{{Name.Avenger}}"
+
+
+JusticeMethod:
+  - "{{JusticeStyle}} and physical"
+  - "{{JusticeStyle}} and ruinous"
+  - "{{JusticeStyle}} and humiliating"
+
+JusticeStyle:
+  - swift
+  - tortuous
+
+GuiltyReaction:
+  - "{{Criminal}} repents over his crime."
+  - "{{Criminal}} begs forgiveness for his crime."
+  - "{{Criminal}} justifies his crime to the bitter end."
+  - "{{Criminal}} curses his family."
+
+KinsmanCriminalAct:
+  - "{{Incident.Crime.capitalize()}}, {{Criminal}}, in {{KinsmanCrimeMode.mode.an}} {{KinsmanCrimeMode.mode}} act, murders {{Victim}} because {{CriminalMotive}}."
+
+KinsmanCrimeMode:
+  - premeditated
+  - impulsive
+
+VengeanceKinResult:
+  - yes
+  - no

@@ -16,6 +16,10 @@ SwordPlanetOracle:
     - {Peril.Three}
 
 
+SwordPlanetShort:
+  - |
+    - {Person.One.A} {Person.One}, {fate.Fate}.
+    - {Peril.One}
 
 
 OurHeroes:

@@ -1,0 +1,35 @@
+include:
+  - inciting-incidents
+
+render: jinja2
+
+
+Criminal:
+  - "{{Name.Criminal}}"
+Victim:
+  - "{{Name.Victim}}"
+ThirdParty:
+  - "{{Name.ThirdParty}}"
+
+
+CriminalMotive:
+  - "{{he.Criminal}} had a disagreement with {{him.Victim}}"
+  - "{{Victim}} insulted {{him.Criminal}}"
+  - "{{he.Criminal}} and {{Victim}} had a terrible misunderstanding"
+  - "{{he.Criminal}} desires power, and thinks {{he.Criminal}} can get it from {{him.Victim}}"
+  - "{{he.Criminal}} desires money, and thinks {{he.Criminal}} can get it from {{him.Victim}}"
+  - "{{he.Criminal}} desires prestige, and thinks {{he.Criminal}} can get it from {{him.Victim}}"
+  - "{{he.Criminal}} was acting in self-defense"
+  - "{{he.Criminal}} has made a terrible mistake"
+
+CriminalAct:
+  - "{{Incident.Crime.capitalize()}}, {{Criminal}} acts against {{Victim}}'s property because {{CriminalMotive}}."
+  - "{{Incident.Crime.capitalize()}}, {{Criminal}} acts against {{Victim}} {{himself.Victim}} because {{CriminalMotive}}."
+  - "{{Incident.Crime.capitalize()}}, {{Criminal}} acts against someone close to {{Victim}} because {{CriminalMotive}}."
+  - "{{Incident.Crime.capitalize()}}, {{Criminal}} acts against {{Victim}}'s character because {{CriminalMotive}}."
+  - "{{Incident.Crime.capitalize()}}, {{Criminal}} acts against {{Victim}}'s social standing because {{CriminalMotive}}."
+  - "{{Incident.Crime.capitalize()}}, {{Criminal}} acts against something that {{Victim}} holds dear because {{CriminalMotive}}."
+  - "{{Incident.Crime.capitalize()}}, {{Criminal}} acts against some place that {{Victim}} holds dear because {{CriminalMotive}}."
+  - "{{Incident.Crime.capitalize()}}, {{Criminal}} gets {{Victim}} fired because {{CriminalMotive}}."
+  - "{{Incident.Crime.capitalize()}}, {{Criminal}} gets {{Victim}} thrown out because {{CriminalMotive}}."
+  - "{{Incident.Crime.capitalize()}}, {{Criminal}} disrupts {{Victim}}'s plans because {{CriminalMotive}}."

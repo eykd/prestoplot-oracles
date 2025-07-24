@@ -1,0 +1,105 @@
+include:
+  - highadventure
+  - lovecraft
+  - mystery
+  - noir
+  - pirates
+  - spaceopera
+  - spies
+  - superhero
+  - swordplanet
+  - weirdscience
+  - western
+  - wuxia
+
+  - hooks
+  - locations
+  - characters
+  - inciting-incidents
+  - outcomes
+  - proverbs
+  - villains
+
+
+Begin:
+  - |
+    #
+
+    ## {Theme.Main.title}
+
+    {Theme.Main.pieces}
+
+    #
+
+Theme:
+  - title: High Adventure!
+    pieces: |
+      {Incident.Inciting}
+
+      - {HighAdventure.One}
+      - {HighAdventure.Two}
+  # - title: Lovecraft!
+  #   pieces: |
+  #     {Incident.Inciting}
+
+  #     - {Lovecraft.One}
+  #     - {Lovecraft.Two}
+  - title: Mystery!
+    pieces: |
+      {Incident.Inciting}
+
+      - {Mystery.One}
+      - {Mystery.Two}
+  - title: Noir!
+    pieces: |
+      {Incident.Inciting}
+
+      - {Noir.One}
+      - {Noir.Two}
+  - title: Pirates!
+    pieces: |
+      {Incident.Inciting}
+
+      - {PiratesShort.One}
+      - {PiratesShort.Two}
+  - title: Space Opera!
+    pieces: |
+      {Incident.Inciting}
+
+      - {SpaceOpera.One}
+      - {SpaceOpera.Two}
+  - title: Spies!
+    pieces: |
+      {Incident.Inciting}
+
+      - {SpiesShort.One}
+      - {SpiesShort.Two}
+  - title: Superheroes!
+    pieces: |
+      {Incident.Inciting}
+
+      - {SuperHeroShort.One}
+      - {SuperHeroShort.Two}
+  - title: Sword & Planet!
+    pieces: |
+      {Incident.Inciting}
+
+      {SwordPlanetShort.One}
+  - title: Weird Science!
+    pieces: |
+      {Incident.Inciting}
+
+      - {WeirdScience.One}
+      - {WeirdScience.Two}
+  - title: Western!
+    pieces: |
+      {Incident.Inciting}
+
+      - {Western.One}
+      - {Western.Two}
+  # - title: Wuxia!
+  #   pieces: |
+  #     {Incident.Inciting}
+  #
+  #     - {Wuxia.One}
+  #     - {Wuxia.Two}

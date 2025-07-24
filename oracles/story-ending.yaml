@@ -1,0 +1,76 @@
+StoryEnd:
+  - |
+    {StoryEndSuccess[key] if StoryEndResult.success else StoryEndFailure[key]}
+
+    {StoryEndMeaning[key]}
+
+
+StoryEndResult:
+  - yes
+  - no
+
+StoryEndSuccess:
+  - "{Name[key]} succeeds in obtaining {his[key]} desired goal but finds {him[key]}self worse off for it."
+  - "{Name[key]} succeeds in obtaining {his[key]} desired goal and leaves satisfied."
+  - "{Name[key]} succeeds in obtaining {his[key]} desired goal and learns an important lesson."
+  - "{Name[key]} succeeds in obtaining {his[key]} desired goal but learns nothing from it."
+
+
+StoryEndFailure:
+  - "{Name[key]} fails in obtaining {his[key]} desired goal, but finds {him[key]}self better off for it."
+  - "{Name[key]} fails in obtaining {his[key]} desired goal."
+  - "{Name[key]} fails in obtaining {his[key]} desired goal but learns an important lesson."
+  - "{Name[key]} fails in obtaining {his[key]} desired goal and learns a difficult lesson."
+
+
+StoryEndMeaning:
+  - |
+    - Eliminate the obvious ending.
+    - Eliminate the odious ending.
+    
+    Find the ending that matters:
+    
+    {StoryEndTypeDescription[key]}
+
+
+StoryEndType:
+  - opposites
+  - irony
+
+
+StoryEndTypeDescription:
+  - |
+    {StoryEndTypeOpposites[key] if StoryEndType[key] == 'opposites' else StoryEndTypeDramaticIrony[key]}
+
+
+StoryEndTypeOpposites:
+  - |
+    The Opposites Ending: move the reader sharply from one emotional state to its opposite.
+
+    Study your complications and your Obvious ending, and create the exact opposite of the Obvious Ending.
+
+StoryEndTypeDramaticIrony:
+  - |
+    The Dramatic Irony Ending: occurs when a serious divergence between what your character believes to be true and what your reader knows to be true, results in something happening to the character that is, to the character, totally unexpected... but that the reader understands perfectly.
+
+    Tell the story in first person, presenting the character receiving the dramatic irony through the eyes of the character who delivers the irony, or witnesses its delivery.
+
+    For the first complication, second complication, and ending, write out what the character thinks is true, and how that is different from what the reader knows is true.
+
+
+StoryEndKey:
+  - |
+    Hide the key to the ending in plain sight in the first complication.
+
+    **Keep your key subtle.** It has to be where the reader can find it, can see it, can even see it work, but then you downplay its importance.
+
+    {StoryEndKeyOpposites[key] if StoryEndType[key] == 'opposites' else StoryEndKeyDramaticIrony[key]}
+
+
+StoryEndKeyOpposites:
+  - |
+    What one word or phrase, added in the First Complication, would create a key you could use to make the ending either the opposite of what readers will expect?
+
+StoryEndKeyDramaticIrony:
+  - |
+    What one word or phrase, added in the First Complication, would create a key you could use to create the incongruence that will let me write a dramatic irony ending?

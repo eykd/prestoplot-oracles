@@ -1,0 +1,191 @@
+include:
+  - characters
+  - conflict
+  - crises
+  - hooks
+  - inciting-incidents
+  - physical-description
+  - result
+  - story-ending
+  - yes-but
+
+render: jinja2
+
+Begin:
+  - |
+    {{Sojourn}}
+
+
+Sojourn:
+  - |
+    # Sojourn
+
+    ## Characters
+
+    {{SojournCharacters}}
+
+    ## Plot
+
+    {{SojournPlot}}
+
+
+SojournCharacters:
+  - |
+    ### {{Unfortunate}} ({{Sex.Unfortunate}}): The Unfortunate
+
+    {{FullDescription.Unfortunate}}
+
+    ### {{Threatener}} ({{Sex.Threatener}}): The Threat
+
+    {% if ThreatenerType.Threat == "Person" -%}
+    {{FullDescription.Threatener}}
+    {% else %}{{Threatener}}{% endif %}
+
+    ### {{Sojourner}} ({{Sex.Sojourner}}): The Sojourner
+
+    {{FullDescription.Sojourner}}
+
+    ### {{ThirdParty}} ({{Sex.ThirdParty}}): A Third Party
+
+    {{FullDescription.ThirdParty}}
+
+SojournPlot:
+  - |
+    ### Beginning
+
+    Hook, Characters, Trouble, Conflict.
+
+    {{SojournBeginning}}
+
+    Twist: {{YesButEverything.beginning}}
+
+    ### First Complication
+
+    Grief, Struggle, Conflict.
+
+    {{SojournMiddle.one}}
+
+    {{SojournMiddle.two}}
+
+    Twist: {{YesButEverything.first}}
+
+    ### Second Complication
+
+    Grief, Headway, Conflict.
+
+    {{SojournMiddle.three}}
+
+    {{SojournMiddle.four}}
+
+    Setback: {{YesButEverything.second}}
+
+    ### Resolution
+
+    Shovel Difficulty, All is Lost, Self-rescue, Conflict.
+
+    {{SojournEnd}}
+
+
+SojournBeginning:
+  - |
+    Hook: {{Hook.Sojourn}}
+
+    {{Incident.Sojourn.capitalize()}}, {{Unfortunate}} finds {{himself.Unfortunate}} unhappy. {{He.Unfortunate}} feels completely {% if Result.capable %}capable{% else %}incapable{% endif %} of helping {{himself.Unfortunate}}.
+
+    {{SojournerPosture}}
+
+    {{ThirdParty}} is unhappy about {{Sojourner}}'s presence.
+
+    The threat of {{Threatener}} makes itself known.
+
+    {{Sojourner}} {% if Result.understands %}sees and understands{% else %}doesn't see or understand{% endif %} the threat immediately. {{SojournerThreatRelation}}
+
+    {{UnfortunatePosture}}
+
+    {{Unfortunate}} and {{Sojourner}} meet {% if Result.private %}privately{% else %}in public{% endif %}.
+
+    What attracts {{Unfortunate}} and {{Sojourner}} to each other? What does {{Unfortunate}} have to lose by associating with {{Sojourner}}? Or vice versa?
+
+    When {{Unfortunate}} is faced with {{Threatener}}, {{Sojourner}} arrives {% if Result.on_time -%}just in time{% else %}too late{% endif %} to save {{him.Unfortunate}} from serious damage.
+
+
+SojournMiddle:
+  - mode: pick
+  - "{{Unfortunate}} and {{Sojourner}} meet."
+  - "{{ThirdParty}} threatens {{Sojourner}} if {{he.Sojourner}} doesn't leave."
+  - "{{Unfortunate}} ignores {{Sojourner}} and tries to save {{himself.Unfortunate}} from {{Threatener}}, winding up in more trouble."
+  - "{{Unfortunate}} gets {{himself.Unfortunate}} in deeper trouble."
+  - "{{Sojourner}}'s efforts cause trouble."
+  - "{{Sojourner}}'s efforts cause trouble for {{ThirdParty}}."
+  - "{{Sojourner}}'s efforts cause trouble for {{Unfortunate}}."
+  - "{{ThirdParty}} critiques {{Sojourner}}'s plan."
+  - "{{ThirdParty}} critiques {{Sojourner}}'s technique."
+  - "{{ThirdParty}} antagonizes {{Threatener}}, making the danger more forceful than ever toward {{Sojourner}}."
+  - "{{Unfortunate}} misjudges {{Threatener}}, thinking {{he.Unfortunate}} is safe."
+  - "{{ThirdParty}} is oblivious to {{Threatener}}, thinking {{Sojourner}} crazy to warn {{him.Unfortunate}} of danger."
+  - "{{Sojourner}} faces unexpected dangers that slow {{his.Sojourner}} ability to neutralize {{Threatener}}."
+  - The location adds further to the danger and conflict.
+  - "{{ThirdParty}} complicates things further with {{his.ThirdParty}} attempts to help."
+  - "{{ThirdParty}} complicates things further with {{his.ThirdParty}} attempts to meddle."
+
+
+SojournEnd:
+  - |
+    {{Sojourner}} defeats {{Threatener}}, changing people's lives for the better{% if not Result.realize %}, though some may not realize it{% endif %}.
+
+    {{Sojourner}} {% if Result.changed %}experiences a transformation{% else %}remains the same{% endif %}.
+
+    {{Sojourner}} {% if Result.leaves %}decides to leave{% else %}decides to stay{% endif %}. Why?
+
+    {{StoryEnd.Unfortunate}}
+
+
+SojournProtagonist:
+  - "{{Unfortunate}}"
+
+Unfortunate:
+  - "{{Name.Unfortunate}}"
+Recipient:
+  - "{{Name.Recipient}}"
+ThreatenerType:
+  - Person
+  - "[Threatening Place]"
+  - "[Dangerous Animal or Actor]"
+  - "[Threatening Institution]"
+  - "[Threatening Environment]"
+Threatener:
+  - |
+    {% if ThreatenerType.Threat == "Person" %}{{Name.Threatener }}{% else %}{{ThreatenerType.Threat}}{% endif %}
+ThirdParty:
+  - "{{Name.ThirdParty}}"
+Sojourner:
+  - "{{Name.Sojourner}}"
+
+UnfortunatePosture:
+  - "{{Unfortunate}} feels humiliated by needing help."
+  - "{{Unfortunate}} feels that {{he.Unfortunate}} is entitled to help."
+  - "{{Unfortunate}} will welcome any help {{he.Unfortunate}} can get."
+  - "{{Unfortunate}} doesn't really want help, but feels compelled to accept."
+  - "{{Unfortunate}} is desperate for help, because {{his.Unfortunate}} situation is dire."
+
+SojournerPosture:
+  - "{{Sojourner}} arrives, in great need of a holiday."
+  - "{{Sojourner}} arrives, hoping to recuperate from a terrible experience."
+  - "{{Sojourner}} arrives, hoping to start fresh in a new environment."
+  - "{{Sojourner}} arrives, an innocent tourist."
+  - "{{Sojourner}} arrives with a plan."
+  - "{{Sojourner}} arrives, fresh from {{his.Sojourner}} wanderings."
+
+SojournerThreatRelation:
+  - "{{Sojourner}} has faced {{Threatener}} before and overcome the danger."
+  - "{{Sojourner}} has faced {{Threatener}} before and has the scars to prove it."
+  - "{{Sojourner}} has faced {{Threatener}} before and still has nightmares."
+  - "{{Sojourner}} has faced {{Threatener}} before and knows {{he.Sojourner}} is out of {{his.Sojourner}} league."
+  - "{{Sojourner}} has never faced {{Threatener}} before and immediately knows that {{he.Sojourner}}'s out of {{his.Sojourner}} league."
+  - "{{Sojourner}} has never faced {{Threatener}} before and doesn't realize that {{he.Sojourner}}'s out of {{his.Sojourner}} league."
+  - "{{Sojourner}} has never faced {{Threatener}} before, but immediately understands the danger."
+  - "{{Sojourner}} has never faced {{Threatener}} before, and doesn't immediately understand the danger."
+
+SojournResult:
+  - yes
+  - no

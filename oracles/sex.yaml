@@ -1,0 +1,112 @@
+Sex:
+  - male
+  - female
+
+boy:
+  - >
+    {'girl' if Sex[key] == 'female' else 'boy'}
+
+
+guy:
+  - >
+    {'gal' if Sex[key] == 'female' else 'guy'}
+
+
+man:
+  - >-
+    {'woman' if Sex[key] == 'female' else 'man'}
+
+
+woman:
+  - >-
+    {man[key]}
+
+
+he:
+  - >
+    {'she' if Sex[key] == 'female' else 'he'}
+
+
+she:
+  - >-
+    {he[key]}
+
+
+He:
+  - >
+    {'She' if Sex[key] == 'female' else 'He'}
+
+
+She:
+  - >-
+    {He[key]}
+
+
+him:
+  - >
+    {'her' if Sex[key] == 'female' else 'him'}
+
+
+her:
+  - >-
+    {him[key]}
+
+
+Him:
+  - >
+    {'Her' if Sex[key] == 'female' else 'Him'}
+
+
+Her:
+  - >-
+    {Him[key]}
+
+
+himself:
+  - >
+    {'herself' if Sex[key] == 'female' else 'himself'}
+
+
+herself:
+  - >-
+    {himself[key]}
+
+
+Himself:
+  - >
+    {'Herself' if Sex[key] == 'female' else 'Himself'}
+
+
+Herself:
+  - >-
+    {Himself[key]}
+
+
+his:
+  - >
+    {'her' if Sex[key] == 'female' else 'his'}
+
+
+her:
+  - >-
+    {his[key]}
+
+
+hers:
+  - >-
+    {'hers' if Sex[key] == 'female' else 'his'}
+
+
+His:
+  - >
+    {'Her' if Sex[key] == 'female' else 'His'}
+
+
+Her:
+  - >-
+    {His[key]}
+
+
+Hers:
+  - >-
+    {'Hers' if Sex[key] == 'female' else 'His'}

@@ -1,42 +1,128 @@
+include:
+  - sex
+
+render: jinja2
+
 Begin:
   - |
-    - {Description.One}
-    - {Description.Two}
-    - {Description.Three}
-    - {Description.Four}
-    - {Description.Five}
-    - {Description.Six}
-    - {Description.Seven}
-    - {Description.Eight}
-    - {Description.Nine}
-    - {Description.Ten}
+    - {{Description.One}}
+    - {{Description.Two}}
+    - {{Description.Three}}
+    - {{Description.Four}}
+    - {{Description.Five}}
+    - {{Description.Six}}
+    - {{Description.Seven}}
+    - {{Description.Eight}}
+    - {{Description.Nine}}
+    - {{Description.Ten}}
 
 
 Description:
   - |
-    a {body[key]} body, {eyes[key]} eyes, {hair[key]} hair, {garb[key]} garb, and excess {excess[key]}.
+    {{PhysicalDescription[key]}}, wearing {{Garb[key]}} garb
 
-style:
-  - belligerent
-  - calculating
-  - pompous
-  - inspiring
-  - hedonistic
-  - gluttonous
-  - slothful
-  - gregarious
-  - impatient
-  - verbose
-  - paranoid
-  - cowardly
-  - peace-loving
-  - inventive
-  - wyrd
-  - touched
-  - simple
-  - gruff
+PhysicalDescription:
+  - |
+    {{Build[key]}}; {{Complexion[key]}} {{SkinColor[key]}} skin with {{Eyes[key]}} under {{EyeBrows[key]}} brows and {{Hair[key]}}
 
-eyes:
+
+Complexion:
+  - clear
+  - freckled
+  - pale
+  - pimpled
+  - spotted
+  - tan
+  - ugly
+  - baby-soft
+  - blemished
+  - bruised
+  - clear
+  - delicate
+  - dewy
+  - dimpled
+  - doughy
+  - drooping
+  - dry
+  - dull
+  - firm
+  - flaky
+  - flawless
+  - freckled
+  - fuzzy
+  - glowing
+  - leathery
+  - lined
+  - loose
+  - luminescent
+  - mottled
+  - pimply
+  - pitted
+  - pockmarked
+  - poreless
+  - raw
+  - rough
+  - sagging
+  - satiny
+  - scaly
+  - scarred
+  - scratched
+  - seamed
+  - silken
+  - smooth
+  - sunburned
+  - tattooed
+  - thin
+  - translucent
+  - uneven
+  - veined
+  - velvety
+  - weather-beaten
+  - large-pored
+  - wrinkled
+
+
+SkinColor:
+  - alabaster
+  - amber
+  - bisque
+  - bronze
+  - chalky
+  - cinnamon
+  - copper
+  - cream
+  - creamy
+  - dark
+  - dark brown
+  - deep brown
+  - ebony
+  - fair
+  - fawn
+  - florid
+  - golden
+  - honey
+  - ivory
+  - light
+  - milk
+  - olive
+  - pale
+  - pallid
+  - pasty
+  - peach
+  - porcelain
+  - rose
+  - rosy
+  - ruddy
+  - russet
+  - sallow
+  - tawny
+
+Eyes:
+ - |
+   {{EyeManner}} {{EyeColor[key]}} eyes
+
+EyeManner:
+  - mode: pick
   - bulging
   - wild
   - half-lidded
@@ -48,43 +134,462 @@ eyes:
   - wise
   - suspicious
 
-body:
-  - squat
+EyeColor:
+  - amber
+  - aquamarine
+  - arctic blue
+  - ash gray
+  - azure
+  - black
+  - blue
+  - brandy
+  - brown
+  - cerulean
+  - chestnut
+  - chestnut
+  - chocolate brown
+  - chrome
+  - coal
+  - cocoa brown
+  - coffee brown
+  - cognac
+  - concrete gray
+  - copper
+  - cornflower blue
+  - crystal blue
+  - dark brown
+  - denim blue
+  - dove gray
+  - electric blue
+  - emerald
+  - fog gray
+  - forest green
+  - glacial blue
+  - golden brown
+  - gray
+  - gray green
+  - green
+  - gunmetal gray
+  - hazel
+  - honey
+  - ice blue
+  - indigo
+  - jade
+  - lake blue
+  - leaf green
+  - mahogany
+  - midnight
+  - mink brown
+  - mocha
+  - moss green
+  - obsidian
+  - olive
+  - olive green
+  - onyx
+  - pewter
+  - platinum
+  - raven
+  - sapphire blue
+  - sepia
+  - shark gray
+  - sienna brown
+  - silver
+  - silver gray
+  - sky blue
+  - slate blue
+  - slate gray
+  - smoky gray
+  - steel blue
+  - storm blue
+  - storm gray
+  - sunny blue
+  - tawny
+  - topaz
+  - turquoise
+  - violet
+  - warm brown
+  - whiskey
+  - yellow green
+
+EyeBrows:
+  - arched
+  - bushy
+  - dark
+  - faint
+  - heavy
+  - plucked
+  - sparse
+  - straight
   - thick
-  - wiry
-  - spherical
-  - compact
+  - thin
+  - trim
+  - unruly
+
+Build:
+  - mode: pick
+  - Herculean
+  - agile
+  - ample
+  - athletic
+  - average
+  - barrel-chested
+  - beefy
+  - big
+  - bony
+  - bowlegged
+  - brawny
+  - broad-shouldered
+  - bulky
   - burly
-  - tight
-  - scrawny
-  - pot-bellied
+  - chiseled
+  - chubby
+  - chunky
+  - clumsy
+  - coltish
+  - compact
+  - curvy
+  - emaciated
+  - fat
+  - fit
+  - flabby
+  - frail
+  - full-figured
+  - gangling
+  - gaunt
+  - generous
+  - grossly obese
+  - healthy
+  - heavy
+  - heavy-set
+  - hourglass
+  - hulking
+  - lanky
+  - large
   - lean
+  - leggy
+  - lissome
+  - lithe
+  - long-legged
+  - lush
+  - muscular
+  - obese
+  - overweight
+  - petite
+  - plump
+  - plush
+  - portly
+  - pot-bellied
+  - powerful
+  - pudgy
+  - rangy
+  - ripped
+  - ropy
+  - rounded
+  - scrawny
+  - short
+  - sinewy
+  - skeletal
+  - skinny
+  - slender
+  - slightly chubby
+  - slim
+  - slope-shouldered
+  - small
+  - solid
+  - spare
+  - spherical
+  - squat
+  - stocky
+  - stout
+  - strapping
+  - stringy
+  - strong
+  - sturdy
+  - superbly fit
+  - supernaturally strong
+  - tall
+  - taut
+  - thick
+  - thin
+  - tight
+  - tiny
+  - toned
+  - trim
+  - voluptuous
+  - weak
+  - well-built
+  - well-muscled
+  - well-proportioned
+  - willowy
+  - wiry
 
-hair:
+Hair:
+  - "{% if Sex[key] == 'female' %}{{FemaleHair[key]}}{% else %}{{MaleHair[key]}}{% endif %}"
+
+HairCurve:
+  - mode: pick
+  - bouncy
+  - bushy
+  - curly
+  - dry
+  - dull
+  - fine
   - frizzy
-  - voluminous
-  - sleek
-  - scraggly
-  - thinning
-  - shorn
+  - full
+  - glossy
+  - greasy
+  - lanky
+  - layered
+  - limp
+  - loose
+  - luminous
+  - lustrous
+  - luxuriant
+  - messy
   - mottled
-  - multi-hued
-  - adorned
-  - braided
+  - neatly-combed
+  - oily
+  - scraggly
+  - shaggy
+  - sleek
+  - shiny
+  - smooth
+  - spiky
+  - straggly
+  - straight
+  - stringy
+  - tangled
+  - thick
+  - tousled
+  - unkempt
+  - untamed
+  - voluminous
+  - wavy
+  - wild
+  - windblown
+  - wispy
 
-garb:
-  - grimy
-  - immaculate
+FemaleHair:
+  - "{{FemaleHairStyle[key]}}"
+
+FemaleHairStyle:
+  - mode: pick
+  - "short {{HairCurve[key]}} {{HairColor[key]}} hair"
+  - "a {{HairColor[key]}} pixie-cut"
+  - "chin-length {{HairCurve[key]}} {{HairColor[key]}} hair"
+  - "shoulder-length {{HairCurve[key]}} {{HairColor[key]}} hair"
+  - "long {{HairCurve[key]}} {{HairColor[key]}} hair"
+  - "{{HairColor[key]}} pigtails"
+  - "a {{HairColor[key]}} ponytail"
+  - "two long {{HairColor[key]}} braids"
+  - "braided {{HairColor[key]}} hair"
+  - "{{HairColor[key]}} dredlocks"
+  - "a {{HairColor[key]}} afro"
+  - "{{HairCurve[key]}} {{HairColor[key]}} hair parted neatly in the middle"
+  - "a {{HairColor[key]}} topknot"
+  - "a {{HairColor[key]}} bun"
+  - "close-cropped {{HairColor[key]}} hair"
+  - "a {{HairColorUnusual[key]}} mohawk"
+  - "{{HairColor[key]}} hair pulled behind a headband"
+  - "{{HairColor[key]}} hair held back by a tortoiseshell comb"
+  - "very long {{HairCurve[key]}} {{HairColor[key]}} hair"
+  - "long, braided {{HairColor[key]}} hair"
+  - "greasy, limp {{HairColor[key]}} hair"
+  - "bobbed {{HairColor[key]}} hair"
+  - "braided {{HairColor[key]}} hair"
+  - "buzzed {{HairColor[key]}} hair"
+  - "clipped {{HairColor[key]}} hair"
+  - "corkscrewed {{HairColor[key]}} hair"
+  - "crewcut {{HairColor[key]}} hair"
+  - "cropped {{HairColor[key]}} hair"
+  - "a {{HairCurve[key]}} {{HairColor[key]}} mullet"
+  - "parted {{HairColor[key]}} hair"
+  - "ringletted {{HairColor[key]}} hair"
+  - "short {{HairCurve[key]}} {{HairColor[key]}} hair"
+  - "shoulder-length {{HairCurve[key]}} {{HairColor[key]}} hair"
+  - "spiralled {{HairColor[key]}} hair"
+
+
+MaleHair:
+  - "{{MaleHairStyle[key]}}"
+  - "{{MaleHairStyle[key]}}"
+  - "{{MaleHairStyle[key]}}"
+  - "{{MaleHairStyle[key]}}"
+  - "{{MaleHairStyle[key]}}"
+  - "{{MaleHairStyle[key]}}"
+  - "{{MaleHairStyle[key]}}"
+  - "{{MaleHairStyle[key]}}"
+  - "bald"
+  - "very little {{HairColor[key]}} hair"
+  - "thinning {{HairColor[key]}} hair"
+  - "receding {{HairColor[key]}} hair"
+  - "a {{HairColor[key]}} comb-over"
+  - "a {{HairColor[key]}} widow's peak"
+  - "slicked down {{HairColor[key]}} hair"
+  - "thinning {{HairColor[key]}} hair"
+
+
+MaleHairStyle:
+  - mode: pick
+  - "short-cropped {{HairColor}} hair"
+  - "long {{HairCurve[key]}} {{HairColor[key]}} hair"
+  - "a {{HairColor[key]}} ponytail"
+  - "a {{HairColor[key]}} tonsure"
+  - "a {{HairColorUnusual[key]}} mohawk"
+  - "short {{HairCurve[key]}} {{HairColor[key]}} hair"
+  - "a {{HairColor[key]}} pixie-cut"
+  - "chin-length {{HairCurve[key]}} {{HairColor[key]}} hair"
+  - "shoulder-length {{HairCurve[key]}} {{HairColor[key]}} hair"
+  - "long {{HairCurve[key]}} {{HairColor[key]}} hair"
+  - "a {{HairColor[key]}} ponytail"
+  - "{{HairColor[key]}} dredlocks"
+  - "a {{HairColor[key]}} afro"
+  - "{{HairCurve[key]}} {{HairColor[key]}} hair parted neatly in the middle"
+  - "a {{HairColor[key]}} topknot"
+  - "a {{HairColor[key]}} bun"
+  - "close-cropped {{HairColor[key]}} hair"
+  - "very long {{HairCurve[key]}} {{HairColor[key]}} hair"
+  - "greasy, limp {{HairColor[key]}} hair"
+  - "buzzed {{HairColor[key]}} hair"
+  - "clipped {{HairColor[key]}} hair"
+  - "a {{HairColor[key]}} crew-cut"
+  - "close-cropped {{HairColor[key]}} hair"
+  - "a {{HairCurve[key]}} {{HairColor[key]}} mullet"
+  - "parted {{HairColor[key]}} hair"
+  - "short {{HairCurve[key]}} {{HairColor[key]}} hair"
+  - "shoulder-length {{HairCurve[key]}} {{HairColor[key]}} hair"
+
+
+HairColor:
+  - mode: pick
+  - "{{HairColorUnusual[key]}}"
+  - Titian-haired
+  - ash blonde
+  - ash brown
+  - auburn
+  - black
+  - bleached
+  - blonde
+  - blue-black
+  - brown
+  - brown sugar
+  - brunette
+  - butterscotch
+  - caramel
+  - charcoal gray
+  - chocolate brown
+  - cinnamon
+  - coffee brown
+  - copper
+  - copper
+  - dark ash brown
+  - dark brown
+  - dark golden blonde
+  - deep warm brown
+  - ebony
+  - fair
+  - fiery red
+  - flaxen
+  - ginger
+  - golden
+  - honey
+  - inky black
+  - jet black
+  - light blonde
+  - light brown
+  - midnight
+  - near-white
+  - nut brown
+  - orange
+  - platinum
+  - platinum blonde
+  - plum brown
+  - raven
+  - raven black
+  - red
+  - sable
+  - salt and pepper
+  - sandy blond
+  - silver
+  - silver gray
+  - snow-white
+  - steel gray
+  - strawberry blonde
+  - tawny blonde
+  - tawny brown
+  - toffee brown
+  - warm auburn
+  - warm golden blonde
+  - wheat
+  - white
+
+HairColorUnusual:
+  - mode: pick
+  - bright red
+  - dark blue
+  - forest green
+  - light blue
+  - olive green
+  - pink
+  - violet
+
+
+Garb:
+  - "{{GarbNormal[key]}}"
+  - "{{GarbNormal[key]}}"
+  - "{{GarbNormal[key]}}"
+  - "{{GarbNormal[key]}}"
+  - "{{GarbBad[key]}}"
+  - "{{GarbBad[key]}}"
+  - "{{GarbBad[key]}}"
+  - "{{GarbNice[key]}}"
+  - "{{GarbNice[key]}}"
+  - "{{GarbNice[key]}}"
+
+GarbNormal:
+  - fitted
+  - homespun
+  - almost new
+  - decent quality
+  - close-fitting
+  - loose-fitting
+  - good quality
   - simple
-  - decorated
-  - outdoorsy
-  - ceremonial
-  - functional
-  - fashionable
-  - scrappy
-  - worn
+  - basic
+  - slightly worn
+  - clean
 
-excess:
+GarbBad:
+  - dingy
+  - dirty
+  - filthy
+  - ragged
+  - torn
+  - tattered
+  - weathered
+  - worn out
+  - very old
+  - burnt
+  - ripped up
+  - muddy
+  - bloodstained
+  - sweat-stained
+  - discolored
+  - faded
+  - ruined
+  - threadbare
+
+GarbNice:
+  - elegant
+  - fancy
+  - expensive looking
+  - custom-fitted
+  - perfectly fitted
+  - very well made
+  - uniquely excellent
+
+Excess:
+  - mode: pick
   - muscle
   - hairstyling
   - girth

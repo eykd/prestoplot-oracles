@@ -2,55 +2,93 @@ include:
   - characters
 
 Begin:
-  - "{Incident.Inciting.text}"
+  - "{Incident.Inciting}"
 
 Incident:
-  - text: confronting a situation in which courage and devotion alone can save the fortunes of one beloved
-  - text: seeking by craftiness to escape misfortune
-  - text: falling into misfortune through the wiles of a crafty schemer
-  - text: finding a sustaining power in misfortune
-  - text: being delivered from misfortune by one who, in confidence, confesses a secret of transgression
-  - text: bearing patiently with misfortunes and seeking to attain cherished aims honorably
-  - text: rebelling against a power that controls personal abilities and holds them in subjection
-  - text: meeting with misfortune and being cast away in a primitive, isolated and savage environment
-  - text: becoming involved with conditions in which misfortune is indicated
-  - text: falling into misfortune through mistaken judgment
-  - text: following a wrong course through mistaken judgment
-  - text: becoming involved in a complication that has to do with mistaken judgment and suspicion
-  - text: becoming the victim of mistaken judgment in carrying out an enterprise
-  - text: seeking to save a person who is accused of transgression
-  - text: seeking secretly to preserve another from danger
-  - text: refusing to betray another’s secret and calmly facing persecution because of the refusal
-  - text: facing a situation in which the misfortunes of one greatly esteemed call for courage and sagacious enterprise
-  - text: aiding another to hide from the world a fateful secret
-  - text: enlisting whole-heartedly in the service of a needy unfortunate and conferring aid of the utmost value
-  - text: seeking to conceal {his.Protag} identity because of a lofty idealism
-  - text: resisting secretly and from an honorable motive a mandate considered discreditable
-  - text: embarking upon an enterprise of insurrection in the hope of ameliorating certain evil conditions
-  - text: becoming involved in a complication that challenges the value of cherished ideals
-  - text: undergoing an experience that results in a remarkable character change
-  - text: seeking against difficulties to realize a cherished ideal
-  - text: committing a grievous mistake and seeking in secret to live down its evil results
-  - text: forsaking cherished ambitions to carry out an obligation
-  - text: embarking upon an enterprise in which one obligation is opposed by another obligation
-  - text: finding an obligation at variance with ambition, inclination or necessity
-  - text: falling into misfortune while seeking honorably to discharge an obligation
-  - text: seeking to overcome personal limitations in carrying out an enterprise
-  - text: seeking by unusual methods to conquer personal limitations
-  - text: seeking to forward an enterprise and encountering family sentiment as an obstacle
-  - text: seeking retaliation for a grievous wrong that is either real or fancied
-  - text: finding (apparently) an object greatly coveted, and obtaining (apparently) the object
-  - text: assuming the character of a criminal in a perfectly honest enterprise
-  - text: assuming a fictitious character when embarking upon a certain enterprise
-  - text: being impelled by an unusual motive to engage in crafty enterprise
-  - text: devising a clever and plausible delusion in order to forward certain ambitious plans
-  - text: encountering a would-be transgressor and seeking to prevent a transgression
-  - text: opposing the plans of a crafty schemer
-  - text: becoming involved in a puzzling complication that has to do with an object possessing mysterious powers
-  - text: becoming involved in a mysterious complication and seeking to make the utmost of a bizarre experience
-  - text: seeking to test the value of a mysterious communication and becoming involved in weird complexities
-  - text: seeking to unravel a puzzling complication
-  - text: engaging in an enterprise and then mysteriously disappearing
-  - text: engaging in an mysterious enterprise and becoming involved with the occult and the fantastic
-  - text: becoming involved, through curiosity aroused by mystery, in a strange enterprise
-  - text: becoming aware of an important secret that calls for decisive action
+  - confronting a situation in which courage and devotion alone can save the fortunes of one beloved
+  - seeking by craftiness to escape misfortune
+  - falling into misfortune through the wiles of a crafty schemer
+  - finding a sustaining power in misfortune
+  - being delivered from misfortune by one who, in confidence, confesses a secret of transgression
+  - bearing patiently with misfortunes and seeking to attain cherished aims honorably
+  - rebelling against a power that controls personal abilities and holds them in subjection
+  - meeting with misfortune and being cast away in a primitive, isolated and savage environment
+  - becoming involved with conditions in which misfortune is indicated
+  - falling into misfortune through mistaken judgment
+  - following a wrong course through mistaken judgment
+  - becoming involved in a complication that has to do with mistaken judgment and suspicion
+  - becoming the victim of mistaken judgment in carrying out an enterprise
+  - seeking to save a person who is accused of transgression
+  - seeking secretly to preserve another from danger
+  - refusing to betray another’s secret and calmly facing persecution because of the refusal
+  - facing a situation in which the misfortunes of one greatly esteemed call for courage and sagacious enterprise
+  - aiding another to hide from the world a fateful secret
+  - enlisting whole-heartedly in the service of a needy unfortunate and conferring aid of the utmost value
+  - seeking to conceal {his.Protag} identity because of a lofty idealism
+  - resisting secretly and from an honorable motive a mandate considered discreditable
+  - embarking upon an enterprise of insurrection in the hope of ameliorating certain evil conditions
+  - becoming involved in a complication that challenges the value of cherished ideals
+  - undergoing an experience that results in a remarkable character change
+  - seeking against difficulties to realize a cherished ideal
+  - committing a grievous mistake and seeking in secret to live down its evil results
+  - forsaking cherished ambitions to carry out an obligation
+  - embarking upon an enterprise in which one obligation is opposed by another obligation
+  - finding an obligation at variance with ambition, inclination or necessity
+  - falling into misfortune while seeking honorably to discharge an obligation
+  - seeking to overcome personal limitations in carrying out an enterprise
+  - seeking by unusual methods to conquer personal limitations
+  - seeking to forward an enterprise and encountering family sentiment as an obstacle
+  - seeking retaliation for a grievous wrong that is either real or fancied
+  - finding (apparently) an object greatly coveted, and obtaining (apparently) the object
+  - assuming the character of a criminal in a perfectly honest enterprise
+  - assuming a fictitious character when embarking upon a certain enterprise
+  - being impelled by an unusual motive to engage in crafty enterprise
+  - devising a clever and plausible delusion in order to forward certain ambitious plans
+  - encountering a would-be transgressor and seeking to prevent a transgression
+  - opposing the plans of a crafty schemer
+  - becoming involved in a puzzling complication that has to do with an object possessing mysterious powers
+  - becoming involved in a mysterious complication and seeking to make the utmost of a bizarre experience
+  - seeking to test the value of a mysterious communication and becoming involved in weird complexities
+  - seeking to unravel a puzzling complication
+  - engaging in an enterprise and then mysteriously disappearing
+  - engaging in an mysterious enterprise and becoming involved with the occult and the fantastic
+  - becoming involved, through curiosity aroused by mystery, in a strange enterprise
+  - becoming aware of an important secret that calls for decisive action
+  - threatened with the revelation of a secret transgression
+  - opposing by force a dangerous threat
+  - seeking to obtain an object of great worth by commerce or barter
+  - taking on the unfamiliar responsibilities of an institution or establishment
+  - seeking to capture by force and defend a critical objective
+  - seeking to delay an opposing force in reaching a critical objective in time
+  - seeking to capture by force a critical individual
+  - seeking to alter the properties of an object or clever device
+  - seeking to identify and root out an informant or spy
+  - seeking to repair a critical device
+  - being ensnared in the evils of a cursed or dangerous location
+  - seeking to defend by force a vital objective
+  - seeking to defend by force a person of some importance
+  - seeking to defend by force a cherished place from an invading force
+  - entrusted to deliver an object of great worth
+  - seeking by subtle means to insert an object into a critical location
+  - seeking to destroy by force an object of great importance
+  - seeking to capture an object and disperse it to render its power useless
+  - exploring a strange country or locale
+  - seeking to gather enough of a critical resource
+  - seeking to intercept an object and capture it or divert it from its destination
+  - endeavoring to assault and invade a location of great importance
+  - seeking to maintain the properties of an object against the meddling of another
+  - seeking to track down and capture a dangerous individual
+  - seeking to trace the location of a lost object or individual
+  - engaging in preparation for a great endeavor
+  - seeking to protect an object or individual of great importance
+  - engaging in a race to reach a destination first
+  - seeking to discover the reason behind a great wreck or ruin
+  - seeking to recover an ally from a dangerous altered state
+  - seeking to rescue an individual from great trouble or danger
+  - seeking sanctuary from overwhelming dangers
+  - engaging in commerce to make a profit
+  - engaging in subterfuge and espionage to discover and retrieve a secret
+  - seeking to obtain an object of great worth by subtle or dishonest means
+  - seeking to escape a place of confinement, exile, or abandonment
+  - being betrayed by one in whom a great deal of trust had been placed
+  - seeking to discover the secrets of a mysterious visitor

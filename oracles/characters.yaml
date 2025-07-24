@@ -1,10 +1,30 @@
 include:
   - names
   - names-markov
+  - physical-description
+  - sex
+  - weapons
 
-Sex:
-  - male
-  - female
+
+Begin: |
+    - {Character.One}
+    - {Character.Two}
+    - {Character.Three}
+    - {Character.Four}
+    - {Character.Five}
+    - {Character.Six}
+    - {Character.Seven}
+    - {Character.Eight}
+    - {Character.Nine}
+    - {Character.Ten}
+
+
+
+Character:
+  - "{Person[key].A} {Person[key]}."
+  - "{Person[key].A} {Person[key]}."
+  - "{Person[key].A} {Person[key]}, {WieldingAction[key]}."
+
 
 Name:
   - >
@@ -16,69 +36,501 @@ MarkovName:
     {NamesMarkov[Sex[key]][key]}
 
 
-boy:
-  - >
-    {'girl' if Sex[key] == 'female' else 'boy'}
-
-
-guy:
-  - >
-    {'gal' if Sex[key] == 'female' else 'guy'}
-
-
-man:
-  - >-
-    {'woman' if Sex[key] == 'female' else 'man'}
-
-he:
-  - >
-    {'she' if Sex[key] == 'female' else 'he'}
-
-
-He:
-  - >
-    {'She' if Sex[key] == 'female' else 'He'}
-
-
-him:
-  - >
-    {'her' if Sex[key] == 'female' else 'him'}
-
-
-Him:
-  - >
-    {'Her' if Sex[key] == 'female' else 'Him'}
-
-
-his:
-  - >
-    {'her' if Sex[key] == 'female' else 'his'}
-
-
-His:
-  - >
-    {'Her' if Sex[key] == 'female' else 'His'}
-
-
 hero:
   - "{'heroine' if Sex[key] == 'female' else 'hero'}"
 
 
+FullDescription:
+  - "{He[key]} is {Person[key].a} {Person[key]}."
+
+
 Person:
-  - "{Physical[key]}, {Status[key]} {Occupation[key]}, {Motivation}"
+  - "{Build[key]}, {Style[key + 'one']}, {Style[key + 'two']} {Occupation[key]}, {Motivation[key]}"
 
 
-Status:
-  - mode: pick
-  - married
-  - lawless
-  - erring
-  - benevolent
-  - resentful
-  - subtle
-  - normal
+Wielding:
   - "{Weapon[key]}-wielding"
 
+
+WieldingAction:
+  - "wielding {his[key]} {WeaponAdjective[key]} {Weapon[key]}"
+
+Status:
+  - married
+  - single
+
+
+Style:
+  - mode: pick
+  - able
+  - absent-minded
+  - active
+  - adventurous
+  - affable
+  - affected
+  - affectionate
+  - afraid
+  - aggressive
+  - alert
+  - aloof
+  - ambitious
+  - amiable
+  - angry
+  - animated
+  - annoyed
+  - anxious
+  - apologetic
+  - appreciative
+  - argumentative
+  - arrogant
+  - attentive
+  - austere
+  - average
+  - awkward
+  - babyish
+  - bad
+  - bashful
+  - belligerent
+  - bewildered
+  - blasé
+  - boastful
+  - bold
+  - boorish
+  - bored
+  - bossy
+  - brainy
+  - brave
+  - bright
+  - brilliant
+  - brutish
+  - busy
+  - calculating
+  - calm
+  - candid
+  - capable
+  - carefree
+  - careful
+  - careless
+  - caring
+  - caustic
+  - cautious
+  - challenge-loving
+  - changeable
+  - charismatic
+  - charming
+  - cheerful
+  - civilised
+  - clever
+  - clumsy
+  - coarse
+  - cold-hearted
+  - commitment-fearing
+  - committed
+  - communicative
+  - compassionate
+  - competent
+  - complacent
+  - conceited
+  - concerned
+  - confident
+  - confused
+  - conscientious
+  - considerate
+  - consistent
+  - content
+  - contented
+  - cooperative
+  - courageous
+  - cowardly
+  - crafty
+  - creative
+  - critical
+  - cross
+  - cruel
+  - cultured
+  - curious
+  - dainty
+  - dangerous
+  - daring
+  - dark
+  - dauntless
+  - dazed
+  - decisive
+  - deferential
+  - demanding
+  - dependable
+  - depressed
+  - desiccated
+  - despondent
+  - determined
+  - devoted
+  - diligent
+  - disaffected
+  - disagreeable
+  - discerning
+  - discontented
+  - discouraged
+  - discreet
+  - dishonest
+  - disillusioned
+  - disloyal
+  - dismayed
+  - disorganized
+  - disparaging
+  - disrespectful
+  - dissatisfied
+  - distressed
+  - domineering
+  - doubtful
+  - dreamy
+  - dull
+  - dutiful
+  - eager
+  - easy-going
+  - effervescent
+  - efficient
+  - eloquent
+  - embarrassed
+  - emotionless
+  - encouraging
+  - energetic
+  - enraged
+  - enthusiastic
+  - equable
+  - ethical
+  - evil
+  - exacting
+  - excessive
+  - excitable
+  - excited
+  - exuberant
+  - facetious
+  - fair
+  - faithful
+  - faithless
+  - fanciful
+  - fearful
+  - fearless
+  - feisty
+  - ferocious
+  - fidgety
+  - fierce
+  - fighting
+  - finicky
+  - flexible
+  - focused
+  - foolish
+  - forgetful
+  - forgiving
+  - formal
+  - fortunate
+  - foul
+  - frank
+  - fresh
+  - friendly
+  - frightened
+  - frustrated
+  - fun-loving
+  - funny
+  - furious
+  - furtive
+  - fussy
+  - garrulous
+  - generous
+  - gentle
+  - giddy
+  - giving
+  - glamorous
+  - gloomy
+  - glum
+  - gluttonous
+  - good-for-nothing
+  - graceful
+  - greedy
+  - gregarious
+  - grouchy
+  - gruff
+  - grumpy
+  - guilty
+  - gullible
+  - handsome
+  - happy
+  - hard-working
+  - hardy
+  - harried
+  - harsh
+  - hateful
+  - haughty
+  - healthy
+  - hedonistic
+  - helpful
+  - hesitant
+  - honest
+  - hopeful
+  - hopeless
+  - hospitable
+  - hot-tempered
+  - humble
+  - humorous
+  - ignorant
+  - ill-bred
+  - imaginative
+  - immaculate
+  - immature
+  - immobile
+  - impartial
+  - impatient
+  - impolite
+  - impudent
+  - impulsive
+  - inactive
+  - inconsiderate
+  - inconsistent
+  - indecisive
+  - independent
+  - indiscriminate
+  - indolent
+  - industrious
+  - inefficient
+  - inimitable
+  - innocent
+  - insecure
+  - insincere
+  - insipid
+  - insistent
+  - insolent
+  - inspiring
+  - intelligent
+  - intolerant
+  - intrepid
+  - inventive
+  - jealous
+  - jolly
+  - jovial
+  - joyful
+  - keen
+  - kind
+  - kindly
+  - lackadaisical
+  - languid
+  - lazy
+  - leader
+  - lean
+  - left-brained
+  - licentious
+  - light
+  - light-hearted
+  - limited
+  - lively
+  - logical
+  - lonely
+  - loquacious
+  - loud
+  - lovable
+  - loving
+  - loyal
+  - lucky
+  - malicious
+  - mannerly
+  - mature
+  - mean
+  - meek
+  - merciful
+  - messy
+  - meticulous
+  - mischievous
+  - miserable
+  - moody
+  - mysterious
+  - nagging
+  - naughty
+  - naïve
+  - neat
+  - negligent
+  - nervous
+  - nice
+  - noisy
+  - untrustworthy
+  - obedient
+  - obliging
+  - obsequious
+  - observant
+  - open
+  - optimistic
+  - organised
+  - outspoken
+  - paranoid
+  - patient
+  - patriotic
+  - peace-loving
+  - peaceful
+  - perserverant
+  - persistent
+  - persuasive
+  - perverse
+  - pessimistic
+  - picky
+  - pitiful
+  - plain
+  - playful
+  - pleasant
+  - pleasing
+  - polite
+  - pompous
+  - poor
+  - popular
+  - positive
+  - precise
+  - pretty
+  - prim
+  - primitive
+  - proper
+  - proud
+  - provocative
+  - prudent
+  - punctual
+  - purposeful
+  - purposeless
+  - quarrelsome
+  - quick
+  - quick-tempered
+  - quiet
+  - rational
+  - reasonable
+  - reckless
+  - relaxed
+  - reliable
+  - religious
+  - reluctant
+  - repugnant
+  - repulsive
+  - resentful
+  - reserved
+  - resolute
+  - resourceful
+  - respectful
+  - responsible
+  - restless
+  - reticent
+  - rich
+  - rigid
+  - risk-taking
+  - rough
+  - rowdy
+  - rude
+  - ruthless
+  - sad
+  - safe
+  - satisfied
+  - scared
+  - scatty
+  - scheming
+  - scrawny
+  - scruffy
+  - secretive
+  - secure
+  - seductive
+  - self-centered
+  - self-confident
+  - self-controlling
+  - selfish
+  - sensitive
+  - sentimental
+  - serene
+  - serious
+  - sharp
+  - sharp-witted
+  - shiftless
+  - short
+  - shrewd
+  - shy
+  - silly
+  - simple
+  - simple-minded
+  - sincere
+  - single-minded
+  - skillful
+  - sleepy
+  - slothful
+  - sly
+  - smart
+  - sneaky
+  - soft-hearted
+  - solitary
+  - sorry
+  - spendthrift
+  - spoiled
+  - sterile
+  - stern
+  - stingy
+  - strange
+  - strict
+  - strong
+  - stubborn
+  - studious
+  - subdued
+  - submissive
+  - subversive
+  - successful
+  - superstitious
+  - supportive
+  - surprised
+  - suspicious
+  - sweet
+  - tactful
+  - tactless
+  - talented
+  - talkative
+  - tardy
+  - temperate
+  - thankful
+  - thorough
+  - thoughtful
+  - thoughtless
+  - thrifty
+  - thrilled
+  - timid
+  - tired
+  - tireless
+  - tolerant
+  - touched
+  - touchy
+  - tough
+  - trusting
+  - trustworthy
+  - truthful
+  - unconcerned
+  - uncoordinated
+  - undependable
+  - understanding
+  - uneasy
+  - unforgiving
+  - unfriendly
+  - ungrateful
+  - unhappy
+  - unkind
+  - unmerciful
+  - unselfish
+  - unsuitable
+  - upset
+  - useful
+  - vacant
+  - verbose
+  - violent
+  - virtuous
+  - warm
+  - weak
+  - well-bred
+  - wicked
+  - wild
+  - wise
+  - wishy-washy
+  - withdrawn
+  - witty
+  - worried
+  - wyrd
+  - young
+  - zany
 
 Motivation:
   - mode: pick
@@ -88,43 +540,118 @@ Motivation:
   - subjected to adverse conditions
   - swayed by pretense
   - influenced by the occult and the mysterious
+  - seeking love
+  - lawless
+  - in the wrong
+  - erring
+  - seeking to protect that most dear
+  - seeking an ideal
+  - subtle
+  - benevolent
+  - seeming too good to be true
+  - desiring to be happy
+  - looking to fulfill a prophecy
+  - fearful and afraid
+  - reeling from a life-changing mistake
+  - compelled to help anyone in need
+  - determined to defend {His[key]} home
+  - compelled to protect the vulnerable
+  - afraid to stand out
+  - compelled to repay a debt
+  - seeking purpose
+  - seeking power
+  - wandering aimless
+  - driven by envy
+  - crazed
+  - seeking perfection
+  - driven to oppose injustice in any form
+  - seeking to protect the one {he[key]} loves most
+  - determined not to fail again
+  - determined to live up to the family name
+  - fighting for {his[key]} homeland
+  - desperately seeking food
+  - determined that justice should prevail
+  - desiring only to spread joy and cheer
+  - delving into nature's innermost secrets
+  - desiring to play a joke on a friend
+  - scarred by years of abuse
+  - seeking glory
+  - pursuing the final piece in {his[key]} collection
+  - in need of money to pay off medical bills
+  - hiding {his[key]} true purpose
+  - seeking to return home
+  - seeking to do the right thing above all else
+  - pursuing a simpler life
+  - desiring to be stronger
+  - pursuing vanity
+  - in pursuit of freedom
+  - in pursuit of a quieter life
+  - seeking adventure
+  - seeking friendship
+  - seeking allies
+  - seeking to repay a life-debt
+  - seeking to please the one {he[key]} loves
+  - seeking to prove {himself[key]} a real {man[key]}
+  - seeking a lost loved one
+  - seeking to free a captured love one
+  - seeking excitement
+  - provoked by an insult to {his[key]} name
+  - seeking {his[key]} own entertainment
+  - looking to satisfy {his[key]} personal honor
+  - seeking a handout
+  - obsessed with obtaining wealth
+  - in pursuit of a MacGuffin
+  - motivated by fear
+  - encouraged in {his[key]} endeavor by a loved one
+  - led astray by a horrid lie
+  - seeking dark means to achieve an admirable goal
+  - vowing never to be hurt again
+  - vowing never to be taken advantage of again
+  - pursuing an admirable goal for personal gain
+  - in it only for the money
+  - seeking to regain {his[key]} humanity
+  - overcome by apathy
+  - motivated by friendship
+  - moved by a powerful hate
+  - seeking to redress a great injustice
+  - in pursuit of a worthy occupation
+  - provoked against heaven itself
+  - seeking revenge for a great wrong
+  - seeking to escape from boredom
+  - wracked by a survivor's guilt
+  - vowing to overturn the decree of Fate
+  - seeking the resurrection of a loved one
+  - overpowered by greed
+  - overpowered by lust
+  - overpowered by envy
+  - overpowered by pride
+  - overpowered by sloth
+  - overpowered by wrath
+  - overpowered by gluttony
+  - vowing to prove {his[key]} mockers wrong
+  - in pursuit of an impossible dream
+  - desperately attempting to stave off death
+  - in search of the next thrill
+  - moved by undying loyalty
+  - going to extreme lengths to create a better world
+  - in search of approval
+  - in search of affirmation
+  - ruthlessly pursuing a noble goal
 
-
-Physical:
-  - mode: pick
-  - "tall"
-  - "flashing-eyed"
-  - "supernaturally strong"
-  - "superbly fit"
-  - "lithe"
-  - "well-muscled"
-  - big
-  - ugly
-  - small
-  - agile
-  - weak
-  - strong
-  - clumsy
-
-Weapon:
-  - mode: pick
-  - "sword"
-  - "pistol"
-  - "laser"
-  - "whip"
-  - "saber"
-  - "rifle"
 
 Occupation:
   - mode: pick
-  - "scientist"
-  - "adventurer"
-  - "explorer"
-  - "archaeologist"
-  - "pilot"
-  - "soldier"
-  - "hunter"
-  - "millionaire"
+  - blowhard
+  - dreamer
+  - liar
+  - scientist
+  - adventurer
+  - explorer
+  - archaeologist
+  - pilot
+  - soldier
+  - hunter
+  - millionaire
   - academician
   - business owner
   - chemist
@@ -146,7 +673,6 @@ Occupation:
   - servant
   - socialite
   - soldier
-  - spouse
   - thief
   - thug
   - worker
@@ -161,11 +687,11 @@ Occupation:
 
 Personality:
   - mode: pick
-  - "brooding"
-  - "spunky"
-  - "genius"
-  - "self-confident"
-  - "determined"
+  - brooding
+  - spunky
+  - genius
+  - self-confident
+  - determined
   - shifty
   - secretive
   - trustworthy
@@ -184,26 +710,26 @@ Personality:
   - beautiful
   - impulsive
   - charming
-  - "dedicated"
-  - "grieving"
-  - "idealistic"
-  - "opportunistic"
-  - "patriotic"
-  - "stern"
-  - "severe"
-  - "unbalanced"
+  - dedicated
+  - grieving
+  - idealistic
+  - opportunistic
+  - patriotic
+  - stern
+  - severe
+  - unbalanced
 
 Skill:
   - mode: pick
-  - "swordplay"
-  - "biology"
-  - "metallurgy"
-  - "ancient history"
-  - "hieroglyphs"
-  - "archaeology"
-  - "dead languages"
-  - "athletics"
-  - "linguistics"
+  - swordplay
+  - biology
+  - metallurgy
+  - ancient history
+  - hieroglyphs
+  - archaeology
+  - dead languages
+  - athletics
+  - linguistics
 
 
 Profession:

@@ -1,9 +1,17 @@
 include:
   - characters
   - outcomes
+  - stratagems
 
 Begin:
-  - "{Person.Antag.a} {Person.Antag} ({VillainTheme.Antag}?), who {VillainOutcome.Antag}"
+  - "{Villain}"
+
+Villain:
+  - "{VillainStyle.Antag.A} {VillainStyle.Antag}, {Wielding.Antag} {Occupation.Antag}, {Motivation.Antag}, who {Stratagem.Antag}."
+
+VillainStyle:
+  - "{Style[key + 'one']}, {Style[key + 'two']}"
+
 
 VillainTheme:
   - "0% Approval Rating: The villain is unpopular with {his.Antag} underlings"
@@ -368,7 +376,6 @@ VillainTheme:
   - "Greater Scope Villain: A bigger threat than the Big Bad that doesn’t have as big of an effect on the plot"
   - "The Group"
   - "Grand Vizier Jafar"
-  - "Greedy Jew"
   - "Green and Mean"
   - "Hair-Raising Hare"
   - "Hair-Trigger Temper: Everything pisses this villain off"
@@ -442,7 +449,6 @@ VillainTheme:
   - "Kneel Before Zod: Bow to me, hero! Acknowledge my supremacy!"
   - "Knight of Cerebus: Everything was lighthearted and funny until this bastard showed up"
   - "Knight Templar: A “righteous” villain who goes way too far"
-  - "Kosher Nostra: The Jewish Mafia"
   - "Lady Macbeth"
   - "Last Villain Stand"
   - "Laughably Evil: This villain’s purpose is often to make you and the audience laugh"
