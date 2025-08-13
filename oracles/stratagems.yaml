@@ -4,7 +4,7 @@ include:
 
 Stratagem:
   - "{StrategemCommandingSuperiority[key]}"
-  - "{StrategemConfrontation[key]"
+  - "{StrategemConfrontation[key]}"
   - "{StratagemAttack[key]}"
   - "{StratagemConfusion[key]}"
   - "{StratagemGain[key]}"
